@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Noto+Naskh+Arabic:wght@600;700&amp;display=swap');
+      .title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; fill: #0F2942; }
+      .subtitle { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; fill: #0D9488; letter-spacing: 1px; }
+      .sindhi-title { font-family: 'Noto Naskh Arabic', sans-serif; font-weight: 700; font-size: 24px; fill: #0F2942; }
+      .box-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px; fill: #0F2942; }
+      .tier-title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: 13px; fill: #FFFFFF; letter-spacing: 1.5px; }
+      .item-header { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; fill: #1E293B; }
+      .item-text { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 11.5px; fill: #475569; line-height: 1.4; }
+      .badge { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 10px; }
+      .flow-label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 11px; fill: #0D9488; }
+      .sindhi-refusal { font-family: 'Noto Naskh Arabic', sans-serif; font-weight: 600; font-size: 12px; fill: #B91C1C; }
+    </style>
+
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F2942" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#0F766E" />
+    </linearGradient>
+
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3B82F6"/>
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" fill="#F8FAFC"/>
+  <rect x="0" y="0" width="1600" height="95" fill="#FFFFFF"/>
+  <rect x="0" y="93" width="1600" height="3" fill="#E2E8F0"/>
+  <rect x="0" y="93" width="400" height="3" fill="#0D9488"/>
+
+  <!-- Top Title Header -->
+  <g transform="translate(60, 38)">
+    <rect x="-10" y="0" width="6" height="42" fill="#0D9488" rx="3"/>
+    <text x="10" y="20" class="title">SINDHI DIGITAL CLASSROOM (SDC)</text>
+    <text x="10" y="38" class="subtitle">COMPLETE END-TO-END SYSTEM ARCHITECTURE &amp; DATA FLOW SPECIFICATION</text>
+  </g>
+  <g transform="translate(1540, 52)" text-anchor="end">
+    <text x="0" y="0" class="sindhi-title">سنڌي ڊجيٽل ڪلاس روم — مڪمل سسٽم ڊزائن</text>
+    <text x="0" y="20" class="item-text" font-size="12">STBB Curriculum (Classes 6–10) • Offline-First PWA • Grounded RAG</text>
+  </g>
+
+  <!-- ================= TIER 1: CLIENT LAYER (PWA) ================= -->
+  <g transform="translate(60, 125)">
+    <!-- Container -->
+    <rect width="1480" height="235" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+    <!-- Header Tab -->
+    <path d="M 0 12 Q 0 0 12 0 L 260 0 L 285 36 L 0 36 Z" fill="url(#tealGrad)"/>
+    <text x="20" y="24" class="tier-title">TIER 1: CLIENT PWA (BROWSER)</text>
+    <text x="310" y="24" class="item-text" font-weight="600" fill="#0D9488">Responsive Sindhi RTL • Service Worker App Shell • IndexedDB Persistence • Web Speech API</text>
+
+    <!-- Sub-box 1: RTL Presentation -->
+    <g transform="translate(25, 52)">
+      <rect width="335" height="165" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="335" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">1.1 Sindhi RTL Interface</text>
+      <text x="15" y="55" class="item-header">• Noto Naskh Arabic &amp; Inter Typography</text>
+      <text x="15" y="73" class="item-text">Native Right-to-Left (dir="rtl") alignment.</text>
+      <text x="15" y="98" class="item-header">• Adaptive Responsive Viewports</text>
+      <text x="15" y="116" class="item-text">Optimized for low-end Android mobile devices</text>
+      <text x="15" y="132" class="item-text">(1GB–2GB RAM, 320px–768px screens).</text>
+      <text x="15" y="152" class="item-header">• Role Views: Student, Teacher, Head, Officer</text>
+    </g>
+
+    <!-- Sub-box 2: Smart Video Player -->
+    <g transform="translate(385, 52)">
+      <rect width="345" height="165" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="345" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">1.2 Smart Interactive Video Player</text>
+      <text x="15" y="55" class="item-header">• Dual Delivery Engine</text>
+      <text x="15" y="73" class="item-text">Local 240p/360p lightweight MP4 + YouTube Embed.</text>
+      <text x="15" y="98" class="item-header">• Mid-Video Micro-Quiz Overlays</text>
+      <text x="15" y="116" class="item-text">Tracks timeupdate; auto-pauses at timestamps.</text>
+      <text x="15" y="132" class="item-text">Displays approved MCQs with shuffled options.</text>
+      <text x="15" y="152" class="item-header">• Subtitle &amp; Transcript Sync in Sindhi</text>
+    </g>
+
+    <!-- Sub-box 3: Offline PWA Storage -->
+    <g transform="translate(755, 52)">
+      <rect width="345" height="165" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="345" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">1.3 Offline Engine &amp; IndexedDB</text>
+      <text x="15" y="55" class="item-header">• Service Worker (sw.js) App Shell Cache</text>
+      <text x="15" y="73" class="item-text">Cache-First for HTML, CSS, JS, RTL WebFonts.</text>
+      <text x="15" y="98" class="item-header">• Client Store (SDC_Offline_Store)</text>
+      <text x="15" y="116" class="item-text">Holds unit packs, transcripts &amp; question bank.</text>
+      <text x="15" y="138" class="item-header">• Background Sync Queue</text>
+      <text x="15" y="154" class="item-text">Auto-queues quiz attempts during blackouts.</text>
+    </g>
+
+    <!-- Sub-box 4: Voice & Speech UI -->
+    <g transform="translate(1125, 52)">
+      <rect width="330" height="165" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="330" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">1.4 Voice AI &amp; Speech Interface</text>
+      <text x="15" y="55" class="item-header">• Speech-to-Text (STT sd-PK)</text>
+      <text x="15" y="73" class="item-text">Web Speech API capture for Sindhi voice.</text>
+      <text x="15" y="98" class="item-header">• In-Line Dialect Correction</text>
+      <text x="15" y="116" class="item-text">Editable input box for student self-correction.</text>
+      <text x="15" y="138" class="item-header">• Text-to-Speech (TTS)</text>
+      <text x="15" y="154" class="item-text">Audio playback of teacher hints &amp; tutor text.</text>
+    </g>
+  </g>
+
+  <!-- Connective Flow 1 -> 2 -->
+  <g>
+    <!-- Normal Request -->
+    <line x1="450" y1="360" x2="450" y2="410" stroke="#0D9488" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+    <rect x="470" y="372" width="230" height="24" rx="4" fill="#E6FFFA" stroke="#0D9488" stroke-width="1"/>
+    <text x="480" y="388" class="flow-label">REST JSON API / Bearer Auth Tokens</text>
+
+    <!-- Reconnect Auto-Sync -->
+    <line x1="1150" y1="360" x2="1150" y2="410" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-blue)"/>
+    <rect x="910" y="372" width="225" height="24" rx="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1"/>
+    <text x="920" y="388" class="flow-label" fill="#2563EB">window.ononline → /api/sync/queue</text>
+  </g>
+
+  <!-- ================= TIER 2: API GATEWAY & SECURITY ================= -->
+  <g transform="translate(60, 415)">
+    <rect width="1480" height="120" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 0 12 Q 0 0 12 0 L 260 0 L 285 36 L 0 36 Z" fill="url(#blueGrad)"/>
+    <text x="20" y="24" class="tier-title">TIER 2: API GATEWAY &amp; SECURITY</text>
+    <text x="310" y="24" class="item-text" font-weight="600" fill="#2563EB">FastAPI Gateway • Cryptographic JWT Verification • Pydantic V2 Validation • Role-Based Access Control</text>
+
+    <g transform="translate(25, 48)">
+      <rect width="335" height="58" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="25" class="item-header">FastAPI Router (/api/v1)</text>
+      <text x="15" y="44" class="item-text">Asynchronous request routing &amp; CORS policies.</text>
+    </g>
+
+    <g transform="translate(385, 48)">
+      <rect width="345" height="58" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="25" class="item-header">Hardened Auth &amp; Session Dep</text>
+      <text x="15" y="44" class="item-text">Enforces HMAC/JWT tokens; rejects query bypass.</text>
+    </g>
+
+    <g transform="translate(755, 48)">
+      <rect width="345" height="58" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="25" class="item-header">Pydantic V2 Request Guards</text>
+      <text x="15" y="44" class="item-text">Strict payload schema validation &amp; sanitization.</text>
+    </g>
+
+    <g transform="translate(1125, 48)">
+      <rect width="330" height="58" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="25" class="item-header">RBAC Tier Enforcer</text>
+      <text x="15" y="44" class="item-text">Guards: Student, Teacher, Head, Officer, SuperAdmin.</text>
+    </g>
+  </g>
+
+  <!-- Connective Flow 2 -> 3 -->
+  <line x1="800" y1="535" x2="800" y2="575" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ================= TIER 3: SERVICES & SINDHI AI ENGINE ================= -->
+  <g transform="translate(60, 580)">
+    <rect width="1480" height="260" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 0 12 Q 0 0 12 0 L 260 0 L 285 36 L 0 36 Z" fill="url(#purpleGrad)"/>
+    <text x="20" y="24" class="tier-title">TIER 3: SERVICES &amp; SINDHI AI ENGINE</text>
+    <text x="310" y="24" class="item-text" font-weight="600" fill="#7C3AED">Micro-Services Architecture • Grounded RAG Pipeline • Teacher Approval Gate • Batch Idempotency</text>
+
+    <!-- Sub-box 1: Lesson & Curriculum -->
+    <g transform="translate(25, 52)">
+      <rect width="335" height="190" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="335" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">3.1 Lesson &amp; Media Service</text>
+      <text x="15" y="55" class="item-header">• STBB Curriculum Registry (Classes 6–10)</text>
+      <text x="15" y="73" class="item-text">Units, topics, learning objectives, and chapters.</text>
+      <text x="15" y="98" class="item-header">• Transcript &amp; Caption Orchestrator</text>
+      <text x="15" y="116" class="item-text">Synchronized start/end timestamps in Sindhi.</text>
+      <text x="15" y="142" class="item-header">• Video Streaming Handler</text>
+      <text x="15" y="160" class="item-text">Serves byte-range local MP4s &amp; HLS playlists.</text>
+    </g>
+
+    <!-- Sub-box 2: Quiz & Approval -->
+    <g transform="translate(385, 52)">
+      <rect width="345" height="190" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="345" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">3.2 Smart Quiz &amp; Approval Gate</text>
+      <text x="15" y="55" class="item-header">• Teacher Approval Gate (FR-13)</text>
+      <text x="15" y="73" class="item-text">Enforces is_approved=1; unapproved items blocked.</text>
+      <text x="15" y="98" class="item-header">• Distractor Shuffling &amp; Scoring</text>
+      <text x="15" y="116" class="item-text">Randomizes answer choices; records instant feedback.</text>
+      <text x="15" y="142" class="item-header">• Attempt Tracking &amp; Analytics</text>
+      <text x="15" y="160" class="item-text">Calculates mastery indices and concept drop-offs.</text>
+    </g>
+
+    <!-- Sub-box 3: Grounded AI Tutor RAG -->
+    <g transform="translate(755, 52)">
+      <rect width="400" height="190" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="400" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">3.3 Grounded Sindhi AI Tutor (RAG)</text>
+      <text x="15" y="55" class="item-header">• STBB Approved Textbook Chunks Only</text>
+      <text x="15" y="73" class="item-text">Strict semantic retrieval over authorized curriculum.</text>
+      <text x="15" y="98" class="item-header">• Grounding Threshold &amp; Refusal Gate</text>
+      <text x="15" y="116" class="item-text">If similarity score &lt; 0.65, returns refusal:</text>
+      <text x="15" y="136" class="sindhi-refusal">معاف ڪجو، هي سوال سبق جي دائري کان ٻاهر آهي.</text>
+      <text x="15" y="156" class="item-header">• Exact Citation &amp; Video Jump Link</text>
+      <text x="15" y="172" class="item-text">Returns exact STBB page and video timestamp jump.</text>
+    </g>
+
+    <!-- Sub-box 4: Sync & Analytics -->
+    <g transform="translate(1180, 52)">
+      <rect width="275" height="190" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="275" height="32" rx="8" fill="#F1F5F9"/>
+      <text x="15" y="21" class="box-title">3.4 Sync &amp; Reporting</text>
+      <text x="15" y="55" class="item-header">• Idempotent Sync Worker</text>
+      <text x="15" y="73" class="item-text">De-duplicates offline attempts.</text>
+      <text x="15" y="98" class="item-header">• SELD Analytics Engine</text>
+      <text x="15" y="116" class="item-text">Regional attendance &amp; scores.</text>
+      <text x="15" y="142" class="item-header">• Audit Trail &amp; Consent</text>
+      <text x="15" y="160" class="item-text">GDPR/PECA privacy compliant.</text>
+    </g>
+  </g>
+
+  <!-- Connective Flow 3 -> 4 -->
+  <line x1="800" y1="840" x2="800" y2="880" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ================= TIER 4: PERSISTENCE & STORAGE ================= -->
+  <g transform="translate(60, 885)">
+    <rect width="1480" height="175" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#shadow)"/>
+    <path d="M 0 12 Q 0 0 12 0 L 260 0 L 285 36 L 0 36 Z" fill="url(#headerGrad)"/>
+    <text x="20" y="24" class="tier-title">TIER 4: PERSISTENCE &amp; STORAGE</text>
+    <text x="310" y="24" class="item-text" font-weight="600" fill="#1E293B">SQLite WAL Mode (Edge) • PostgreSQL 16 (Central Cloud) • Static Media Assets • STBB Knowledge Base</text>
+
+    <!-- DB Tables Summary -->
+    <g transform="translate(25, 48)">
+      <rect width="450" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" class="item-header">Relational Schemas (WAL Mode, Foreign Keys On)</text>
+      <text x="15" y="46" class="item-text">• users, schools, courses, lessons, videos</text>
+      <text x="15" y="66" class="item-text">• video_transcripts, questions, student_quiz_attempts</text>
+      <text x="15" y="86" class="item-text">• student_progress, ai_tutor_chats, audit_logs, consents</text>
+    </g>
+
+    <!-- File System Media Storage -->
+    <g transform="translate(505, 48)">
+      <rect width="450" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" class="item-header">Media &amp; Curriculum Filesystem</text>
+      <text x="15" y="46" class="item-text">• 240p / 360p Highly Compressed MP4 Video Lectures</text>
+      <text x="15" y="66" class="item-text">• STBB Official Digitized Lesson PDFs &amp; Diagrams</text>
+      <text x="15" y="86" class="item-text">• Timestamped VTT / JSON Transcripts in Sindhi</text>
+    </g>
+
+    <!-- Vector & Edge Hardware -->
+    <g transform="translate(985, 48)">
+      <rect width="470" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="15" y="24" class="item-header">Edge Deployment: "SDC School-in-a-Box"</text>
+      <text x="15" y="46" class="item-text">• Raspberry Pi 5 / Mini-PC edge server on 12V solar DC</text>
+      <text x="15" y="66" class="item-text">• Local Wi-Fi router provides zero-internet lab access</text>
+      <text x="15" y="86" class="item-text">• Automatic night batch sync to provincial SELD cloud</text>
+    </g>
+  </g>
+</svg>

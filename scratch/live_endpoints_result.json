@@ -1,0 +1,59 @@
+[
+  {
+    "endpoint": "/health",
+    "method": "GET",
+    "status": 404,
+    "error": "HTTP Error 404: Not Found",
+    "snippet": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "/api/health",
+    "method": "GET",
+    "status": 200,
+    "content_type": "application/json",
+    "body_len": 219,
+    "snippet": "{\"status\":\"ok\",\"app\":\"Sindhi Digital Classroom (SDC)\",\"environment\":\"development\",\"roles_policy\":\"TWO_ROLE_LOCK (STUDENT, ADMIN)\",\"language_support\":[\"sindhi\",\"english\"],\"curriculum\":\"Sindh Textbook B"
+  },
+  {
+    "endpoint": "/api/courses",
+    "method": "GET",
+    "status": 404,
+    "error": "HTTP Error 404: Not Found",
+    "snippet": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "/api/lessons",
+    "method": "GET",
+    "status": 200,
+    "content_type": "application/json",
+    "body_len": 13378,
+    "snippet": "[{\"id\":\"crs-eng-6\",\"class_level\":6,\"subject\":\"English\",\"title_sindhi\":\"انگريزي (English Grammar)\",\"title_english\":\"English Class 6\",\"lessons\":[{\"id\":\"lesson-eng-6-1\",\"course_id\":\"crs-eng-6\",\"un"
+  },
+  {
+    "endpoint": "/api/tutor/ask",
+    "method": "POST",
+    "status": 401,
+    "error": "HTTP Error 401: Unauthorized",
+    "snippet": "{\"detail\":\"غير تصديق ٿيل: مهرباني ڪري لاگ ان ٿيو (Authentication required).\"}"
+  },
+  {
+    "endpoint": "/api/tutor/tts?text=ٽيسٽ",
+    "method": "GET",
+    "status": "ERROR",
+    "error": "'ascii' codec can't encode characters in position 24-27: ordinal not in range(128)"
+  },
+  {
+    "endpoint": "/api/tutor/transcribe",
+    "method": "POST",
+    "status": 422,
+    "error": "HTTP Error 422: Unprocessable Entity",
+    "snippet": "{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"file\"],\"msg\":\"Field required\",\"input\":null}]}"
+  },
+  {
+    "endpoint": "/api/progress/track",
+    "method": "POST",
+    "status": 404,
+    "error": "HTTP Error 404: Not Found",
+    "snippet": "{\"detail\":\"Not Found\"}"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "test": "Pure Math Query 'سيٽ'",
+    "query": "سيٽ",
+    "subject_filter": null,
+    "chunks_found": 5,
+    "top_chunks": [
+      "[math-6] ch1 math-ch01-05: ذيلي سيٽ، مٿانهون سيٽ ۽ صحيح ذيلي سيٽ",
+      "[math-6] ch1 math-ch01-03: محدود، لامحدود، خالي ۽ واحد سيٽ",
+      "[math-6] ch1 math-ch01-01: سيٽ ڇا آهي",
+      "[math-6] ch1 math-ch01-02: سيٽ جا روپ",
+      "[math-6] ch1 math-ch01-04: برابر ۽ هم قدر سيٽ"
+    ],
+    "glossary_matches": [
+      "[math-6] ذيلي سيٽ (Subset)",
+      "[math-6] مٿانهون سيٽ (Superset)",
+      "[math-6] صحيح ذيلي سيٽ (Proper subset)"
+    ]
+  },
+  {
+    "test": "Math Query with math subject 'سيٽ'",
+    "query": "سيٽ",
+    "subject_filter": "math-6",
+    "chunks_found": 5,
+    "top_chunks": [
+      "[math-6] ch1 math-ch01-05: ذيلي سيٽ، مٿانهون سيٽ ۽ صحيح ذيلي سيٽ",
+      "[math-6] ch1 math-ch01-03: محدود، لامحدود، خالي ۽ واحد سيٽ",
+      "[math-6] ch1 math-ch01-01: سيٽ ڇا آهي",
+      "[math-6] ch1 math-ch01-02: سيٽ جا روپ",
+      "[math-6] ch1 math-ch01-04: برابر ۽ هم قدر سيٽ"
+    ],
+    "glossary_matches": [
+      "[math-6] ذيلي سيٽ (Subset)",
+      "[math-6] مٿانهون سيٽ (Superset)",
+      "[math-6] صحيح ذيلي سيٽ (Proper subset)"
+    ]
+  },
+  {
+    "test": "Science Satellite Query 'پاڪ سيٽ'",
+    "query": "پاڪ سيٽ",
+    "subject_filter": null,
+    "chunks_found": 5,
+    "top_chunks": [
+      "[science-6] ch12 ch12-06: مصنوعي سيارا ۽ پاڪ سيٽ-1R",
+      "[math-6] ch1 math-ch01-05: ذيلي سيٽ، مٿانهون سيٽ ۽ صحيح ذيلي سيٽ",
+      "[math-6] ch1 math-ch01-03: محدود، لامحدود، خالي ۽ واحد سيٽ",
+      "[math-6] ch1 math-ch01-01: سيٽ ڇا آهي",
+      "[math-6] ch1 math-ch01-02: سيٽ جا روپ"
+    ],
+    "glossary_matches": [
+      "[science-6] پاڪ سيٽ-1R (PAKSAT-1R)",
+      "[math-6] ذيلي سيٽ (Subset)",
+      "[math-6] مٿانهون سيٽ (Superset)"
+    ]
+  },
+  {
+    "test": "Science Query 'فوٽوسنٿيسز'",
+    "query": "فوٽوسنٿيسز",
+    "subject_filter": "science-6",
+    "chunks_found": 5,
+    "top_chunks": [
+      "[science-6] ch3 ch3-02: روشنائي ترڪيب وارو عمل ۽ ان جي اهميت",
+      "[science-6] ch3 ch3-05: روشنائي ترڪيب ۽ ساهه کڻڻ جي ڀيٽ",
+      "[science-6] ch3 ch3-03: روشنائي ترڪيب تي اثر ڪندڙ عنصر",
+      "[science-6] ch6 ch6-05: ڪاربان ڊاءِ آڪسائيڊ: خاصيتون ۽ استعمال",
+      "[science-6] ch3 ch3-06: دور جا سوال"
+    ],
+    "glossary_matches": [
+      "[science-6] پن (Leaf)",
+      "[science-6] ڪلوروپلاسٽ (Chloroplast)",
+      "[science-6] روشنائي ترڪيب وارو عمل (Photosynthesis)"
+    ]
+  },
+  {
+    "test": "Math Integers Query 'سڄا عدد'",
+    "query": "سڄا عدد",
+    "subject_filter": "math-6",
+    "chunks_found": 5,
+    "top_chunks": [
+      "[math-6] ch4 math-ch04-01: سڄا عدد ۽ انهن جي ترتيب",
+      "[math-6] ch2 math-ch02-01: قدرتي ۽ پورا عدد",
+      "[math-6] ch3 math-ch03-02: مفرد، مرڪب، طاق ۽ جفت عدد",
+      "[math-6] ch3 math-ch03-01: جزا ۽ ضربينڊڙ",
+      "[math-6] ch6 math-ch06-03: مربع ۽ مربع جڙ"
+    ],
+    "glossary_matches": [
+      "[math-6] سڄو عدد (Integer)",
+      "[math-6] ضربينڊڙ (Multiple)",
+      "[math-6] مثبت عدد (Positive integer)"
+    ]
+  }
+]

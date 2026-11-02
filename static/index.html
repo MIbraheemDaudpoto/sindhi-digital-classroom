@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="sd" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سنڌي ڊجيٽل ڪلاس روم | Sindhi Digital Classroom (SDC)</title>
+  <meta name="description" content="سنڌ ٽيڪسٽ بڪ بورڊ (ڪلاس 6 کان 10) لاءِ پهرين سنڌي-فرسٽ، آف لائن هلندڙ ۽ محفوظ ڊجيٽل لرننگ ايپليڪيشن.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&family=Amiri:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header & Identity Bar -->
+    <header class="sdc-header" role="banner">
+      <div class="brand-section">
+        <div class="brand-emblem" aria-hidden="true">&#128218;</div>
+        <div class="brand-titles">
+          <h1>سنڌي ڊجيٽل ڪلاس روم</h1>
+          <p>Sindhi Digital Classroom &bull; سنڌ ٽيڪسٽ بڪ بورڊ (ڪلاس 6-10) &bull; آف لائن تيار</p>
+        </div>
+      </div>
+      <div class="header-user-status">
+        <div id="connectivity-pill" class="status-pill online" aria-live="polite">
+          <span class="status-dot"></span>
+          <span id="connectivity-text">آن لائن</span>
+        </div>
+        <div class="user-badge" id="current-user-display" role="status">
+          <span class="user-badge-role" id="header-user-role">شاگرد: STU-101</span>
+          <span class="user-badge-meta" id="header-user-school">گورنمينٽ هاءِ اسڪول قاسم آباد</span>
+        </div>
+        <button id="btn-open-login" class="btn-header" onclick="openLoginModal()" title="اڪائونٽ تبديل ڪريو">
+          &#8646; يوزر تبديل ڪريو
+        </button>
+        <button id="btn-logout" class="btn-header btn-logout" onclick="performLogout()" title="لاگ آئوٽ ڪريو">
+          &#10005; لاگ آئوٽ
+        </button>
+      </div>
+    </header>
+
+    <!-- Role-Gated Navigation Tabs -->
+    <nav id="nav-tabs-container" class="nav-tabs" aria-label="مکيه نيويگيشن"></nav>
+
+    <!-- PANE 1: Student Learn View (Video Player, Quiz & AI Tutor) -->
+    <main id="pane-learn" class="tab-pane">
+      <!-- Unified SDC Educational Hero Header (HCI-Optimized) -->
+      <section class="sdc-hero-section" aria-label="سنڌي ڊجيٽل ڪلاس روم تعارف">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span>سنڌ ٽيڪسٽ بڪ بورڊ (STBB) نصاب • ڪلاس 6 کان 10</span>
+        </div>
+        <h1 class="hero-headline">
+          سنڌي ڊجيٽل ڪلاس روم
+        </h1>
+        <p class="hero-subtitle">
+          سنڌ جي شاگردن لاءِ سنڌي-فرسٽ ۽ حقيقي آف لائن تعليمي پليٽ فارم — وڊيو ليڪچرز، سوال ۽ منظور ٿيل اي آءِ استاد.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-hero-primary" onclick="scrollToCurriculum(event)">
+            <span>سبق ڏسو (Explore Lessons)</span>
+            <span class="hero-btn-arrow">&#8599;</span>
+          </button>
+          <button class="btn-hero-secondary" onclick="openOfflineGuideModal()">
+            <span>&#128246; آف لائن ڪيئن ڪم ڪري ٿو؟</span>
+          </button>
+        </div>
+
+        <!-- Trust Credentials Strip -->
+        <div class="hero-trust-strip">
+          <div class="trust-item">&#127891; سنڌ ٽيڪسٽ بڪ بورڊ نصاب</div>
+          <div class="trust-dot">•</div>
+          <div class="trust-item">&#128218; ڪلاس 6 کان 10 جا درجا</div>
+          <div class="trust-dot">•</div>
+          <div class="trust-item">&#128227; حقيقي آف لائن اسٽوريج</div>
+          <div class="trust-dot">•</div>
+          <div class="trust-item">&#129302; محفوظ سنڌي اي آءِ استاد</div>
+          <div class="trust-dot">•</div>
+          <div class="trust-item">&#128737; 6-رول RBAC سيڪيورٽي</div>
+        </div>
+      </section>
+
+      <!-- Student Learning Progress Stats Bar -->
+      <section class="student-progress-bar-card" aria-label="سکيا جي ترقي">
+        <div class="stat-metric-pill">
+          <div class="stat-metric-icon">&#128293;</div>
+          <div>
+            <div class="stat-metric-label">سکيا جو تسلسل (Streak)</div>
+            <div id="bar-streak-days" class="stat-metric-value">5 ڏينهن</div>
+          </div>
+        </div>
+        <div class="stat-metric-pill">
+          <div class="stat-metric-icon">&#10004;</div>
+          <div>
+            <div class="stat-metric-label">مڪمل سبق (Completed)</div>
+            <div id="bar-completed-count" class="stat-metric-value">2 سبق</div>
+          </div>
+        </div>
+        <div class="stat-metric-pill">
+          <div class="stat-metric-icon">&#127919;</div>
+          <div>
+            <div class="stat-metric-label">ڪوئيز درستگي (Accuracy)</div>
+            <div id="bar-quiz-accuracy" class="stat-metric-value">85%</div>
+          </div>
+        </div>
+        <div class="stat-metric-pill">
+          <div class="stat-metric-icon">&#128190;</div>
+          <div>
+            <div class="stat-metric-label">آف لائن سنڪ اسٽيٽس</div>
+            <div id="bar-sync-status" class="stat-metric-value" style="font-size: 1rem; color: var(--accent-emerald);">فعال (Ready)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Continue Learning Resume Banner -->
+      <section id="continue-learning-card" class="continue-learning-banner" style="display: none;">
+        <div class="continue-learning-info">
+          <span style="font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700;">جتان ڇڏيو هو اتان ئي شروع ڪريو</span>
+          <h4 id="continue-lesson-title">ٻوٽن ۾ فوٽوسنٿيسز جو عمل</h4>
+          <p id="continue-lesson-time">آخري جاءِ: 2 منٽ 5 سيڪنڊ</p>
+        </div>
+        <button id="btn-resume-lesson" class="btn-ctrl active" onclick="resumeLastLesson()">
+          &#9654; سبق جاري رکو (Resume)
+        </button>
+      </section>
+
+      <div class="main-grid">
+        <!-- Main: Video Player & Lessons Browser -->
+        <section class="glass-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; gap: 12px; flex-wrap: wrap;">
+            <div>
+              <span id="current-lesson-unit" class="lesson-unit-tag">يونٽ 1</span>
+              <h2 id="current-lesson-title" style="font-size: 1.25rem; font-weight: 700; color: #fff;">ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis)</h2>
+              <span id="current-lesson-english" style="font-size: 0.78rem; color: var(--text-muted);" class="ltr-text">Photosynthesis in Plants</span>
+            </div>
+            <button id="btn-download-offline" class="btn-ctrl" onclick="downloadCurrentUnitOffline()">
+              &#128190; آف لائن پيڪ محفوظ ڪريو
+            </button>
+          </div>
+
+          <!-- Video Player Container Supporting Local MP4 & Official YouTube Embeds -->
+          <div class="video-wrapper">
+            <!-- Local HTML5 Video Player -->
+            <video id="sdc-video-player" class="sdc-video-element" controls playsinline preload="metadata">
+              <source src="/static/media/demo_lesson.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Official YouTube Privacy-Enhanced Embedded Player -->
+            <iframe id="sdc-youtube-iframe" class="sdc-youtube-iframe" style="display: none;"
+                    title="Official Educational YouTube Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+
+            <!-- Offline YouTube Warning Banner -->
+            <div id="youtube-offline-banner" class="video-error-card" style="display: none;">
+              <h3>&#128246; آف لائن موڊ فعال آهي</h3>
+              <p>هي وڊيو يوٽيوب تي موجود آهي جنهن لاءِ انٽرنيٽ گهربل آهي. پر فڪر نه ڪريو! سبق جو مڪمل متن، ٽرانسڪرپٽس ۽ سوال آف لائن موجود آهن.</p>
+              <button class="btn-retry" onclick="sdcPlayer.switchToLocalOrTranscript()">ٽرانسڪرپٽ ۽ سوال پڙهو</button>
+            </div>
+
+            <!-- Video Error State Card -->
+            <div id="video-error-state" class="video-error-card" style="display: none;">
+              <h3 id="video-error-title">&#9888; وڊيو هلائڻ ۾ ڏکيائي آئي</h3>
+              <p id="video-error-desc">وڊيو فائل لوڊ ٿيڻ ۾ مسئلو آيو آهي. مھرباني ڪري ٻيهر ڪوشش ڪريو يا آف لائن ٽرانسڪرپٽ ڏسو.</p>
+              <button class="btn-retry" onclick="sdcPlayer.retryCurrentVideo()">&#8635; ٻيهر ڪوشش ڪريو (Retry)</button>
+            </div>
+
+            <!-- Smart Video Quiz Pop-up Modal (FR-14) -->
+            <div id="quiz-popup-overlay" class="quiz-overlay" style="display: none;"></div>
+          </div>
+
+          <!-- YouTube Attribution & Legal Notice Card (Phase 4 Compliance) -->
+          <div id="youtube-attribution-banner" class="youtube-attribution-banner" style="display: none;">
+            <div>
+              <span class="yt-channel-badge">&#9658; سرڪاري چينل وڊيو: <strong id="yt-channel-name">Sindh Education Official</strong></span>
+              <div id="yt-video-title" style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">Photosynthesis in Plants</div>
+            </div>
+            <a id="yt-original-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-watch-yt">
+              &#128279; يوٽيوب تي ڏسو (Watch on YouTube)
+            </a>
+            <div class="yt-legal-disclaimer">
+              قانوني ڄاڻ: چينل ايٽريبيوشن ۽ فروغ بذات خود آزاد ڪاپي رائيٽ لائسنس ناهي. وڊيو سرڪاري يوٽيوب ايمبيڊ پليئر ذريعي ڏيکاري پئي وڃي.
+            </div>
+          </div>
+
+          <!-- Player Controls Bar -->
+          <div class="player-controls-bar">
+            <div class="player-controls-group">
+              <button class="btn-ctrl" onclick="sdcPlayer.skipSeconds(-10)" title="10 سيڪنڊ پوئتي">&#9194; 10s</button>
+              <button class="btn-ctrl" onclick="sdcPlayer.skipSeconds(10)" title="10 سيڪنڊ اڳتي">10s &#9193;</button>
+              <button id="btn-audio-only" class="btn-ctrl" onclick="sdcPlayer.toggleAudioOnly()">
+                &#128266; رڳو آواز ٻڌو (ڊيٽا بچايو)
+              </button>
+              <button id="btn-switch-source" class="btn-ctrl" onclick="sdcPlayer.toggleVideoSource()" style="display: none;">
+                &#128257; وڊيو سورس تبديل ڪريو
+              </button>
+            </div>
+            <div class="player-controls-group">
+              <span style="font-size: 0.78rem; color: var(--text-dim);">&#9881; 240p/360p Adaptive HLS</span>
+            </div>
+          </div>
+
+          <!-- Curriculum Browser (3 Taps Class 6-10, FR-05) -->
+          <div id="curriculum-browser-anchor" style="margin-top: 20px;">
+            <div class="curriculum-toolbar">
+              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff;">سنڌ ٽيڪسٽ بڪ بورڊ نصاب</h3>
+                <div class="filter-pills-row">
+                  <button class="pill-btn active" onclick="selectClassLevel(6, this)">ڪلاس 6</button>
+                  <button class="pill-btn" onclick="selectClassLevel(7, this)">ڪلاس 7</button>
+                  <button class="pill-btn" onclick="selectClassLevel(8, this)">ڪلاس 8</button>
+                  <button class="pill-btn" onclick="selectClassLevel(9, this)">ڪلاس 9</button>
+                  <button class="pill-btn" onclick="selectClassLevel(10, this)">ڪلاس 10</button>
+                </div>
+              </div>
+              <input type="text" id="curriculum-search-input" class="search-input-box" placeholder="سبق يا موضوع ڳوليو..." oninput="filterCurriculumLessons(this.value)">
+            </div>
+
+            <!-- Subject Filter Pills -->
+            <div class="filter-pills-row" style="margin-bottom: 12px;">
+              <button class="pill-btn active" onclick="selectSubjectFilter(null, this)">سڀ مضمون (All)</button>
+              <button class="pill-btn" onclick="selectSubjectFilter('Science', this)">سائنس (Science)</button>
+              <button class="pill-btn" onclick="selectSubjectFilter('Math', this)">رياضي (Math)</button>
+              <button class="pill-btn" onclick="selectSubjectFilter('Sindhi', this)">سنڌي (Sindhi)</button>
+              <button class="pill-btn" onclick="selectSubjectFilter('English', this)">انگريزي (English)</button>
+            </div>
+
+            <!-- Dynamic Course & Lesson Cards Grid -->
+            <div id="curriculum-lessons-list" class="course-grid"></div>
+          </div>
+        </section>
+
+        <!-- Sidebar: Grounded Sindhi AI Tutor (FR-20 to FR-26) -->
+        <aside id="tutor-drawer" class="glass-card tutor-drawer" aria-label="سنڌي اي آءِ استاد">
+          <div class="tutor-header">
+            <div>
+              <h3 style="font-size: 0.98rem; font-weight: 700; color: var(--accent-emerald);">&#129302; سنڌي اي آءِ استاد (AI Tutor)</h3>
+              <p style="font-size: 0.74rem; color: var(--text-dim);">رڳو سنڌ ٽيڪسٽ بڪ بورڊ جي منظور ٿيل مواد مان جواب ڏئي ٿو</p>
+            </div>
+          </div>
+
+          <div id="tutor-chat-stream" class="chat-stream" role="log" aria-live="polite">
+            <div class="chat-bubble tutor-bubble">
+              <div class="bubble-sender">&#129302; سنڌي اي آءِ استاد</div>
+              <div>اسلام عليڪم! آءٌ اوهان جو سنڌي اي آءِ استاد آهيان. سبق بابت ڪوبه سوال هجي ته لکو يا مائڪ تي سنڌي ۾ ڳالهايو.</div>
+            </div>
+          </div>
+
+          <!-- Chat Input with Voice AI (FR-20, FR-21) -->
+          <div class="chat-input-bar">
+            <input type="text" id="tutor-question-input" class="chat-input" placeholder="سبق بابت سوال لکو يا مائڪ تي ڳالهايو..." aria-label="اي آءِ استاد کان سوال پڇو" onkeydown="if(event.key === 'Enter') sdcTutor.askQuestion(currentLoadedLessonId)">
+            <button id="btn-voice-input" class="btn-mic" onclick="sdcTutor.toggleMicrophone()" title="مائڪ تي سنڌي ۾ ڳالهايو" aria-label="مائڪ تي سنڌي ۾ ڳالهايو">&#127908;</button>
+            <button class="btn-send" onclick="sdcTutor.askQuestion(currentLoadedLessonId)">موڪليو</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- PANE 2: Student Progress & Streak View (FR-29) -->
+    <main id="pane-student-dash" class="tab-pane" style="display: none;">
+      <section class="glass-card" style="max-width: 960px; margin: 0 auto;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 18px;">منهنجي سکيا جي تفصيلي ترقي (My Learning Progress)</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon">&#128214;</div>
+            <div>
+              <div class="stat-metric-label">مڪمل ڪيل يونٽ</div>
+              <div id="stat-completed-lessons" class="stat-metric-value">0</div>
+            </div>
+          </div>
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon">&#127919;</div>
+            <div>
+              <div class="stat-metric-label">ڪوئيز جي اوسط درستگي</div>
+              <div id="stat-quiz-score" class="stat-metric-value">0%</div>
+            </div>
+          </div>
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon">&#128293;</div>
+            <div>
+              <div class="stat-metric-label">سکيا جو تسلسل (Streak)</div>
+              <div id="stat-streak-days" class="stat-metric-value">5 ڏينهن</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 12px;">تازو حل ڪيل سوال (Recent Quiz Attempts)</h3>
+        <table class="sdc-table">
+          <thead>
+            <tr>
+              <th>سبق ۽ موضوع</th>
+              <th>توهان جو جواب</th>
+              <th>نتيجو</th>
+              <th>وقت</th>
+            </tr>
+          </thead>
+          <tbody id="student-attempts-table-body">
+            <tr>
+              <td colspan="4" style="text-align: center; color: var(--text-dim);">لوڊ ٿي رهيو آهي...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- PANE 3: Student Assignments View (FR-28) -->
+    <main id="pane-student-assignments" class="tab-pane" style="display: none;">
+      <section class="glass-card" style="max-width: 960px; margin: 0 auto;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 16px;">هوم ورڪ ۽ اسائينمينٽس (Homework &amp; Assignments)</h2>
+        <div id="student-assignments-list"></div>
+      </section>
+    </main>
+
+    <!-- PANE 4: Teacher Question Approval Gate (FR-13 Gate) -->
+    <main id="pane-teacher" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">استادن جي منظوري پورٽل (Teacher Approval Gate - FR-13)</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">حفاظتي قاعدو: ڪوبه خودڪار ٺاهيل سوال استاد جي منظوريءَ کانسواءِ شاگردن کي نه ڏيکاريو ويندو.</p>
+          </div>
+          <button class="btn-ctrl" onclick="loadTeacherPendingQuestions()">&#8635; تازو ڪريو (Refresh)</button>
+        </div>
+        <div id="teacher-approval-list"></div>
+      </section>
+    </main>
+
+    <!-- PANE 5: Teacher Lesson Upload (FR-09) -->
+    <main id="pane-teacher-upload" class="tab-pane" style="display: none;">
+      <section class="glass-card" style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 16px;">&#128249; نئون سبق ۽ وڊيو اپلوڊ ڪريو (Upload Lesson &amp; Media - FR-09)</h2>
+        <form id="form-teacher-upload" onsubmit="event.preventDefault(); teacherSubmitLessonUpload();">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 14px;">
+            <div>
+              <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">ڪورس چونڊيو</label>
+              <select id="upload-course-id" class="chat-input" style="width: 100%;">
+                <option value="crs-sci-6">ڪلاس 6: جنرل سائنس</option>
+                <option value="crs-math-6">ڪلاس 6: رياضي</option>
+                <option value="crs-sindhi-6">ڪلاس 6: سنڌي سليس</option>
+                <option value="crs-eng-6">ڪلاس 6: انگريزي</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">يونٽ نمبر (1-50)</label>
+              <input type="number" id="upload-unit-num" class="chat-input" value="2" min="1" max="50" style="width: 100%;">
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">سنڌي عنوان (Sindhi Title)</label>
+              <input type="text" id="upload-title-sindhi" class="chat-input" placeholder="مثال: روشني ۽ پاڇا" style="width: 100%;" required>
+            </div>
+            <div>
+              <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">English Title</label>
+              <input type="text" id="upload-title-english" class="chat-input" placeholder="e.g. Light and Shadows" style="width: 100%;">
+            </div>
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">سبق جو مختصر خلاصو (Summary in Sindhi)</label>
+            <textarea id="upload-summary-sindhi" class="chat-input" style="width: 100%; height: 75px; resize: vertical;" placeholder="هن سبق ۾ شاگرد روشنيءَ جي خاصيتن بابت سکندا..."></textarea>
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 6px;">وڊيو فائل منتخب ڪريو (MP4 / WebM / MKV - وڌ ۾ وڌ 50MB)</label>
+            <input type="file" id="upload-video-file" class="chat-input" accept="video/mp4,video/webm,video/x-matroska,video/quicktime" style="width: 100%;">
+          </div>
+          <button type="submit" id="btn-submit-upload" class="btn-ctrl active" style="padding: 10px 24px; font-size: 0.9rem;">
+            &#10004; سبق ۽ وڊيو محفوظ ڪريو (Save Lesson)
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- PANE 6: Teacher Assignments & Grading (FR-28) -->
+    <main id="pane-teacher-assignments" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 16px;">اسائينمينٽس ٺاهڻ ۽ گريڊنگ (Teacher Assignments)</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <!-- Create Assignment Form -->
+          <div>
+            <h3 style="font-size: 1rem; color: var(--accent-cyan); margin-bottom: 10px;">نئين اسائينمينٽ ٺاهيو</h3>
+            <form id="form-create-assignment" onsubmit="event.preventDefault(); teacherCreateAssignment();">
+              <input type="text" id="asg-title-sindhi" class="chat-input" placeholder="اسائينمينٽ جو عنوان (Sindhi Title)" style="width: 100%; margin-bottom: 8px;" required>
+              <textarea id="asg-desc-sindhi" class="chat-input" placeholder="سوال يا تفصيل لکو..." style="width: 100%; height: 80px; margin-bottom: 8px;" required></textarea>
+              <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+                <input type="number" id="asg-max-marks" class="chat-input" value="10" min="1" max="100" style="width: 100px;" title="ڪل مارڪون">
+                <input type="date" id="asg-due-date" class="chat-input" style="flex: 1;" required>
+              </div>
+              <button type="submit" class="btn-ctrl active">&#10004; اسائينمينٽ جاري ڪريو</button>
+            </form>
+          </div>
+          <!-- Submissions Grading Queue -->
+          <div>
+            <h3 style="font-size: 1rem; color: var(--accent-emerald); margin-bottom: 10px;">شاگردن جا جواب (Submissions)</h3>
+            <div id="teacher-submissions-queue" style="max-height: 400px; overflow-y: auto;"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PANE 7: Teacher Class Analytics -->
+    <main id="pane-teacher-analytics" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 16px;">ڪلاس اينالائيٽڪس ۽ تعليمي اثر (Classroom Analytics &amp; Cohen's d)</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">&#128101;</div>
+            <div>
+              <div class="stat-metric-label">داخلا ٿيل شاگرد</div>
+              <div id="t-analytics-students" class="stat-metric-value">45</div>
+            </div>
+          </div>
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">&#128200;</div>
+            <div>
+              <div class="stat-metric-label">ڪوئيز جي اوسط شرح</div>
+              <div id="t-analytics-avg-score" class="stat-metric-value">78.5%</div>
+            </div>
+          </div>
+          <div class="stat-metric-pill">
+            <div class="stat-metric-icon" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">&#127891;</div>
+            <div>
+              <div class="stat-metric-label">سکيا جو اثر (Cohen's d)</div>
+              <div id="t-analytics-cohens-d" class="stat-metric-value" style="color: #c084fc;">d = 0.82 (High)</div>
+            </div>
+          </div>
+        </div>
+        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 10px;">ڪمزور موضوع (Topics Needing Attention)</h3>
+        <table class="sdc-table">
+          <thead>
+            <tr>
+              <th>موضوع (Topic)</th>
+              <th>غلطين جي شرح (Error Rate)</th>
+              <th>ڪل حل ٿيل سوال</th>
+            </tr>
+          </thead>
+          <tbody id="t-analytics-weak-topics"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- PANE 8: Content Reviewer Queue (Phase 5 RBAC) -->
+    <main id="pane-reviewer" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">نصاب جي نظرثاني ۽ سرڪاري منظوري (Curriculum Review Board)</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">سنڌ ٽيڪسٽ بڪ بورڊ جي پينل پاران سبقن ۽ وڊيوز جي معيار جي تصديق.</p>
+          </div>
+          <button class="btn-ctrl" onclick="loadReviewerQueue()">&#8635; تازو ڪريو</button>
+        </div>
+        <div id="reviewer-queue-list"></div>
+      </section>
+    </main>
+
+    <!-- PANE 9: YouTube Video Catalog (Phase 4 Compliance) -->
+    <main id="pane-youtube-catalog" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 8px;">سرڪاري تعليمي يوٽيوب وڊيو ڪئٽلاگ (Educational Video Catalog)</h2>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px;">
+          سرڪاري چينل تان سنڌ ٽيڪسٽ بڪ بورڊ نصاب سان ڳنڍيل وڊيوز. اهي وڊيوز رڳو يوٽيوب سرڪاري ايمبيڊ پليئر ذريعي نشر ٿينديون آهن.
+        </p>
+        <div id="youtube-catalog-grid" class="course-grid"></div>
+      </section>
+    </main>
+
+    <!-- PANE 10: School Admin Directory (Phase 5 RBAC) -->
+    <main id="pane-school-admin" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">اسڪول يوزر ڊائريڪٽري (School User Management)</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">توهان رڳو پنهنجي اسڪول جا شاگرد ۽ استاد سنڀالي سگهو ٿا.</p>
+          </div>
+          <button class="btn-ctrl active" onclick="openCreateUserModal()">+ نئون يوزر شامل ڪريو</button>
+        </div>
+        <table class="sdc-table">
+          <thead>
+            <tr>
+              <th>ڪوڊ / يوزر نالو</th>
+              <th>رول (Role)</th>
+              <th>اسڪول</th>
+              <th>رابطو</th>
+              <th>تاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="school-users-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- PANE 11: District Officer Telemetry & CSV Export (FR-31, FR-36) -->
+    <main id="pane-officer-dash" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">تعليم کاتي جي ضلعي رپورٽ (Education Department Telemetry - FR-31)</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">سنڌ ايجوڪيشن اينڊ لٽريسي ڊپارٽمينٽ مانيٽرنگ ۽ ائٿليٽڪس</p>
+          </div>
+          <a href="/api/dashboards/export-anonymized" class="btn-ctrl" style="border-color: var(--accent-cyan); color: var(--accent-cyan); text-decoration: none;">
+            &#128229; پائلٽ ڊيٽا CSV ڊائونلوڊ ڪريو (FR-36 Zero PII)
+          </a>
+        </div>
+        <table class="sdc-table">
+          <thead>
+            <tr>
+              <th>ضلعو (District)</th>
+              <th>اسڪول (Schools)</th>
+              <th>شاگرد (Students)</th>
+              <th>حاضري جي شرح (Active %)</th>
+              <th>ڪوئيز اوسط (Avg Score)</th>
+              <th>آف لائن سنڪ ڳڻپ (Offline Syncs)</th>
+            </tr>
+          </thead>
+          <tbody id="officer-districts-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- PANE 12: Super Admin Platform Governance (Phase 5 RBAC) -->
+    <main id="pane-super-admin" class="tab-pane" style="display: none;">
+      <section class="glass-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 16px;">پليٽ فارم سيڪيورٽي آڊٽ لاگز (Platform Security Audit Logs)</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <span style="font-size: 0.82rem; color: var(--text-muted);">سمورين انتظامي سرگرمين، لاگ ان ۽ سنڪ جو اڻ مٽ رڪارڊ.</span>
+          <button class="btn-ctrl" onclick="loadSuperAdminAuditLogs()">&#8635; تازو ڪريو</button>
+        </div>
+        <table class="sdc-table">
+          <thead>
+            <tr>
+              <th>وقت (UTC)</th>
+              <th>عمل (Action)</th>
+              <th>يوزر آءِ ڊي</th>
+              <th>وسيلو (Resource)</th>
+              <th>تفصيل</th>
+            </tr>
+          </thead>
+          <tbody id="superadmin-audit-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- LOGIN & ACCOUNT SWITCHER MODAL -->
+    <div id="login-modal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="login-modal-title" style="font-size: 1.15rem; font-weight: 700; color: #fff;">اڪائونٽ ۾ لاگ ان ٿيو (Account Login)</h3>
+          <button class="modal-close-btn" onclick="closeLoginModal()" aria-label="بند ڪريو">&times;</button>
+        </div>
+
+        <!-- Role Login Switcher Tabs -->
+        <div class="nav-tabs" style="margin-bottom: 16px;">
+          <button id="modal-tab-student" class="tab-btn active" onclick="switchLoginModalTab('STUDENT')">شاگرد لاگ ان (Student)</button>
+          <button id="modal-tab-staff" class="tab-btn" onclick="switchLoginModalTab('STAFF')">استاد / اسٽاف لاگ ان (Staff)</button>
+        </div>
+
+        <!-- Student Login Form -->
+        <form id="form-student-login" onsubmit="event.preventDefault(); submitStudentLogin();">
+          <div style="margin-bottom: 12px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">اسڪول ڪوڊ (School Code)</label>
+            <input type="text" id="login-school-code" class="chat-input" value="SCH-HYD-01" required style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 12px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">شاگرد ڪوڊ (Student Code)</label>
+            <input type="text" id="login-student-code" class="chat-input" value="STU-101" required style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">4-6 انگن جو پن ڪوڊ (PIN)</label>
+            <input type="password" id="login-student-pin" class="chat-input" value="1234" maxlength="6" required style="width: 100%;">
+          </div>
+          <button type="submit" class="btn-ctrl active" style="width: 100%; justify-content: center; padding: 10px;">لاگ ان ٿيو</button>
+        </form>
+
+        <!-- Staff Login Form -->
+        <form id="form-staff-login" onsubmit="event.preventDefault(); submitStaffLogin();" style="display: none;">
+          <div style="margin-bottom: 12px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">يوزر نالو يا ايميل (Identifier)</label>
+            <input type="text" id="login-staff-identifier" class="chat-input" value="teacher_hyd" required style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">پاسورڊ (Password)</label>
+            <input type="password" id="login-staff-password" class="chat-input" value="password123" required style="width: 100%;">
+          </div>
+          <button type="submit" class="btn-ctrl active" style="width: 100%; justify-content: center; padding: 10px;">لاگ ان ٿيو</button>
+        </form>
+
+        <!-- 1-Click Quick Demo Switchers for Review & Testing -->
+        <div class="demo-pills-row">
+          <span style="font-size: 0.75rem; color: var(--text-dim); width: 100%;">تيز رفتار ٽيسٽ لاءِ چونڊيو (1-Click Demo Testing):</span>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('STUDENT', 'SCH-HYD-01', 'STU-101', '1234')">شاگرد (STU-101)</button>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('TEACHER', null, 'teacher_hyd', 'password123')">استاد (Teacher)</button>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('CONTENT_REVIEWER', null, 'reviewer_sindh', 'reviewer123')">نصاب رويوئر (Reviewer)</button>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('SCHOOL_ADMIN', null, 'admin_hyd', 'admin123')">اسڪول ايڊمن (Admin)</button>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('DISTRICT_OFFICER', null, 'officer_sindh', 'password123')">ضلعي آفيسر (Officer)</button>
+          <button class="demo-pill-btn" onclick="quickDemoLogin('SUPER_ADMIN', null, 'superadmin', 'super123')">سپر ايڊمن (Super)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create User Modal for School Admin / Super Admin -->
+    <div id="create-user-modal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff;">نئون يوزر کاتو ٺاهيو (Provision User)</h3>
+          <button class="modal-close-btn" onclick="closeCreateUserModal()">&times;</button>
+        </div>
+        <form id="form-create-user" onsubmit="event.preventDefault(); submitCreateUser();">
+          <div style="margin-bottom: 12px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">رول (Role)</label>
+            <select id="new-user-role" class="chat-input" style="width: 100%;">
+              <option value="STUDENT">شاگرد (STUDENT)</option>
+              <option value="TEACHER">استاد (TEACHER)</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 12px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">ڪوڊ يا يوزر نالو</label>
+            <input type="text" id="new-user-code" class="chat-input" placeholder="مثال: STU-105 يا teacher_ali" required style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 18px;">
+            <label style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">پن يا پاسورڊ</label>
+            <input type="text" id="new-user-secret" class="chat-input" placeholder="گھٽ ۾ گھٽ 4 انگ" required style="width: 100%;">
+          </div>
+          <button type="submit" class="btn-ctrl active" style="width: 100%; justify-content: center; padding: 10px;">يوزر اڪائونٽ محفوظ ڪريو</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Offline Architecture & How It Works Modal (Batch 6) -->
+    <div id="offline-guide-modal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="offline-guide-title">
+      <div class="modal-card offline-guide-modal-card">
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.3rem;">&#128246;</span>
+            <h3 id="offline-guide-title" style="font-size: 1.15rem; font-weight: 700; color: #fff;">سنڌي ڊجيٽل ڪلاس روم: آف لائن ڪيئن ڪم ڪري ٿو؟</h3>
+          </div>
+          <button class="modal-close-btn" onclick="closeOfflineGuideModal()">&times;</button>
+        </div>
+        <div class="offline-guide-body">
+          <div class="offline-guide-step">
+            <div class="guide-step-num">1</div>
+            <div>
+              <h4 class="guide-step-title">آف لائن يونٽ پيڪ (IndexedDB Storage)</h4>
+              <p class="guide-step-desc">هر سبق جو مڪمل سنڌي متن، درسي نوٽس، سوال ۽ چيڪ پوائنٽس توهان جي ڊيوائس ۾ مقامي طور محفوظ ٿين ٿا. انٽرنيٽ بند هجڻ جي صورت ۾ به پڙهائي روڪجي نٿي.</p>
+            </div>
+          </div>
+
+          <div class="offline-guide-step">
+            <div class="guide-step-num">2</div>
+            <div>
+              <h4 class="guide-step-title">خودڪار پس منظر سنڪ (Background Sync)</h4>
+              <p class="guide-step-desc">آف لائن حل ڪيل ڪوئيز، اسائنمينٽ ۽ سکيا جو تسلسل (Streak) ڊيوائس تي جمع رهن ٿا. جڏهن به ڊيوائس تي نيٽ ورڪ ايندو، ڊيٽا بغير ڪنهن محنت جي پاڻمرادو اسڪول سرور تي سنڪ ٿي ويندي.</p>
+            </div>
+          </div>
+
+          <div class="offline-guide-step">
+            <div class="guide-step-num">3</div>
+            <div>
+              <h4 class="guide-step-title">انٽرنيٽ جي گهرج ڪٿي آهي؟ (Online Limitations)</h4>
+              <p class="guide-step-desc">سرڪاري يوٽيوب وڊيو اسٽريمنگ ۽ نوان پيڪ ڊائونلوڊ ڪرڻ لاءِ انٽرنيٽ گهربل هوندو آهي. جيڪڏهن نيٽ ڪٽجي وڃي ته سسٽم فوري طور تي لوڪل آف لائن ٽرانسڪرپٽ ۽ سوال چالو ڪري ٿو.</p>
+            </div>
+          </div>
+
+          <div class="offline-guide-step">
+            <div class="guide-step-num">4</div>
+            <div>
+              <h4 class="guide-step-title">مشترڪ ڊيوائسز تي رازداري (Multi-Student Privacy)</h4>
+              <p class="guide-step-desc">اسڪول يا گهر جي هڪ ئي ٽيبليٽ تي هڪ کان وڌيڪ شاگرد الڳ الڳ پن (PIN) سان محفوظ نموني پڙهي سگهن ٿا. ڪنهن به شاگرد جي قطار ٻئي شاگرد جي رڪارڊ سان گڏ نٿي ملي.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 20px; display: flex; justify-content: flex-end;">
+          <button class="btn-ctrl active" onclick="closeOfflineGuideModal()">سمجهه ۾ اچي ويو (Close)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- NexStudio-Inspired Educational Platform Footer (Batch 6) -->
+    <footer class="sdc-footer">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <div class="footer-logo-box">&#127891;</div>
+            <div class="footer-brand-title">سنڌي ڊجيٽل ڪلاس روم</div>
+          </div>
+          <p class="footer-brand-desc">
+            سنڌ ٽيڪسٽ بڪ بورڊ (STBB) جي منظور ٿيل نصاب تي ٻڌل پهرين مڪمل سنڌي-فرسٽ، آف لائن-فرسٽ ڊجيٽل تعليمي ايپليڪيشن.
+          </p>
+          <div class="footer-badges">
+            <span class="tech-badge">FastAPI</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">Vanilla PWA</span>
+            <span class="tech-badge">IndexedDB</span>
+            <span class="tech-badge">H.264 Video</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">نصاب ۽ درجا</h4>
+          <ul class="footer-links">
+            <li>ڪلاس 6: جنرل سائنس ۽ رياضي</li>
+            <li>ڪلاس 7: جنرل سائنس ۽ رياضي</li>
+            <li>ڪلاس 8: جنرل سائنس ۽ رياضي</li>
+            <li>ڪلاس 9: فزڪس، ڪيمسٽري ۽ سنڌي</li>
+            <li>ڪلاس 10: حياتيات، رياضي ۽ سنڌي</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">خاص فيچرز ۽ سيڪيورٽي</h4>
+          <ul class="footer-links">
+            <li>حقيقي آف لائن پيڪيجز ۽ بيڪ گرائونڊ سنڪ</li>
+            <li>نصاب-محدود سنڌي اي آءِ استاد (Grounded AI)</li>
+            <li>6-رول سخت RBAC ۽ اسڪول اسڪوپ</li>
+            <li>ٻارن جي ذاتي ڊيٽا جي حفاظت (Pseudonymous)</li>
+            <li>مقامي H.264 وڊيو ۽ سرڪاري يوٽيوب ايمبيڊز</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">سسٽم ۽ رازداري جو واعدو</h4>
+          <div class="footer-trust-box">
+            <div class="trust-pill">&#10004; زيرو اڻ تصديق ٿيل دعوائون</div>
+            <div class="trust-pill">&#10004; ڪوبه اشتهار يا ٽريڪر ناهي</div>
+            <div class="trust-pill">&#10004; ڪاپي رائيٽ محفوظ تعليمي اسٽريمنگ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 سنڌي ڊجيٽل ڪلاس روم (Sindhi Digital Classroom) • سنڌ ايجوڪيشن اينڊ لٽريسي ڊپارٽمينٽ اڳڀرائي
+        </div>
+        <div class="footer-status-indicator">
+          <span class="status-pulse-dot"></span>
+          <span>سسٽم جي حالت: محفوظ ۽ فعال (Audit Verified)</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-box" aria-live="assertive"></div>
+  </div>
+
+  <script src="/static/js/db.js"></script>
+  <script src="/static/js/player.js"></script>
+  <script src="/static/js/tutor.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2470 @@
+{
+  "meta": {
+    "dataset": "Class 6 Mathematics — Sindhi medium curriculum dataset",
+    "source_book": "Riazi Sindhi VI, Sindh Textbook Board (STBB), Jamshoro, 2024-25 edition",
+    "source_portal": "https://portal.stbb.edu.pk/ebooks/book.php?id=270",
+    "book_pages": "264 PDF pages; printed pages 1-260; pagination rule verified: printed page = PDF page - 4",
+    "contents_source": "Book contents page (PDF 3, فهرست) read visually from rendered page images; the PDF text layer drops Sindhi script and was not used as book text.",
+    "chapter_structure": "This dataset follows the OFFICIAL book structure: 13 units (chapter_id 1-13). See chapter_mapping for how the requested 12-chapter list maps to it.",
+    "chapters": [
+      {
+        "chapter_id": 1,
+        "title_sd": "سيٽ",
+        "title_en": "Sets",
+        "pdf_page_range": "PDF 5-19",
+        "printed_page_range": "printed 1-15"
+      },
+      {
+        "chapter_id": 2,
+        "title_sd": "پورا عدد",
+        "title_en": "Whole numbers",
+        "pdf_page_range": "PDF 20-39",
+        "printed_page_range": "printed 16-35"
+      },
+      {
+        "chapter_id": 3,
+        "title_sd": "جزا ۽ ضربينڊڙ",
+        "title_en": "Factors and multiples",
+        "pdf_page_range": "PDF 40-67",
+        "printed_page_range": "printed 36-63"
+      },
+      {
+        "chapter_id": 4,
+        "title_sd": "سڄا عدد",
+        "title_en": "Integers",
+        "pdf_page_range": "PDF 68-91",
+        "printed_page_range": "printed 64-87"
+      },
+      {
+        "chapter_id": 5,
+        "title_sd": "سادي صورت",
+        "title_en": "Simplification",
+        "pdf_page_range": "PDF 92-105",
+        "printed_page_range": "printed 88-101"
+      },
+      {
+        "chapter_id": 6,
+        "title_sd": "نسبت ۽ تناسب",
+        "title_en": "Ratio and proportion",
+        "pdf_page_range": "PDF 106-122",
+        "printed_page_range": "printed 102-118"
+      },
+      {
+        "chapter_id": 7,
+        "title_sd": "ماليتي حساب",
+        "title_en": "Financial arithmetic",
+        "pdf_page_range": "PDF 123-140",
+        "printed_page_range": "printed 119-136"
+      },
+      {
+        "chapter_id": 8,
+        "title_sd": "آلجبرا جو تعارف",
+        "title_en": "Introduction to algebra",
+        "pdf_page_range": "PDF 141-157",
+        "printed_page_range": "printed 137-153"
+      },
+      {
+        "chapter_id": 9,
+        "title_sd": "هک درجي مساواتون",
+        "title_en": "Linear (one-degree) equations",
+        "pdf_page_range": "PDF 158-169",
+        "printed_page_range": "printed 154-165"
+      },
+      {
+        "chapter_id": 10,
+        "title_sd": "جاميٽري",
+        "title_en": "Geometry",
+        "pdf_page_range": "PDF 170-197",
+        "printed_page_range": "printed 166-193"
+      },
+      {
+        "chapter_id": 11,
+        "title_sd": "احاطو ۽ ايراضي",
+        "title_en": "Perimeter and area",
+        "pdf_page_range": "PDF 198-217",
+        "printed_page_range": "printed 194-213"
+      },
+      {
+        "chapter_id": 12,
+        "title_sd": "ٽن پاسن واريون شيوون",
+        "title_en": "Three-dimensional shapes",
+        "pdf_page_range": "PDF 218-231",
+        "printed_page_range": "printed 214-227"
+      },
+      {
+        "chapter_id": 13,
+        "title_sd": "معلومات سيهڙڻ",
+        "title_en": "Information handling",
+        "pdf_page_range": "PDF 232-246",
+        "printed_page_range": "printed 228-242"
+      }
+    ],
+    "chapter_mapping_requested_12_to_book_13": {
+      "requested_1_sets": "book unit 1 سيٽ (exact match)",
+      "requested_2_whole_and_integers": "MERGED in the request; book keeps them separate: unit 2 پورا عدد (whole numbers) and unit 4 سڄا عدد (integers)",
+      "requested_3_factors_multiples": "book unit 3 جزا ۽ ضربينڊڙ (exact match)",
+      "requested_4_fractions_decimals": "NOT a unit in Riazi Sindhi VI 2024-25 — no fractions/decimals unit exists in this book; no chapter was invented for it",
+      "requested_5_ratio_proportion": "book unit 6 نسبت ۽ تناسب (exact match)",
+      "requested_6_financial_arithmetic": "book unit 7 ماليتي حساب (requested spelling مالياتي differs from the printed ماليتي)",
+      "requested_7_intro_algebra": "book unit 8 آلجبرا جو تعارف (requested spelling الجبرا differs from the printed آلجبرا)",
+      "requested_8_linear_equations": "book unit 9 هک درجي مساواتون (one-degree equations = linear equations)",
+      "requested_9_basic_geometry": "book unit 10 جاميٽري (geometry; the book does not split off a separate basic-concepts unit)",
+      "requested_10_practical_geometry": "NOT a standalone unit in this book — bisector/triangle construction is taught inside unit 10 جاميٽري; no chapter was invented for it",
+      "requested_11_perimeter_area": "book unit 11 احاطو ۽ ايراضي (printed wording; requested transliteration پيريميٽر ۽ رقبو is not the book wording)",
+      "requested_12_data_handling": "book unit 13 معلومات سيهڙڻ (printed wording; requested معلومات جو انتظام is not the book wording)",
+      "in_book_but_missing_from_request": "unit 5 سادي صورت (Simplification) and unit 12 ٽن پاسن واريون شيوون (Three-dimensional shapes) — both are real book units and are included here"
+    },
+    "chunks_note": "Chunk summaries are original (not book-verbatim). Citations are at verified unit-range level; exact sub-section pages inside a unit were not invented.",
+    "glossary_note": "Existing glossary rows keep their cleaned-package page citations; newly added terms are cited at unit-range level.",
+    "exercises_note": "Exercises are ORIGINAL questions written for this dataset (the book exercise index records only exercise metadata, not question text). Every arithmetic answer was verified by computation.",
+    "videos_note": "Video URLs, titles and durations are real rows from the Sindh Online School playlist 'Math Class VI Complete' (141 videos, harvested 2026-10-26 by playlist metadata). Sindhi narration is NOT yet verified for Math VI — a guest sample-listen is still pending — so no video here is claimed to be verified Sindhi-medium. Sabaq Foundation videos are NOT listed: Sabaq's Sindh Class 6 videos were verified URDU medium and are excluded. Full 141-video inventory: math6_videos_clean.csv in the SDC Math VI package.",
+    "script_note": "Sindhi fields use Sindhi Kaf U+06AA (ڪ) and Sindhi Yeh U+064A (ي); Persian Yeh U+06CC and Arabic Kaf U+0643 were checked and are absent. Digraphs جھ and گھ occur naturally (e.g. سمجھڻ, گهڻو). Punctuation uses ۔ and ،.",
+    "counts": {
+      "chunks": {
+        "total": 54,
+        "per_chapter": {
+          "1": 5,
+          "2": 4,
+          "3": 5,
+          "4": 4,
+          "5": 4,
+          "6": 4,
+          "7": 4,
+          "8": 4,
+          "9": 4,
+          "10": 4,
+          "11": 4,
+          "12": 4,
+          "13": 4
+        }
+      },
+      "glossary": {
+        "total": 105,
+        "per_chapter": {
+          "1": 9,
+          "2": 8,
+          "3": 8,
+          "4": 8,
+          "5": 8,
+          "6": 8,
+          "7": 8,
+          "8": 8,
+          "9": 8,
+          "10": 8,
+          "11": 8,
+          "12": 8,
+          "13": 8
+        }
+      },
+      "exercises": {
+        "total": 39,
+        "per_chapter": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3,
+          "7": 3,
+          "8": 3,
+          "9": 3,
+          "10": 3,
+          "11": 3,
+          "12": 3,
+          "13": 3
+        }
+      },
+      "videos": {
+        "total": 39,
+        "per_chapter": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3,
+          "7": 3,
+          "8": 3,
+          "9": 3,
+          "10": 3,
+          "11": 3,
+          "12": 3,
+          "13": 3
+        }
+      }
+    }
+  },
+  "chunks": [
+    {
+      "chunk_id": "math-ch01-01",
+      "chapter_id": 1,
+      "topic_title_sd": "سيٽ ڇا آهي",
+      "topic_title_en": "What is a set",
+      "summary_sd": "سيٽ شين جو هڪ واضح مجموعو آهي۔ هر شيء جيڪا سيٽ ۾ اچي ٿي ان کي سيٽ جو رڪن چئبو آهي۔ سيٽ کي عام طور تي وڏن اکرن سان ظاهر ڪيو ويندو آهي ۽ ان جا رڪن وچولي ڪنگڻ ۾ لکيا ويندا آهن۔",
+      "pdf_page_range": "PDF 5-19",
+      "printed_page_range": "1-15",
+      "citation_formatted": "PDF 5-19 (printed 1-15)"
+    },
+    {
+      "chunk_id": "math-ch01-02",
+      "chapter_id": 1,
+      "topic_title_sd": "سيٽ جا روپ",
+      "topic_title_en": "Forms of a set",
+      "summary_sd": "سيٽ کي ٻن روپن ۾ لکي سگهجي ٿو۔ هڪ روپ ۾ سڀ رڪن لسٽ ڪري لکيا ويندا آهن ۽ ٻئي روپ ۾ رڪنن جي خاصيت بيان ڪئي ويندي آهي۔ ٻنهي روپن جو مطلب هڪ ئي سيٽ هوندو آهي۔",
+      "pdf_page_range": "PDF 5-19",
+      "printed_page_range": "1-15",
+      "citation_formatted": "PDF 5-19 (printed 1-15)"
+    },
+    {
+      "chunk_id": "math-ch01-03",
+      "chapter_id": 1,
+      "topic_title_sd": "محدود، لامحدود، خالي ۽ واحد سيٽ",
+      "topic_title_en": "Finite, infinite, empty and singleton sets",
+      "summary_sd": "جنهن سيٽ ۾ رڪن ڳڻي سگهجن ان کي محدود سيٽ چئبو آهي ۽ جنهن ۾ رڪن ختم نه ٿين ان کي لامحدود سيٽ چئبو آهي۔ جنهن سيٽ ۾ ڪو رڪن نه هجي اهو خالي سيٽ آهي ۽ جنهن ۾ صرف هڪ رڪن هجي اهو واحد سيٽ آهي۔",
+      "pdf_page_range": "PDF 5-19",
+      "printed_page_range": "1-15",
+      "citation_formatted": "PDF 5-19 (printed 1-15)"
+    },
+    {
+      "chunk_id": "math-ch01-04",
+      "chapter_id": 1,
+      "topic_title_sd": "برابر ۽ هم قدر سيٽ",
+      "topic_title_en": "Equal and equivalent sets",
+      "summary_sd": "ٻه سيٽ برابر تڏهن چئبا آهن جڏهن انهن جا سڀ رڪن هڪجهڙا هجن۔ هم قدر سيٽن ۾ رڪنن جو تعداد برابر هوندو آهي پر رڪن ضروري ناهي ته هڪجهڙا هجن۔",
+      "pdf_page_range": "PDF 5-19",
+      "printed_page_range": "1-15",
+      "citation_formatted": "PDF 5-19 (printed 1-15)"
+    },
+    {
+      "chunk_id": "math-ch01-05",
+      "chapter_id": 1,
+      "topic_title_sd": "ذيلي سيٽ، مٿانهون سيٽ ۽ صحيح ذيلي سيٽ",
+      "topic_title_en": "Subset, superset and proper subset",
+      "summary_sd": "جيڪڏهن هڪ سيٽ جا سڀ رڪن ٻئي سيٽ ۾ به هجن ته پهرين سيٽ ٻئي جو ذيلي سيٽ آهي ۽ ٻيو سيٽ پهرين جو مٿانهون سيٽ آهي۔ جيڪڏهن ذيلي سيٽ ۾ ڪو رڪن گهٽ هجي ته اهو صحيح ذيلي سيٽ آهي۔ هر سيٽ پنهنجو پاڻ جو ذيلي سيٽ آهي۔",
+      "pdf_page_range": "PDF 5-19",
+      "printed_page_range": "1-15",
+      "citation_formatted": "PDF 5-19 (printed 1-15)"
+    },
+    {
+      "chunk_id": "math-ch02-01",
+      "chapter_id": 2,
+      "topic_title_sd": "قدرتي ۽ پورا عدد",
+      "topic_title_en": "Natural and whole numbers",
+      "summary_sd": "ڳڻپ جا عدد قدرتي عدد آهن ۽ انهن ۾ صفر شامل ڪرڻ سان پورا عدد ٺهن ٿا۔ قدرتي عدد هڪ کان شروع ٿين ٿا ۽ پورا عدد صفر کان شروع ٿين ٿا۔",
+      "pdf_page_range": "PDF 20-39",
+      "printed_page_range": "16-35",
+      "citation_formatted": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chunk_id": "math-ch02-02",
+      "chapter_id": 2,
+      "topic_title_sd": "عددي ليڪ تي پورا عدد",
+      "topic_title_en": "Whole numbers on the number line",
+      "summary_sd": "عددي ليڪ تي عدد ساڄي طرف وڌن ٿا ۽ کاٻي طرف گهٽجن ٿا۔ ٻن عددن جي وچ ۾ وڏو عدد اهو آهي جيڪو ليڪ تي وڌيڪ ساڄي پاسي هجي۔ جمع ڪرڻ سان ليڪ تي ساڄي طرف وڃبو آهي۔",
+      "pdf_page_range": "PDF 20-39",
+      "printed_page_range": "16-35",
+      "citation_formatted": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chunk_id": "math-ch02-03",
+      "chapter_id": 2,
+      "topic_title_sd": "پورن عددن جو جمع ۽ تفريق",
+      "topic_title_en": "Addition and subtraction of whole numbers",
+      "summary_sd": "جمع ڪرڻ سان ٻه يا وڌيڪ عدد گڏ ٿين ٿا ۽ تفريق ڪرڻ سان فرق معلوم ٿئي ٿو۔ جمع ۽ تفريق هڪ ٻئي جا الٽ عمل آهن۔",
+      "pdf_page_range": "PDF 20-39",
+      "printed_page_range": "16-35",
+      "citation_formatted": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chunk_id": "math-ch02-04",
+      "chapter_id": 2,
+      "topic_title_sd": "مٽاسٽا ۽ صحبت جا قانون",
+      "topic_title_en": "Commutative and associative laws",
+      "summary_sd": "جمع ۾ عددن جي ترتيب مٽائڻ سان جواب نٿو مٽجي ۽ اهو مٽاسٽا جو قانون آهي۔ ٽن عددن کي گروپن ۾ مٽائي جمع ڪرڻ سان به جواب ساڳيو رهي ٿو ۽ اهو صحبت جو قانون آهي۔",
+      "pdf_page_range": "PDF 20-39",
+      "printed_page_range": "16-35",
+      "citation_formatted": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chunk_id": "math-ch03-01",
+      "chapter_id": 3,
+      "topic_title_sd": "جزا ۽ ضربينڊڙ",
+      "topic_title_en": "Factors and multiples",
+      "summary_sd": "جنهن عدد سان ٻيو عدد پورو ونڊجي اهو پهرين عدد جو جزو آهي۔ ڪنهن عدد کي قدرتي عددن سان ضرب ڏيڻ سان ان جا ضربينڊڙ ملن ٿا۔ هر عدد پاڻ جو جزو ۽ ضربينڊڙ ٻئي آهي۔",
+      "pdf_page_range": "PDF 40-67",
+      "printed_page_range": "36-63",
+      "citation_formatted": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chunk_id": "math-ch03-02",
+      "chapter_id": 3,
+      "topic_title_sd": "مفرد، مرڪب، طاق ۽ جفت عدد",
+      "topic_title_en": "Prime, composite, odd and even numbers",
+      "summary_sd": "مفرد عدد جا صرف ٻه جزا هوندا آهن، هڪ ۽ اهو عدد پاڻ۔ مرڪب عدد جا ٻن کان وڌيڪ جزا هوندا آهن۔ جفت عدد ٻن سان پورو ونڊجن ٿا ۽ طاق عدد نٿا ونڊجن۔",
+      "pdf_page_range": "PDF 40-67",
+      "printed_page_range": "36-63",
+      "citation_formatted": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chunk_id": "math-ch03-03",
+      "chapter_id": 3,
+      "topic_title_sd": "ونڊ جي جاچ ۽ جزن ۾ ٽوڙڻ",
+      "topic_title_en": "Divisibility tests and factorization",
+      "summary_sd": "ونڊ جي جاچ سان بغير ڊگهي ونڊ جي خبر پوي ٿي ته عدد ڪنهن عدد سان ونڊجي ٿو يا نه۔ ڪنهن عدد کي مفرد جزن جي ضرب طور لکڻ کي مفرد جزن ۾ ٽوڙڻ چئبو آهي۔",
+      "pdf_page_range": "PDF 40-67",
+      "printed_page_range": "36-63",
+      "citation_formatted": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chunk_id": "math-ch03-04",
+      "chapter_id": 3,
+      "topic_title_sd": "وڏي ۾ وڏو گڏيل جزو",
+      "topic_title_en": "Highest common factor (HCF)",
+      "summary_sd": "ٻن يا وڌيڪ عددن جي گڏيل جزن ۾ سڀ کان وڏو جزو وڏو گڏيل جزو آهي۔ اهو مفرد جزن ۾ ٽوڙڻ سان يا جزن جي لسٽ مان به ڪڍي سگهجي ٿو۔",
+      "pdf_page_range": "PDF 40-67",
+      "printed_page_range": "36-63",
+      "citation_formatted": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chunk_id": "math-ch03-05",
+      "chapter_id": 3,
+      "topic_title_sd": "ننڍو گڏيل ضربينڊڙ",
+      "topic_title_en": "Lowest common multiple (LCM)",
+      "summary_sd": "ٻن يا وڌيڪ عددن جي گڏيل ضربينڊڙن ۾ سڀ کان ننڍو ضربينڊڙ ننڍو گڏيل ضربينڊڙ آهي۔ اهو روزمره جي مسئلن ۾ گڏيل وقت يا مقدار ڪڍڻ ۾ ڪم اچي ٿو۔",
+      "pdf_page_range": "PDF 40-67",
+      "printed_page_range": "36-63",
+      "citation_formatted": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chunk_id": "math-ch04-01",
+      "chapter_id": 4,
+      "topic_title_sd": "سڄا عدد ۽ انهن جي ترتيب",
+      "topic_title_en": "Integers and their order",
+      "summary_sd": "سڄا عدد مثبت عدد، منفي عدد ۽ صفر تي مشتمل آهن۔ عددي ليڪ تي صفر جي ساڄي پاسي مثبت ۽ کاٻي پاسي منفي عدد هوندا آهن۔ ساڄي طرف وڌڻ سان عدد وڏا ٿين ٿا۔",
+      "pdf_page_range": "PDF 68-91",
+      "printed_page_range": "64-87",
+      "citation_formatted": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chunk_id": "math-ch04-02",
+      "chapter_id": 4,
+      "topic_title_sd": "سڄي عدد جي مطلق قيمت",
+      "topic_title_en": "Absolute value of an integer",
+      "summary_sd": "ڪنهن عدد جي مطلق قيمت ان جو صفر کان فاصلو آهي ۽ اها هميشه مثبت يا صفر هوندي آهي۔ مثال طور پنج ۽ منفي پنج جي مطلق قيمت ٻنهي جي پنج آهي۔",
+      "pdf_page_range": "PDF 68-91",
+      "printed_page_range": "64-87",
+      "citation_formatted": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chunk_id": "math-ch04-03",
+      "chapter_id": 4,
+      "topic_title_sd": "سڄن عددن جو جمع ۽ تفريق",
+      "topic_title_en": "Addition and subtraction of integers",
+      "summary_sd": "ساڳي نشاني وارن عددن کي جمع ڪرڻ وقت نشاني ساڳي رهي ٿي ۽ قدر جمع ٿين ٿا۔ مختلف نشاني وارن عددن ۾ ننڍي قدر وڏي مان ڪڍجي ٿي ۽ وڏي قدر جي نشاني لڳي ٿي۔ تفريق ڪرڻ جو مطلب الٽ عدد جمع ڪرڻ آهي۔",
+      "pdf_page_range": "PDF 68-91",
+      "printed_page_range": "64-87",
+      "citation_formatted": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chunk_id": "math-ch04-04",
+      "chapter_id": 4,
+      "topic_title_sd": "سڄن عددن جو ضرب ۽ ونڊ",
+      "topic_title_en": "Multiplication and division of integers",
+      "summary_sd": "ساڳي نشاني وارن عددن جو ضرب ۽ ونڊ مثبت ٿئي ٿو ۽ مختلف نشاني وارن جو منفي ٿئي ٿو۔ صفر سان ضرب هميشه صفر ٿئي ٿو۔",
+      "pdf_page_range": "PDF 68-91",
+      "printed_page_range": "64-87",
+      "citation_formatted": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chunk_id": "math-ch05-01",
+      "chapter_id": 5,
+      "topic_title_sd": "حسابي اظهار",
+      "topic_title_en": "Arithmetic expressions",
+      "summary_sd": "حسابي اظهار عددن ۽ عملن جهڙوڪ جمع، تفريق، ضرب ۽ ونڊ مان ٺهي ٿو۔ اظهار جي قيمت ڪڍڻ لاءِ عملن جي صحيح ترتيب تي عمل ڪرڻ ضروري آهي۔",
+      "pdf_page_range": "PDF 92-105",
+      "printed_page_range": "88-101",
+      "citation_formatted": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chunk_id": "math-ch05-02",
+      "chapter_id": 5,
+      "topic_title_sd": "ڪنگڻ ۽ عملن جي ترتيب",
+      "topic_title_en": "Brackets and BODMAS",
+      "summary_sd": "ڪنگڻ واري حصي کي پهريان حل ڪيو ويندو آهي، پوء ضرب ۽ ونڊ، ۽ آخر ۾ جمع ۽ تفريق ڪئي ويندي آهي۔ هن ترتيب کي BODMAS چئبو آهي ۽ ان کان سواء جواب غلط ٿي سگهي ٿو۔",
+      "pdf_page_range": "PDF 92-105",
+      "printed_page_range": "88-101",
+      "citation_formatted": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chunk_id": "math-ch05-03",
+      "chapter_id": 5,
+      "topic_title_sd": "ڪسرن سان سادي صورت",
+      "topic_title_en": "Simplification with fractions",
+      "summary_sd": "ڪسرن واري اظهار کي سادو ڪرڻ لاءِ پهريان ڪنگڻ ۽ پوء عملن جي ترتيب تي عمل ڪيو ويندو آهي۔ ڪسر کي سادي صورت ۾ آڻڻ سان جواب صاف ۽ سمجهڻ ۾ آسان ٿئي ٿو۔",
+      "pdf_page_range": "PDF 92-105",
+      "printed_page_range": "88-101",
+      "citation_formatted": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chunk_id": "math-ch05-04",
+      "chapter_id": 5,
+      "topic_title_sd": "سادي صورت جا لفظي مسئلا",
+      "topic_title_en": "Word problems in simplification",
+      "summary_sd": "لفظي مسئلي ۾ پهريان اهو سمجهڻ ضروري آهي ته ڪهڙو عمل گهربل آهي ۽ پوء ان کي حسابي اظهار ۾ بدلائي حل ڪيو وڃي ٿو۔ آخر ۾ جواب کي مسئلي جي حوالي سان چڪاسيو وڃي ٿو۔",
+      "pdf_page_range": "PDF 92-105",
+      "printed_page_range": "88-101",
+      "citation_formatted": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chunk_id": "math-ch06-01",
+      "chapter_id": 6,
+      "topic_title_sd": "نسبت ۽ ان جون خاصيتون",
+      "topic_title_en": "Ratio and its properties",
+      "summary_sd": "نسبت ٻن مقدارن جي مقابلي کي ظاهر ڪري ٿي ۽ ان کي عام طور تي ٻن عددن جي صورت ۾ لکيو ويندو آهي۔ نسبت کي ننڍي صورت ۾ آڻڻ سان ان جو مطلب نٿو مٽجي۔",
+      "pdf_page_range": "PDF 106-122",
+      "printed_page_range": "102-118",
+      "citation_formatted": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chunk_id": "math-ch06-02",
+      "chapter_id": 6,
+      "topic_title_sd": "تناسب ۽ سڌو/الٽ تناسب",
+      "topic_title_en": "Proportion and direct/inverse proportion",
+      "summary_sd": "جڏهن ٻه نسبتون برابر هجن ته ان کي تناسب چئبو آهي۔ سڌي تناسب ۾ هڪ مقدار وڌڻ سان ٻي به وڌي ٿي ۽ الٽ تناسب ۾ هڪ وڌڻ سان ٻي گهٽجي ٿي۔",
+      "pdf_page_range": "PDF 106-122",
+      "printed_page_range": "102-118",
+      "citation_formatted": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chunk_id": "math-ch06-03",
+      "chapter_id": 6,
+      "topic_title_sd": "مربع ۽ مربع جڙ",
+      "topic_title_en": "Square and square root",
+      "summary_sd": "ڪنهن عدد کي پاڻ سان ضرب ڏيڻ سان ان جو مربع ملندو آهي۔ مربع جڙ اهو عدد آهي جنهن کي پاڻ سان ضرب ڏيڻ سان اصل عدد ملي۔",
+      "pdf_page_range": "PDF 106-122",
+      "printed_page_range": "102-118",
+      "citation_formatted": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chunk_id": "math-ch06-04",
+      "chapter_id": 6,
+      "topic_title_sd": "اڪائي جو طريقو",
+      "topic_title_en": "Unitary method",
+      "summary_sd": "اڪائي جي طريقي ۾ پهريان هڪ شيء جي قيمت ڪڍي ويندي آهي ۽ پوء ان مان گهربل تعداد جي قيمت ڪڍي ويندي آهي۔ هي طريقو نسبت ۽ تناسب جي مسئلن ۾ گهڻو ڪم اچي ٿو۔",
+      "pdf_page_range": "PDF 106-122",
+      "printed_page_range": "102-118",
+      "citation_formatted": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chunk_id": "math-ch07-01",
+      "chapter_id": 7,
+      "topic_title_sd": "فيصد",
+      "topic_title_en": "Percent",
+      "summary_sd": "فيصد جو مطلب سئو مان حصو آهي ۽ ان کي سئو جي نشاني سان ظاهر ڪيو ويندو آهي۔ ڪنهن مقدار جو فيصد ڪڍڻ لاءِ ان کي سئو سان ضرب ڏئي گهربل مقدار سان ونڊيو ويندو آهي۔",
+      "pdf_page_range": "PDF 123-140",
+      "printed_page_range": "119-136",
+      "citation_formatted": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chunk_id": "math-ch07-02",
+      "chapter_id": 7,
+      "topic_title_sd": "نفعو ۽ نقصان",
+      "topic_title_en": "Profit and loss",
+      "summary_sd": "جيڪڏهن وڪرو قيمت خريد قيمت کان وڌيڪ هجي ته نفعو ٿئي ٿو ۽ جيڪڏهن گهٽ هجي ته نقصان ٿئي ٿو۔ نفعو ۽ نقصان عام طور تي خريد قيمت جي فيصد طور ٻڌايو ويندو آهي۔",
+      "pdf_page_range": "PDF 123-140",
+      "printed_page_range": "119-136",
+      "citation_formatted": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chunk_id": "math-ch07-03",
+      "chapter_id": 7,
+      "topic_title_sd": "رعايت",
+      "topic_title_en": "Discount",
+      "summary_sd": "رعايت اها گهٽتائي آهي جيڪا اصل قيمت تي ڏني ويندي آهي۔ رعايت کان پوء جي قيمت اصل قيمت مان رعايت ڪڍڻ سان ملندي آهي۔",
+      "pdf_page_range": "PDF 123-140",
+      "printed_page_range": "119-136",
+      "citation_formatted": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chunk_id": "math-ch07-04",
+      "chapter_id": 7,
+      "topic_title_sd": "فيصد جا لفظي مسئلا",
+      "topic_title_en": "Word problems with percent",
+      "summary_sd": "فيصد جي لفظي مسئلن ۾ پهريان اهو طئي ڪيو ويندو آهي ته فيصد ڪهڙي مقدار تي لڳو آهي۔ پوء نفعو، نقصان يا رعايت جو حساب لڳائي جواب چڪاسيو ويندو آهي۔",
+      "pdf_page_range": "PDF 123-140",
+      "printed_page_range": "119-136",
+      "citation_formatted": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chunk_id": "math-ch08-01",
+      "chapter_id": 8,
+      "topic_title_sd": "الجبرائي اظهار",
+      "topic_title_en": "Algebraic expressions",
+      "summary_sd": "الجبرائي اظهار عددن، حرفن ۽ عملن مان ٺهي ٿو ۽ ان ۾ حرف ڪنهن اڻڄاتل مقدار کي ظاهر ڪري ٿو۔ اظهار ۾ هر حصي کي رقم چئبو آهي۔",
+      "pdf_page_range": "PDF 141-157",
+      "printed_page_range": "137-153",
+      "citation_formatted": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chunk_id": "math-ch08-02",
+      "chapter_id": 8,
+      "topic_title_sd": "هم جنس ۽ غير هم جنس رقمون",
+      "topic_title_en": "Like and unlike terms",
+      "summary_sd": "هم جنس رقمن ۾ حرف ۽ انهن جون طاقتون هڪجهڙيون هونديون آهن ۽ صرف عددي گڻڪ مختلف ٿي سگهي ٿو۔ غير هم جنس رقمون گڏ نٿيون ڪري سگهجن۔",
+      "pdf_page_range": "PDF 141-157",
+      "printed_page_range": "137-153",
+      "citation_formatted": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chunk_id": "math-ch08-03",
+      "chapter_id": 8,
+      "topic_title_sd": "اظهارن جو جمع ۽ تفريق",
+      "topic_title_en": "Adding and subtracting expressions",
+      "summary_sd": "اظهارن کي جمع يا تفريق ڪرڻ وقت صرف هم جنس رقمون گڏ ڪيون وينديون آهن۔ تفريق ڪرڻ وقت ڪنگڻ کولڻ سان نشانين جو خيال رکڻ ضروري آهي۔",
+      "pdf_page_range": "PDF 141-157",
+      "printed_page_range": "137-153",
+      "citation_formatted": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chunk_id": "math-ch08-04",
+      "chapter_id": 8,
+      "topic_title_sd": "اظهار کي سادو ڪرڻ ۽ قيمت ڪڍڻ",
+      "topic_title_en": "Simplifying and evaluating expressions",
+      "summary_sd": "اظهار کي سادو ڪرڻ لاءِ هم جنس رقمون گڏ ڪيون وينديون آهن۔ قيمت ڪڍڻ لاءِ حرف جي جاء تي ڏنل عدد رکي حساب ڪيو ويندو آهي۔",
+      "pdf_page_range": "PDF 141-157",
+      "printed_page_range": "137-153",
+      "citation_formatted": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chunk_id": "math-ch09-01",
+      "chapter_id": 9,
+      "topic_title_sd": "الجبرائي مساواتون لکڻ",
+      "topic_title_en": "Writing algebraic equations",
+      "summary_sd": "مساوات ۾ ٻه اظهار برابر جي نشاني سان ڳنڍيل هوندا آهن۔ لفظي ڳالهه کي مساوات ۾ بدلائڻ لاءِ اڻڄاتل مقدار کي حرف سان ظاهر ڪيو ويندو آهي۔",
+      "pdf_page_range": "PDF 158-169",
+      "printed_page_range": "154-165",
+      "citation_formatted": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chunk_id": "math-ch09-02",
+      "chapter_id": 9,
+      "topic_title_sd": "الجبرائي مساواتون حل ڪرڻ",
+      "topic_title_en": "Solving algebraic equations",
+      "summary_sd": "مساوات حل ڪرڻ جو مطلب اهو عدد ڳولڻ آهي جيڪو حرف جي جاء تي رکڻ سان ٻئي پاسا برابر ٿين۔ ٻنهي پاسن تي ساڳيو عمل ڪرڻ سان مساوات جو توازن برقرار رهي ٿو۔",
+      "pdf_page_range": "PDF 158-169",
+      "printed_page_range": "154-165",
+      "citation_formatted": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chunk_id": "math-ch09-03",
+      "chapter_id": 9,
+      "topic_title_sd": "الجبرائي لفظي مسئلا",
+      "topic_title_en": "Algebraic word problems",
+      "summary_sd": "الجبرائي لفظي مسئلي ۾ پهريان اڻڄاتل مقدار کي حرف ڏنو ويندو آهي، پوء مساوات ٺاهي حل ڪئي ويندي آهي ۽ آخر ۾ جواب کي اصل مسئلي ۾ چڪاسيو ويندو آهي۔",
+      "pdf_page_range": "PDF 158-169",
+      "printed_page_range": "154-165",
+      "citation_formatted": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chunk_id": "math-ch09-04",
+      "chapter_id": 9,
+      "topic_title_sd": "مساوات جي جانچ",
+      "topic_title_en": "Checking a solution",
+      "summary_sd": "مساوات جو حل ڪڍڻ کان پوء ان جي جانچ ڪرڻ ضروري آهي۔ حل جي قيمت کي مساوات ۾ نامعلوم جي جاء تي رکيو ويندو آهي۔ جيڪڏهن کاٻو پاسو ساڄي پاسي جي برابر ٿي وڃي ته حل درست آهي، نه ته حل ۾ غلطي آهي ۽ ان کي ٻيهر ڪڍڻ گهرجي۔ هي جانچ شاگرد کي پنهنجي غلطي سمجھڻ ۾ مدد ڪري ٿي۔",
+      "pdf_page_range": "PDF 158-169",
+      "printed_page_range": "154-165",
+      "citation_formatted": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chunk_id": "math-ch10-01",
+      "chapter_id": 10,
+      "topic_title_sd": "ليڪون ۽ ليڪي ٽڪرا",
+      "topic_title_en": "Lines and line segments",
+      "summary_sd": "ليڪ ٻنهي طرفن ۾ لامحدود هوندي آهي ۽ ليڪي ٽڪري جا ٻه ڇيڙا هوندا آهن۔ ٻن ليڪي ٽڪرن کي جوڙڻ يا ڪڍڻ سان نوان ٽڪرا ٺهن ٿا۔",
+      "pdf_page_range": "PDF 170-197",
+      "printed_page_range": "166-193",
+      "citation_formatted": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chunk_id": "math-ch10-02",
+      "chapter_id": 10,
+      "topic_title_sd": "عمودي وچولي ليڪ",
+      "topic_title_en": "Perpendicular bisector",
+      "summary_sd": "عمودي وچولي ليڪ ڪنهن ٽڪري کي ٻن برابر حصن ۾ ورهائي ٿي ۽ ان سان سڌو زاويو ٺاهي ٿي۔ اها پرڪار ۽ رولر سان ٺاهي سگهجي ٿي۔",
+      "pdf_page_range": "PDF 170-197",
+      "printed_page_range": "166-193",
+      "citation_formatted": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chunk_id": "math-ch10-03",
+      "chapter_id": 10,
+      "topic_title_sd": "زاويا ٺاهڻ",
+      "topic_title_en": "Constructing angles",
+      "summary_sd": "زاويو ٻن شعاعن جي وچ ۾ ٺهي ٿو جيڪي هڪ نقطي کان نڪرن ٿا۔ پرڪار سان زاويو نقل ڪري سگهجي ٿو ۽ ان کي ٻيڻو به ڪري سگهجي ٿو۔",
+      "pdf_page_range": "PDF 170-197",
+      "printed_page_range": "166-193",
+      "citation_formatted": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chunk_id": "math-ch10-04",
+      "chapter_id": 10,
+      "topic_title_sd": "ٽڪنڊا ٺاهڻ",
+      "topic_title_en": "Constructing triangles",
+      "summary_sd": "ٽڪنڊو ٺاهڻ لاءِ ٽن پاسن يا پاسن ۽ زاوين جي ماپ گهربل هوندي آهي۔ ٺاهڻ کان پوء ماپن کي چڪاسڻ ضروري آهي ته ٽڪنڊو صحيح ٺهيو آهي يا نه۔",
+      "pdf_page_range": "PDF 170-197",
+      "printed_page_range": "166-193",
+      "citation_formatted": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chunk_id": "math-ch11-01",
+      "chapter_id": 11,
+      "topic_title_sd": "احاطو",
+      "topic_title_en": "Perimeter",
+      "summary_sd": "ڪنهن شڪل جو احاطو ان جي چوڌاري ڪل ڊيگهه آهي۔ مستطيل جو احاطو ٻنهي پاسن جي جمع کي ٻن سان ضرب ڏيڻ سان ملندو آهي۔",
+      "pdf_page_range": "PDF 198-217",
+      "printed_page_range": "194-213",
+      "citation_formatted": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chunk_id": "math-ch11-02",
+      "chapter_id": 11,
+      "topic_title_sd": "ايراضي",
+      "topic_title_en": "Area",
+      "summary_sd": "ڪنهن شڪل جي ايراضي ان جي اندر جي مٿاڇري آهي ۽ اها چورس اڪائين ۾ ماپي ويندي آهي۔ مستطيل جي ايراضي ڊيگهه ۽ ويڪر جي ضرب سان ملندي آهي۔",
+      "pdf_page_range": "PDF 198-217",
+      "printed_page_range": "194-213",
+      "citation_formatted": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chunk_id": "math-ch11-03",
+      "chapter_id": 11,
+      "topic_title_sd": "پيچيده شڪلن ۽ چئن پاسن واريون شڪلون",
+      "topic_title_en": "Area of complex shapes and quadrilaterals",
+      "summary_sd": "پيچيده شڪل کي سادي حصن ۾ ورهائي هر حصي جي ايراضي ڪڍي پوء گڏ ڪئي ويندي آهي۔ چئن پاسن واري شڪل جي ايراضي ان جي شڪل ۽ ماپن تي دارومدار رکي ٿي۔",
+      "pdf_page_range": "PDF 198-217",
+      "printed_page_range": "194-213",
+      "citation_formatted": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chunk_id": "math-ch11-04",
+      "chapter_id": 11,
+      "topic_title_sd": "مربع جو احاطو ۽ ايراضي",
+      "topic_title_en": "Perimeter and area of a square",
+      "summary_sd": "مربع جي چئني پاسن جي ڊيگهه برابر هوندي آهي۔ جيڪڏهن هڪ پاسو a هجي ته احاطو 4a ۽ ايراضي a² ٿيندي آهي۔ مثال طور 6 سينٽي ميٽر پاسو رکندڙ مربع جو احاطو 24 سينٽي ميٽر ۽ ايراضي 36 چورس سينٽي ميٽر ٿيندي آهي۔",
+      "pdf_page_range": "PDF 198-217",
+      "printed_page_range": "194-213",
+      "citation_formatted": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chunk_id": "math-ch12-01",
+      "chapter_id": 12,
+      "topic_title_sd": "ٽن پاسن واريون شيوون",
+      "topic_title_en": "Three-dimensional shapes",
+      "summary_sd": "ٽن پاسن واري شڪل ۾ ڊيگهه، ويڪر ۽ اوچائي ٽئي هوندا آهن۔ مثال طور ڪعب، مستطيل ڪعب، سلنڈر ۽ مخروط ٽن پاسن واريون شيوون آهن۔",
+      "pdf_page_range": "PDF 218-231",
+      "printed_page_range": "214-227",
+      "citation_formatted": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chunk_id": "math-ch12-02",
+      "chapter_id": 12,
+      "topic_title_sd": "ٽن پاسن واري شڪلن جي مٿاڇري",
+      "topic_title_en": "Surface area of 3D shapes",
+      "summary_sd": "ٽن پاسن واري شڪل جي مٿاڇري ان جي سڀني منهن جي ايراضين جو جمع آهي۔ هر منهن جي ايراضي الڳ ڪڍي پوء گڏ ڪئي ويندي آهي۔",
+      "pdf_page_range": "PDF 218-231",
+      "printed_page_range": "214-227",
+      "citation_formatted": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chunk_id": "math-ch12-03",
+      "chapter_id": 12,
+      "topic_title_sd": "ٽن پاسن واري شڪلن جو حجم",
+      "topic_title_en": "Volume of 3D shapes",
+      "summary_sd": "حجم اهو هنڌ آهي جيڪو ڪنهن ٽن پاسن واري شڪل گهيري ٿي ۽ اهو ڪعب اڪائين ۾ ماپيو ويندو آهي۔ مستطيل ڪعب جو حجم ڊيگهه، ويڪر ۽ اوچائي جي ضرب سان ملندو آهي۔",
+      "pdf_page_range": "PDF 218-231",
+      "printed_page_range": "214-227",
+      "citation_formatted": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chunk_id": "math-ch12-04",
+      "chapter_id": 12,
+      "topic_title_sd": "ڪعب ۽ مستطيل ڪعب",
+      "topic_title_en": "Cube and cuboid",
+      "summary_sd": "ڪعب اها ٽن پاسن واري شڪل آهي جنهن جا سڀ پاسا برابر هوندا آهن ۽ ان جا 6 منهن، 12 ڪنارا ۽ 8 ڪنڊون هونديون آهن۔ مستطيل ڪعب ۾ ڊيگهه، ويڪر ۽ اوچائي مختلف ٿي سگهن ٿيون۔ ڪعب جو حجم پاسن جي ضرب سان ۽ مستطيل ڪعب جو حجم ڊيگهه × ويڪر × اوچائي سان ڪڍيو ويندو آهي۔",
+      "pdf_page_range": "PDF 218-231",
+      "printed_page_range": "214-227",
+      "citation_formatted": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chunk_id": "math-ch13-01",
+      "chapter_id": 13,
+      "topic_title_sd": "معلومات ۽ ڊيٽا",
+      "topic_title_en": "Data and information",
+      "summary_sd": "ڊيٽا گڏ ڪيل حقيقتن ۽ انگن جو مجموعو آهي ۽ معلومات ان ڊيٽا جو ترتيب ڏنل ۽ سمجهڻ لائق روپ آهي۔ ڊيٽا کي جدول ۾ ترتيب ڏيڻ سان ان جو مقابلو آسان ٿئي ٿو۔",
+      "pdf_page_range": "PDF 232-246",
+      "printed_page_range": "228-242",
+      "citation_formatted": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chunk_id": "math-ch13-02",
+      "chapter_id": 13,
+      "topic_title_sd": "بار گراف",
+      "topic_title_en": "Bar graph",
+      "summary_sd": "بار گراف ۾ ڊيٽا کي بارن سان ظاهر ڪيو ويندو آهي ۽ بار جي ڊيگهه مقدار کي ظاهر ڪري ٿي۔ بار گراف سان مختلف قسمن جو مقابلو هڪ نظر ۾ ٿي سگهي ٿو۔",
+      "pdf_page_range": "PDF 232-246",
+      "printed_page_range": "228-242",
+      "citation_formatted": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chunk_id": "math-ch13-03",
+      "chapter_id": 13,
+      "topic_title_sd": "پائي چارٽ",
+      "topic_title_en": "Pie chart",
+      "summary_sd": "پائي چارٽ ۾ پورو دائرو ڪل مقدار کي ظاهر ڪري ٿو ۽ هر حصو ان جو هڪ حصو آهي۔ حصي جي زاويه مان ان جي مقدار جو اندازو لڳائي سگهجي ٿو۔",
+      "pdf_page_range": "PDF 232-246",
+      "printed_page_range": "228-242",
+      "citation_formatted": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chunk_id": "math-ch13-04",
+      "chapter_id": 13,
+      "topic_title_sd": "اوسط ڪڍڻ",
+      "topic_title_en": "Finding the average",
+      "summary_sd": "ڊيٽا جو اوسط ڪڍڻ لاء سڀني قدرن کي گڏ ڪري انهن جي تعداد سان ونڊ ڪيو ويندو آهي۔ مثال طور 5، 8، 8، 10 ۽ 4 جو مجموعو 35 آهي ۽ قدر 5 آهن، تنهنڪري اوسط 7 ٿيندو آهي۔ اوسط ڊيٽا جي وچولي قدر جو اندازو ڏيندو آهي ۽ گهڻو ايندڙ قدر کان مختلف ٿي سگهي ٿو۔",
+      "pdf_page_range": "PDF 232-246",
+      "printed_page_range": "228-242",
+      "citation_formatted": "PDF 232-246 (printed 228-242)"
+    }
+  ],
+  "glossary": [
+    {
+      "chapter_id": 1,
+      "term_sd": "برابر سيٽ",
+      "term_en": "Equal sets",
+      "symbol_latex": "",
+      "definition_sd": "ٻه سيٽ جن جا سڀ رڪن هڪجهڙا هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "خالي سيٽ",
+      "term_en": "Empty set",
+      "symbol_latex": "\\emptyset",
+      "definition_sd": "اهو سيٽ جنهن ۾ ڪو رڪن نه هجي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "ذيلي سيٽ",
+      "term_en": "Subset",
+      "symbol_latex": "",
+      "definition_sd": "اهو سيٽ جنهن جا سڀ رڪن ٻئي سيٽ ۾ هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "رڪن",
+      "term_en": "Element / Member",
+      "symbol_latex": "\\in \\text{ or } \\notin",
+      "definition_sd": "سيٽ ۾ موجود هر شيء سيٽ جو رڪن آهي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "سيٽ",
+      "term_en": "Set",
+      "symbol_latex": "",
+      "definition_sd": "شين جو واضح مجموعو جنهن جا رڪن چٽا هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "صحيح ذيلي سيٽ",
+      "term_en": "Proper subset",
+      "symbol_latex": "",
+      "definition_sd": "اهو ذيلي سيٽ جنهن ۾ اصل سيٽ کان گهٽ رڪن هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "مٿانهون سيٽ",
+      "term_en": "Superset",
+      "symbol_latex": "",
+      "definition_sd": "اهو سيٽ جنهن ۾ ٻئي سيٽ جا سڀ رڪن هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "هم قدر سيٽ",
+      "term_en": "Equivalent sets",
+      "symbol_latex": "",
+      "definition_sd": "ٻه سيٽ جن ۾ رڪنن جو تعداد برابر هجي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 1,
+      "term_sd": "واحد سيٽ",
+      "term_en": "Singleton set",
+      "symbol_latex": "",
+      "definition_sd": "اهو سيٽ جنهن ۾ صرف هڪ رڪن هجي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation": "PDF 5 (printed 1)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "جفت عدد",
+      "term_en": "Even number",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جيڪو 2 سان پورو ونڊجي وڃي، ان کي جفت عدد چئبو آهي۔ مثال طور 2، 4، 6 جفت عدد آهن۔",
+      "pdf_page": "PDF 20-39 (printed 16-35)",
+      "citation": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "صحبت جو قانون",
+      "term_en": "Associative law",
+      "symbol_latex": "",
+      "definition_sd": "عدد کي گروپن ۾ مٽائي جمع يا ضرب ڪرڻ سان جواب ساڳيو رهي ٿو۔",
+      "pdf_page": "PDF 20 (printed 16)",
+      "citation": "PDF 20 (printed 16)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "صفر",
+      "term_en": "Zero",
+      "symbol_latex": "0",
+      "definition_sd": "اهو پورو عدد جيڪو قدرتي عددن ۾ شامل نه آهي۔ صفر کي عددي ليڪ تي قدرتي عددن کان اڳ رکيو ويندو آهي۔",
+      "pdf_page": "PDF 20-39 (printed 16-35)",
+      "citation": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "طاق عدد",
+      "term_en": "Odd number",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جيڪو 2 سان پورو ونڊجي نه سگهي، ان کي طاق عدد چئبو آهي۔ مثال طور 1، 3، 5 طاق عدد آهن۔",
+      "pdf_page": "PDF 20-39 (printed 16-35)",
+      "citation": "PDF 20-39 (printed 16-35)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "عددي ليڪ",
+      "term_en": "Number line",
+      "symbol_latex": "",
+      "definition_sd": "اها ليڪ جنهن تي عدد ترتيب سان ظاهر ڪيا وڃن ٿا۔",
+      "pdf_page": "PDF 20 (printed 16)",
+      "citation": "PDF 20 (printed 16)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "قدرتي عدد",
+      "term_en": "Natural numbers",
+      "symbol_latex": "",
+      "definition_sd": "ڳڻپ جا عدد جيڪي هڪ کان شروع ٿين ٿا۔",
+      "pdf_page": "PDF 20 (printed 16)",
+      "citation": "PDF 20 (printed 16)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "مٽاسٽا جو قانون",
+      "term_en": "Commutative law",
+      "symbol_latex": "",
+      "definition_sd": "عدد جي ترتيب مٽائڻ سان جمع يا ضرب جو جواب نٿو مٽجي۔",
+      "pdf_page": "PDF 20 (printed 16)",
+      "citation": "PDF 20 (printed 16)"
+    },
+    {
+      "chapter_id": 2,
+      "term_sd": "پورا عدد",
+      "term_en": "Whole numbers",
+      "symbol_latex": "",
+      "definition_sd": "قدرتي عدد ۽ صفر جو مجموعو۔",
+      "pdf_page": "PDF 20 (printed 16)",
+      "citation": "PDF 20 (printed 16)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "جزو",
+      "term_en": "Factor",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جنهن سان ٻيو عدد پورو ونڊجي۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "ضربينڊڙ",
+      "term_en": "Multiple",
+      "symbol_latex": "",
+      "definition_sd": "ڪنهن عدد کي قدرتي عدد سان ضرب ڏيڻ سان ملندڙ عدد۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "عام ضربينڊڙ",
+      "term_en": "Common multiple",
+      "symbol_latex": "",
+      "definition_sd": "اهو ضربينڊڙ جيڪو ٻن يا وڌيڪ عددن جي ضربينڊڙن ۾ گڏيل هجي، ان کي عام ضربينڊڙ چئبو آهي۔",
+      "pdf_page": "PDF 40-67 (printed 36-63)",
+      "citation": "PDF 40-67 (printed 36-63)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "مرڪب عدد",
+      "term_en": "Composite number",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جنهن جا ٻن کان وڌيڪ جزا هجن۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "مفرد عدد",
+      "term_en": "Prime number",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جنهن جا صرف ٻه جزا هجن، هڪ ۽ اهو عدد پاڻ۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "ننڍو گڏيل ضربينڊڙ",
+      "term_en": "Lowest common multiple (LCM)",
+      "symbol_latex": "\\text{LCM}",
+      "definition_sd": "ٻن يا وڌيڪ عددن جي گڏيل ضربينڊڙن ۾ سڀ کان ننڍو ضربينڊڙ۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "ونڊ جي قابليت",
+      "term_en": "Divisibility",
+      "symbol_latex": "",
+      "definition_sd": "اها خاصيت جنهن سان خبر پوي ٿي ته عدد ڪنهن عدد سان پورو ونڊجي ٿو يا نه۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 3,
+      "term_sd": "وڏو گڏيل جزو",
+      "term_en": "Highest common factor (HCF)",
+      "symbol_latex": "\\text{HCF}",
+      "definition_sd": "ٻن يا وڌيڪ عددن جي گڏيل جزن ۾ سڀ کان وڏو جزو۔",
+      "pdf_page": "PDF 40 (printed 36)",
+      "citation": "PDF 40 (printed 36)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "سڄن عددن جي ترتيب",
+      "term_en": "Ordering of integers",
+      "symbol_latex": "",
+      "definition_sd": "عددي ليڪ تي ساڄي پاسي وارو عدد کاٻي پاسي واري عدد کان وڏو هوندو آهي۔ مثال طور -2 کان 3 وڏو آهي۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "سڄو عدد",
+      "term_en": "Integer",
+      "symbol_latex": "",
+      "definition_sd": "مثبت عدد، منفي عدد ۽ صفر جو مجموعو۔",
+      "pdf_page": "PDF 68 (printed 64)",
+      "citation": "PDF 68 (printed 64)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "صفر",
+      "term_en": "Zero",
+      "symbol_latex": "0",
+      "definition_sd": "صفر نه مثبت آهي نه منفي۔ عددي ليڪ تي صفر وچ ۾ هوندو آهي ۽ مثبت ۽ منفي عددن کي جدا ڪندو آهي۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "عددي ليڪ",
+      "term_en": "Number line",
+      "symbol_latex": "",
+      "definition_sd": "اها ليڪ جنهن تي عددن کي ترتيب سان نشان لڳايا ويندا آهن۔ وچ ۾ صفر، ساڄي مثبت ۽ کاٻي منفي عدد هوندا آهن۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "مثبت عدد",
+      "term_en": "Positive integer",
+      "symbol_latex": "+n",
+      "definition_sd": "صفر کان وڏو سڄو عدد مثبت عدد آهي۔ عددي ليڪ تي مثبت عدد صفر جي ساڄي پاسي هوندا آهن۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "مخالف عدد",
+      "term_en": "Opposite (additive inverse)",
+      "symbol_latex": "-a",
+      "definition_sd": "ڪنهن عدد جو مخالف اهو عدد آهي جيڪو ان سان گڏجي صفر ڏئي۔ مثال طور 5 جو مخالف -5 آهي۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "مطلق قيمت",
+      "term_en": "Absolute value",
+      "symbol_latex": "|x|",
+      "definition_sd": "ڪنهن عدد جو صفر کان فاصلو، جيڪو هميشه مثبت يا صفر هوندو آهي۔",
+      "pdf_page": "PDF 68 (printed 64)",
+      "citation": "PDF 68 (printed 64)"
+    },
+    {
+      "chapter_id": 4,
+      "term_sd": "منفي عدد",
+      "term_en": "Negative integer",
+      "symbol_latex": "-n",
+      "definition_sd": "صفر کان ننڍو سڄو عدد منفي عدد آهي۔ عددي ليڪ تي منفي عدد صفر جي کاٻي پاسي هوندا آهن۔",
+      "pdf_page": "PDF 68-91 (printed 64-87)",
+      "citation": "PDF 68-91 (printed 64-87)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "تفريق",
+      "term_en": "Subtraction",
+      "symbol_latex": "-",
+      "definition_sd": "وڏي عدد مان ننڍو عدد گھٽ ڪرڻ جو عمل تفريق آهي۔ تفريق جو جواب فرق چئبو آهي۔",
+      "pdf_page": "PDF 92-105 (printed 88-101)",
+      "citation": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "جمع",
+      "term_en": "Addition",
+      "symbol_latex": "+",
+      "definition_sd": "ٻن يا وڌيڪ عددن کي گڏ ڪرڻ جو عمل جمع آهي۔ جمع جو جواب مجموعو چئبو آهي۔",
+      "pdf_page": "PDF 92-105 (printed 88-101)",
+      "citation": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "حسابي اظهار",
+      "term_en": "Arithmetic expression",
+      "symbol_latex": "",
+      "definition_sd": "عددن ۽ عملن مان ٺهيل اظهار جنهن جي قيمت ڪڍي سگهجي ٿي۔",
+      "pdf_page": "PDF 92 (printed 88)",
+      "citation": "PDF 92 (printed 88)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "سادي صورت",
+      "term_en": "Simplification",
+      "symbol_latex": "",
+      "definition_sd": "اظهار کي ننڍي ۽ صاف صورت ۾ آڻڻ۔",
+      "pdf_page": "PDF 92 (printed 88)",
+      "citation": "PDF 92 (printed 88)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "ضرب",
+      "term_en": "Multiplication",
+      "symbol_latex": "\\times",
+      "definition_sd": "هڪ عدد کي ٻئي عدد جيترا ڀيرا گڏ ڪرڻ جو عمل ضرب آهي۔ ضرب جو جواب حاصل ضرب چئبو آهي۔",
+      "pdf_page": "PDF 92-105 (printed 88-101)",
+      "citation": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "عملن جي ترتيب",
+      "term_en": "BODMAS",
+      "symbol_latex": "",
+      "definition_sd": "ڪنگڻ، ضرب ۽ ونڊ، پوء جمع ۽ تفريق جي ترتيب جو اصول۔",
+      "pdf_page": "PDF 92 (printed 88)",
+      "citation": "PDF 92 (printed 88)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "ونڊ",
+      "term_en": "Division",
+      "symbol_latex": "\\div",
+      "definition_sd": "هڪ عدد کي برابر حصن ۾ ورهائڻ جو عمل ونڊ آهي۔ ونڊ جو جواب خارج قسمت چئبو آهي۔",
+      "pdf_page": "PDF 92-105 (printed 88-101)",
+      "citation": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chapter_id": 5,
+      "term_sd": "ڪنگڻ",
+      "term_en": "Brackets",
+      "symbol_latex": "( )",
+      "definition_sd": "حسابي اظهار ۾ ڪنگڻ اهو ٻڌائين ٿا ته ڪهڙو عمل پهريان ڪرڻو آهي۔ ڪنگڻ اندر جو عمل سڀ کان پهريان ڪيو ويندو آهي۔",
+      "pdf_page": "PDF 92-105 (printed 88-101)",
+      "citation": "PDF 92-105 (printed 88-101)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "الٽ تناسب",
+      "term_en": "Inverse proportion",
+      "symbol_latex": "",
+      "definition_sd": "جڏهن هڪ مقدار وڌڻ سان ٻي مقدار ساڳئي نسبت سان گھٽجي ته ان کي الٽ تناسب چئبو آهي۔",
+      "pdf_page": "PDF 106-122 (printed 102-118)",
+      "citation": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "اڪائي جو طريقو",
+      "term_en": "Unitary method",
+      "symbol_latex": "",
+      "definition_sd": "پهريان هڪ شيء جي قيمت ڪڍي پوء گهربل تعداد جي قيمت ڪڍڻ جو طريقو۔",
+      "pdf_page": "PDF 106 (printed 102)",
+      "citation": "PDF 106 (printed 102)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "تناسب",
+      "term_en": "Proportion",
+      "symbol_latex": "",
+      "definition_sd": "ٻن نسبتن جي برابري۔",
+      "pdf_page": "PDF 106 (printed 102)",
+      "citation": "PDF 106 (printed 102)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "سڌو تناسب",
+      "term_en": "Direct proportion",
+      "symbol_latex": "",
+      "definition_sd": "جڏهن هڪ مقدار وڌڻ سان ٻي مقدار به ساڳئي نسبت سان وڌي ته ان کي سڌو تناسب چئبو آهي۔",
+      "pdf_page": "PDF 106-122 (printed 102-118)",
+      "citation": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "مربع",
+      "term_en": "Square",
+      "symbol_latex": "",
+      "definition_sd": "ڪنهن عدد کي پاڻ سان ضرب ڏيڻ سان ملندڙ عدد۔",
+      "pdf_page": "PDF 106 (printed 102)",
+      "citation": "PDF 106 (printed 102)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "مربع جڙ",
+      "term_en": "Square root",
+      "symbol_latex": "\\sqrt{x}",
+      "definition_sd": "اهو عدد جنهن کي پاڻ سان ضرب ڏيڻ سان اصل عدد ملي۔",
+      "pdf_page": "PDF 106 (printed 102)",
+      "citation": "PDF 106 (printed 102)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "نسبت",
+      "term_en": "Ratio",
+      "symbol_latex": "a:b",
+      "definition_sd": "ٻن مقدارن جي مقابلي کي ظاهر ڪندڙ تعلق۔",
+      "pdf_page": "PDF 106 (printed 102)",
+      "citation": "PDF 106 (printed 102)"
+    },
+    {
+      "chapter_id": 6,
+      "term_sd": "نسبت جي سادي صورت",
+      "term_en": "Simplest form of a ratio",
+      "symbol_latex": "",
+      "definition_sd": "نسبت کي ان جي ٻنهي حصن جي گڏيل جزو سان ونڊ ڪري سادي صورت ۾ آندو ويندو آهي۔ مثال طور 12:16 جي سادي صورت 3:4 آهي۔",
+      "pdf_page": "PDF 106-122 (printed 102-118)",
+      "citation": "PDF 106-122 (printed 102-118)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "خريد قيمت",
+      "term_en": "Cost price",
+      "symbol_latex": "",
+      "definition_sd": "اها قيمت جنهن تي شيء خريدي وئي هجي۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "رعايت",
+      "term_en": "Discount",
+      "symbol_latex": "",
+      "definition_sd": "اصل قيمت تي ڏنل گهٽتائي۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "رعايتي قيمت",
+      "term_en": "Discounted price",
+      "symbol_latex": "",
+      "definition_sd": "نشان لڳل قيمت مان رعايت گھٽ ڪرڻ کان پوء جيڪا قيمت بچي، ان کي رعايتي قيمت چئبو آهي۔",
+      "pdf_page": "PDF 123-140 (printed 119-136)",
+      "citation": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "فيصد",
+      "term_en": "Percent",
+      "symbol_latex": "\\%",
+      "definition_sd": "سئو مان حصو، سئو جي نشاني سان ظاهر ٿيندڙ مقدار۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "نفعو",
+      "term_en": "Profit",
+      "symbol_latex": "",
+      "definition_sd": "وڪرو قيمت جو خريد قيمت کان وڌيڪ هجڻ۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "نفعي جو سيڪڙو",
+      "term_en": "Profit percent",
+      "symbol_latex": "\\%",
+      "definition_sd": "نفعي کي خريد قيمت سان ونڊ ڪري 100 سان ضرب ڏيڻ سان نفعي جو سيڪڙو ملندو آهي۔",
+      "pdf_page": "PDF 123-140 (printed 119-136)",
+      "citation": "PDF 123-140 (printed 119-136)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "نقصان",
+      "term_en": "Loss",
+      "symbol_latex": "",
+      "definition_sd": "وڪرو قيمت جو خريد قيمت کان گهٽ هجڻ۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 7,
+      "term_sd": "وڪرو قيمت",
+      "term_en": "Selling price",
+      "symbol_latex": "",
+      "definition_sd": "اها قيمت جنهن تي شيء وڪڻي وئي هجي۔",
+      "pdf_page": "PDF 123 (printed 119)",
+      "citation": "PDF 123 (printed 119)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "اظهار جي قيمت",
+      "term_en": "Value of an expression",
+      "symbol_latex": "",
+      "definition_sd": "متغير جي جاء تي ڏنل قيمت رکڻ کان پوء اظهار جو جيڪو جواب ملي، ان کي اظهار جي قيمت چئبو آهي۔",
+      "pdf_page": "PDF 141-157 (printed 137-153)",
+      "citation": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "الجبرائي اظهار",
+      "term_en": "Algebraic expression",
+      "symbol_latex": "",
+      "definition_sd": "عددن، حرفن ۽ عملن مان ٺهيل اظهار۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "حرف / متغير",
+      "term_en": "Variable",
+      "symbol_latex": "",
+      "definition_sd": "اهو حرف جيڪو اڻڄاتل مقدار کي ظاهر ڪري ٿو۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "رقم",
+      "term_en": "Term",
+      "symbol_latex": "",
+      "definition_sd": "اظهار جو هڪ حصو جيڪو جمع يا تفريق جي نشاني سان الڳ ٿئي ٿو۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "غير هم جنس رقمون",
+      "term_en": "Unlike terms",
+      "symbol_latex": "",
+      "definition_sd": "اهي رقمون جن ۾ حرف يا طاقتون مختلف هجن۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "مستقل",
+      "term_en": "Constant",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد يا رقم جيڪا ڪڏهن به نه بدلجي، ان کي مستقل چئبو آهي۔ مثال طور اظهار 3x + 5 ۾ 5 مستقل آهي۔",
+      "pdf_page": "PDF 141-157 (printed 137-153)",
+      "citation": "PDF 141-157 (printed 137-153)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "هم جنس رقمون",
+      "term_en": "Like terms",
+      "symbol_latex": "",
+      "definition_sd": "اهي رقمون جن ۾ حرف ۽ طاقتون هڪجهڙيون هجن۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 8,
+      "term_sd": "گڻڪ",
+      "term_en": "Coefficient",
+      "symbol_latex": "",
+      "definition_sd": "رقم ۾ حرف سان گڏ لڳل عددي جزو۔",
+      "pdf_page": "PDF 141 (printed 137)",
+      "citation": "PDF 141 (printed 137)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "ساڄو پاسو",
+      "term_en": "Right-hand side (RHS)",
+      "symbol_latex": "\\text{RHS}",
+      "definition_sd": "مساوات ۾ برابر جي نشاني جي ساڄي پاسي وارو حصو ساڄو پاسو چئبو آهي۔",
+      "pdf_page": "PDF 158-169 (printed 154-165)",
+      "citation": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "مساوات",
+      "term_en": "Equation",
+      "symbol_latex": "",
+      "definition_sd": "ٻن اظهارن جي برابري جيڪا برابر جي نشاني سان ظاهر ٿئي ٿي۔",
+      "pdf_page": "PDF 158 (printed 154)",
+      "citation": "PDF 158 (printed 154)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "مساوات جو حل",
+      "term_en": "Solution of equation",
+      "symbol_latex": "",
+      "definition_sd": "اهو عدد جيڪو حرف جي جاء تي رکڻ سان مساوات صحيح ٿئي۔",
+      "pdf_page": "PDF 158 (printed 154)",
+      "citation": "PDF 158 (printed 154)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "مساوات جي جانچ",
+      "term_en": "Checking a solution",
+      "symbol_latex": "",
+      "definition_sd": "حل جي قيمت کي مساوات ۾ رکي کاٻي ۽ ساڄي پاسن جي برابري جانچڻ کي مساوات جي جانچ چئبو آهي۔",
+      "pdf_page": "PDF 158-169 (printed 154-165)",
+      "citation": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "نامعلوم",
+      "term_en": "Unknown",
+      "symbol_latex": "x",
+      "definition_sd": "مساوات ۾ اها رقم جنهن جي قيمت معلوم نه هجي، ان کي نامعلوم چئبو آهي ۽ عام طور تي x سان ظاهر ڪيو ويندو آهي۔",
+      "pdf_page": "PDF 158-169 (printed 154-165)",
+      "citation": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "هک درجي مساوات",
+      "term_en": "Linear equation",
+      "symbol_latex": "",
+      "definition_sd": "اها مساوات جنهن ۾ حرف جي طاقت هڪ هجي۔",
+      "pdf_page": "PDF 158 (printed 154)",
+      "citation": "PDF 158 (printed 154)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "هک نامعلوم واري مساوات",
+      "term_en": "Equation in one unknown",
+      "symbol_latex": "",
+      "definition_sd": "اها مساوات جنهن ۾ صرف هڪ نامعلوم هجي، ان کي هک نامعلوم واري مساوات چئبو آهي۔ مثال طور x + 7 = 15۔",
+      "pdf_page": "PDF 158-169 (printed 154-165)",
+      "citation": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chapter_id": 9,
+      "term_sd": "کاٻو پاسو",
+      "term_en": "Left-hand side (LHS)",
+      "symbol_latex": "\\text{LHS}",
+      "definition_sd": "مساوات ۾ برابر جي نشاني جي کاٻي پاسي وارو حصو کاٻو پاسو چئبو آهي۔",
+      "pdf_page": "PDF 158-169 (printed 154-165)",
+      "citation": "PDF 158-169 (printed 154-165)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "زاويو",
+      "term_en": "Angle",
+      "symbol_latex": "",
+      "definition_sd": "ٻن شعاعن جي وچ ۾ ٺهيل کليل حصو۔",
+      "pdf_page": "PDF 170 (printed 166)",
+      "citation": "PDF 170 (printed 166)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "سڌو زاويو",
+      "term_en": "Right angle",
+      "symbol_latex": "90^\\circ",
+      "definition_sd": "اهو زاويو جيڪو 90 درجن جي برابر هجي، ان کي سڌو زاويو چئبو آهي۔",
+      "pdf_page": "PDF 170-197 (printed 166-193)",
+      "citation": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "عمودي وچولي ليڪ",
+      "term_en": "Perpendicular bisector",
+      "symbol_latex": "",
+      "definition_sd": "اها ليڪ جيڪا ٽڪري کي ٻن برابر حصن ۾ ورهائي ۽ سڌو زاويو ٺاهي۔",
+      "pdf_page": "PDF 170 (printed 166)",
+      "citation": "PDF 170 (printed 166)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "ليڪ",
+      "term_en": "Line",
+      "symbol_latex": "",
+      "definition_sd": "اها سڌي شڪل جيڪا ٻنهي طرفن ۾ لامحدود هجي۔",
+      "pdf_page": "PDF 170 (printed 166)",
+      "citation": "PDF 170 (printed 166)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "ليڪو ٽڪرو",
+      "term_en": "Line segment",
+      "symbol_latex": "",
+      "definition_sd": "ليڪ جو اهو حصو جنهن جا ٻه ڇيڙا هجن۔",
+      "pdf_page": "PDF 170 (printed 166)",
+      "citation": "PDF 170 (printed 166)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "نوڪدار زاويو",
+      "term_en": "Acute angle",
+      "symbol_latex": "",
+      "definition_sd": "اهو زاويو جيڪو 90 درجن کان ننڍو هجي، ان کي نوڪدار زاويو چئبو آهي۔",
+      "pdf_page": "PDF 170-197 (printed 166-193)",
+      "citation": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "ٽڪنڊو",
+      "term_en": "Triangle",
+      "symbol_latex": "",
+      "definition_sd": "ٽن پاسن واري بند شڪل۔",
+      "pdf_page": "PDF 170 (printed 166)",
+      "citation": "PDF 170 (printed 166)"
+    },
+    {
+      "chapter_id": 10,
+      "term_sd": "ڪنڌو زاويو",
+      "term_en": "Obtuse angle",
+      "symbol_latex": "",
+      "definition_sd": "اهو زاويو جيڪو 90 درجن کان وڏو پر 180 درجن کان ننڍو هجي، ان کي ڪنڌو زاويو چئبو آهي۔",
+      "pdf_page": "PDF 170-197 (printed 166-193)",
+      "citation": "PDF 170-197 (printed 166-193)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "احاطو",
+      "term_en": "Perimeter",
+      "symbol_latex": "",
+      "definition_sd": "ڪنهن شڪل جي چوڌاري ڪل ڊيگهه۔",
+      "pdf_page": "PDF 198 (printed 194)",
+      "citation": "PDF 198 (printed 194)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "ايراضي",
+      "term_en": "Area",
+      "symbol_latex": "",
+      "definition_sd": "ڪنهن شڪل جي اندر جي مٿاڇري، چورس اڪائين ۾ ماپيل۔",
+      "pdf_page": "PDF 198 (printed 194)",
+      "citation": "PDF 198 (printed 194)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "مربع",
+      "term_en": "Square",
+      "symbol_latex": "",
+      "definition_sd": "اها چئن پاسن واري شڪل جنهن جا چئني پاسا برابر ۽ چئني زاويا سڌا هجن، ان کي مربع چئبو آهي۔",
+      "pdf_page": "PDF 198-217 (printed 194-213)",
+      "citation": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "مستطيل",
+      "term_en": "Rectangle",
+      "symbol_latex": "",
+      "definition_sd": "اها چئن پاسن واري شڪل جنهن جا سامهون وارا پاسا برابر ۽ چئني زاويا سڌا هجن، ان کي مستطيل چئبو آهي۔",
+      "pdf_page": "PDF 198-217 (printed 194-213)",
+      "citation": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "ويڪر",
+      "term_en": "Width",
+      "symbol_latex": "w",
+      "definition_sd": "ڪنهن شڪل جي ننڍي پاسي جي ماپ کي ويڪر چئبو آهي۔",
+      "pdf_page": "PDF 198-217 (printed 194-213)",
+      "citation": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "ٽڪنڊي جي ايراضي",
+      "term_en": "Area of a triangle",
+      "symbol_latex": "\\frac{1}{2} \\times b \\times h",
+      "definition_sd": "ٽڪنڊي جي ايراضي بنياد ۽ اوچائي جي ضرب جي اڌ جي برابر هوندي آهي۔",
+      "pdf_page": "PDF 198-217 (printed 194-213)",
+      "citation": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "چئن پاسن واري شڪل",
+      "term_en": "Quadrilateral",
+      "symbol_latex": "",
+      "definition_sd": "اها بند شڪل جنهن جا چار پاسا هجن۔",
+      "pdf_page": "PDF 198 (printed 194)",
+      "citation": "PDF 198 (printed 194)"
+    },
+    {
+      "chapter_id": 11,
+      "term_sd": "ڊيگهه",
+      "term_en": "Length",
+      "symbol_latex": "l",
+      "definition_sd": "ڪنهن شڪل جي ڊگهي پاسي جي ماپ کي ڊيگهه چئبو آهي۔",
+      "pdf_page": "PDF 198-217 (printed 194-213)",
+      "citation": "PDF 198-217 (printed 194-213)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "حجم",
+      "term_en": "Volume",
+      "symbol_latex": "",
+      "definition_sd": "اهو هنڌ جيڪو ٽن پاسن واري شڪل گهيري ٿي، ڪعب اڪائين ۾ ماپيل۔",
+      "pdf_page": "PDF 218 (printed 214)",
+      "citation": "PDF 218 (printed 214)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "مستطيل ڪعب",
+      "term_en": "Cuboid",
+      "symbol_latex": "",
+      "definition_sd": "اها ٽن پاسن واري شڪل جنهن جي ڊيگهه، ويڪر ۽ اوچائي مختلف هجن، ان کي مستطيل ڪعب چئبو آهي۔",
+      "pdf_page": "PDF 218-231 (printed 214-227)",
+      "citation": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "مٿاڇري",
+      "term_en": "Surface area",
+      "symbol_latex": "",
+      "definition_sd": "ٽن پاسن واري شڪل جي سڀني منهن جي ايراضين جو جمع۔",
+      "pdf_page": "PDF 218 (printed 214)",
+      "citation": "PDF 218 (printed 214)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "ٽن پاسن واري شڪل",
+      "term_en": "Three-dimensional shape",
+      "symbol_latex": "",
+      "definition_sd": "اها شڪل جنهن ۾ ڊيگهه، ويڪر ۽ اوچائي هجي۔",
+      "pdf_page": "PDF 218 (printed 214)",
+      "citation": "PDF 218 (printed 214)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "پاسو (منهن)",
+      "term_en": "Face",
+      "symbol_latex": "",
+      "definition_sd": "ٽن پاسن واري شڪل جي هموار مٿاڇري کي پاسو يا منهن چئبو آهي۔ ڪعب جا 6 منهن هوندا آهن۔",
+      "pdf_page": "PDF 218-231 (printed 214-227)",
+      "citation": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "ڪعب",
+      "term_en": "Cube",
+      "symbol_latex": "",
+      "definition_sd": "اها ٽن پاسن واري شڪل جنهن جا سڀ پاسا برابر هجن ۽ جنهن جا 6 منهن هجن، ان کي ڪعب چئبو آهي۔",
+      "pdf_page": "PDF 218-231 (printed 214-227)",
+      "citation": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "ڪنارو",
+      "term_en": "Edge",
+      "symbol_latex": "",
+      "definition_sd": "جتي ٽن پاسن واري شڪل جا ٻه منهن ملن ٿا، ان ليڪ کي ڪنارو چئبو آهي۔ ڪعب جا 12 ڪنارا هوندا آهن۔",
+      "pdf_page": "PDF 218-231 (printed 214-227)",
+      "citation": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chapter_id": 12,
+      "term_sd": "ڪنڊ",
+      "term_en": "Vertex",
+      "symbol_latex": "",
+      "definition_sd": "جتي ٽن پاسن واري شڪل جا ڪنارا ملن ٿا، ان نقطي کي ڪنڊ چئبو آهي۔ ڪعب جون 8 ڪنڊون هونديون آهن۔",
+      "pdf_page": "PDF 218-231 (printed 214-227)",
+      "citation": "PDF 218-231 (printed 214-227)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "اوسط",
+      "term_en": "Average (mean)",
+      "symbol_latex": "\\bar{x}",
+      "definition_sd": "سڀني قدرن جي مجموعي کي قدرن جي تعداد سان ونڊ ڪرڻ سان اوسط ملندو آهي۔",
+      "pdf_page": "PDF 232-246 (printed 228-242)",
+      "citation": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "بار گراف",
+      "term_en": "Bar graph",
+      "symbol_latex": "",
+      "definition_sd": "اهو گراف جنهن ۾ ڊيٽا کي بارن سان ظاهر ڪيو وڃي ٿو۔",
+      "pdf_page": "PDF 232 (printed 228)",
+      "citation": "PDF 232 (printed 228)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "تصويري گراف",
+      "term_en": "Pictograph",
+      "symbol_latex": "",
+      "definition_sd": "اهو گراف جنهن ۾ ڊيٽا کي تصويرن يا نشانين سان ظاهر ڪيو وڃي، ان کي تصويري گراف چئبو آهي۔",
+      "pdf_page": "PDF 232-246 (printed 228-242)",
+      "citation": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "حد",
+      "term_en": "Range",
+      "symbol_latex": "",
+      "definition_sd": "ڊيٽا جي سڀ کان وڏي قدر ۽ سڀ کان ننڍي قدر جي فرق کي حد چئبو آهي۔",
+      "pdf_page": "PDF 232-246 (printed 228-242)",
+      "citation": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "وچولي قدر",
+      "term_en": "Median",
+      "symbol_latex": "",
+      "definition_sd": "ڊيٽا کي ترتيب ڏيڻ کان پوء وچ ۾ ايندڙ قدر کي وچولي قدر چئبو آهي۔",
+      "pdf_page": "PDF 232-246 (printed 228-242)",
+      "citation": "PDF 232-246 (printed 228-242)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "پائي چارٽ",
+      "term_en": "Pie chart",
+      "symbol_latex": "",
+      "definition_sd": "اهو چارٽ جنهن ۾ پورو دائرو ڪل مقدار ۽ هر حصو ان جو هڪ حصو ظاهر ڪري ٿو۔",
+      "pdf_page": "PDF 232 (printed 228)",
+      "citation": "PDF 232 (printed 228)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "ڊيٽا",
+      "term_en": "Data",
+      "symbol_latex": "",
+      "definition_sd": "گڏ ڪيل حقيقتن ۽ انگن جو مجموعو۔",
+      "pdf_page": "PDF 232 (printed 228)",
+      "citation": "PDF 232 (printed 228)"
+    },
+    {
+      "chapter_id": 13,
+      "term_sd": "گهڻو ايندڙ قدر",
+      "term_en": "Mode",
+      "symbol_latex": "",
+      "definition_sd": "ڊيٽا ۾ جيڪا قدر سڀ کان وڌيڪ ڀيرا اچي، ان کي گهڻو ايندڙ قدر چئبو آهي۔",
+      "pdf_page": "PDF 232-246 (printed 228-242)",
+      "citation": "PDF 232-246 (printed 228-242)"
+    }
+  ],
+  "exercises": [
+    {
+      "chapter_id": 1,
+      "question_sd": "جيڪڏهن A = {1, 2, 3, 4} ۽ B = {3, 4, 5} هجي، ته A ∩ B ڪهڙو سيٽ آهي؟",
+      "options": [
+        "{3, 4}",
+        "{1, 2, 3, 4, 5}",
+        "{1, 2}",
+        "{5}"
+      ],
+      "correct_answer": "{3, 4}",
+      "solution_steps_sd": "گڏيل رڪن اهي آهن جيڪي ٻنهي سيٽن ۾ موجود هجن۔ 3 ۽ 4 ٻنهي سيٽن ۾ آهن، تنهنڪري A ∩ B = {3, 4} آهي۔"
+    },
+    {
+      "chapter_id": 1,
+      "question_sd": "خالي سيٽ جي علامت ڪهڙي آهي؟",
+      "options": [
+        "∅",
+        "{0}",
+        "{∅}",
+        "∞"
+      ],
+      "correct_answer": "∅",
+      "solution_steps_sd": "خالي سيٽ ۾ ڪوبه رڪن نه هوندو آهي ۽ ان کي ∅ سان ظاهر ڪيو ويندو آهي۔ {0} خالي نه آهي، ڇو ته ان ۾ هڪ رڪن 0 موجود آهي۔"
+    },
+    {
+      "chapter_id": 1,
+      "question_sd": "جيڪڏهن مڪمل سيٽ U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} ۽ A = {2, 4, 6, 8, 10} هجي، ته A جو مڪمل ڪندڙ سيٽ A' ڪهڙو آهي؟",
+      "options": [
+        "{1, 3, 5, 7, 9}",
+        "{2, 4, 6, 8, 10}",
+        "{1, 2, 3, 4, 5}",
+        "{5, 6, 7, 8, 9}"
+      ],
+      "correct_answer": "{1, 3, 5, 7, 9}",
+      "solution_steps_sd": "مڪمل ڪندڙ سيٽ ۾ U جا اهي رڪن ايندا آهن جيڪي A ۾ نه هجن۔ U مان A جا رڪن ڪڍڻ کان پوء {1, 3, 5, 7, 9} بچندو آهي۔"
+    },
+    {
+      "chapter_id": 2,
+      "question_sd": "234 + 567 ڪيترو ٿيندو؟",
+      "options": [
+        "801",
+        "791",
+        "811",
+        "701"
+      ],
+      "correct_answer": "801",
+      "solution_steps_sd": "234 + 567 = 801۔ پهريان ايڪيون 4 + 7 = 11، پوء ڏهائيون 3 + 6 = 9 ۽ هڪ اڳتي وڌيل 1، پوء سون 2 + 5 = 7 ۽ هڪ اڳتي وڌيل 1، يعني 801۔"
+    },
+    {
+      "chapter_id": 2,
+      "question_sd": "ڪهڙو عدد پورو عدد آهي پر قدرتي عدد نه آهي؟",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "1/2"
+      ],
+      "correct_answer": "0",
+      "solution_steps_sd": "قدرتي عدد 1 کان شروع ٿين ٿا، جڏهن ته پورا عدد 0 کان شروع ٿين ٿا۔ تنهنڪري 0 پورو عدد آهي پر قدرتي عدد نه آهي۔"
+    },
+    {
+      "chapter_id": 2,
+      "question_sd": "45 × 12 ڪيترو ٿيندو؟",
+      "options": [
+        "540",
+        "450",
+        "500",
+        "600"
+      ],
+      "correct_answer": "540",
+      "solution_steps_sd": "45 × 12 = 45 × 10 + 45 × 2 = 450 + 90 = 540۔"
+    },
+    {
+      "chapter_id": 3,
+      "question_sd": "12 ۽ 18 جو وڏو ۾ وڏو گڏيل جزو (HCF) ڪهڙو آهي؟",
+      "options": [
+        "6",
+        "3",
+        "36",
+        "9"
+      ],
+      "correct_answer": "6",
+      "solution_steps_sd": "12 جا جزا 1، 2، 3، 4، 6، 12 آهن ۽ 18 جا جزا 1، 2، 3، 6، 9، 18 آهن۔ گڏيل جزن ۾ سڀ کان وڏو 6 آهي۔"
+    },
+    {
+      "chapter_id": 3,
+      "question_sd": "4 ۽ 6 جو ننڍو ۾ ننڍو گڏيل ضربينڊڙ (LCM) ڪهڙو آهي؟",
+      "options": [
+        "12",
+        "24",
+        "6",
+        "2"
+      ],
+      "correct_answer": "12",
+      "solution_steps_sd": "4 جا ضربينڊڙ 4، 8، 12، 16 آهن ۽ 6 جا ضربينڊڙ 6، 12، 18 آهن۔ گڏيل ضربينڊڙن ۾ سڀ کان ننڍو 12 آهي۔"
+    },
+    {
+      "chapter_id": 3,
+      "question_sd": "10 ۽ 20 جي وچ ۾ ڪيترا مفرد عدد آهن؟",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correct_answer": "4",
+      "solution_steps_sd": "10 ۽ 20 جي وچ ۾ مفرد عدد 11، 13، 17 ۽ 19 آهن، يعني ڪل 4 مفرد عدد آهن۔"
+    },
+    {
+      "chapter_id": 4,
+      "question_sd": "(-7) + 12 ڪيترو ٿيندو؟",
+      "options": [
+        "5",
+        "-5",
+        "19",
+        "-19"
+      ],
+      "correct_answer": "5",
+      "solution_steps_sd": "مختلف نشانن وارن عددن جي جمع ۾ ننڍي مطلق قيمت وڏي مان گھٽائي ويندي آهي ۽ وڏي مطلق قيمت جو نشان لڳندو آهي۔ 12 - 7 = 5 ۽ نشان مثبت آهي۔"
+    },
+    {
+      "chapter_id": 4,
+      "question_sd": "(-3) × (-4) ڪيترو ٿيندو؟",
+      "options": [
+        "12",
+        "-12",
+        "7",
+        "-7"
+      ],
+      "correct_answer": "12",
+      "solution_steps_sd": "ٻن منفي عددن جي ضرب مثبت ٿيندي آهي۔ 3 × 4 = 12، تنهنڪري (-3) × (-4) = 12 آهي۔"
+    },
+    {
+      "chapter_id": 4,
+      "question_sd": "|-9| جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "9",
+        "-9",
+        "0",
+        "18"
+      ],
+      "correct_answer": "9",
+      "solution_steps_sd": "مطلق قيمت ڪنهن عدد جي صفر کان مفاصلي کي ظاهر ڪري ٿي، جيڪا هميشه مثبت هوندي آهي۔ تنهنڪري |-9| = 9 آهي۔"
+    },
+    {
+      "chapter_id": 5,
+      "question_sd": "2 + 3 × 4 ڪيترو ٿيندو؟",
+      "options": [
+        "14",
+        "20",
+        "12",
+        "24"
+      ],
+      "correct_answer": "14",
+      "solution_steps_sd": "عملن جي ترتيب موجب پهريان ضرب ڪيو ويندو آهي: 3 × 4 = 12، پوء جمع: 2 + 12 = 14۔"
+    },
+    {
+      "chapter_id": 5,
+      "question_sd": "(8 + 4) ÷ 3 ڪيترو ٿيندو؟",
+      "options": [
+        "4",
+        "3",
+        "6",
+        "12"
+      ],
+      "correct_answer": "4",
+      "solution_steps_sd": "پهريان ڪنگڻ اندر جو عمل: 8 + 4 = 12، پوء ونڊ: 12 ÷ 3 = 4۔"
+    },
+    {
+      "chapter_id": 5,
+      "question_sd": "5² + 3² ڪيترو ٿيندو؟",
+      "options": [
+        "34",
+        "64",
+        "25",
+        "16"
+      ],
+      "correct_answer": "34",
+      "solution_steps_sd": "5² = 25 ۽ 3² = 9، تنهنڪري 25 + 9 = 34 ٿيندو آهي۔"
+    },
+    {
+      "chapter_id": 6,
+      "question_sd": "12:16 جي سادي صورت ڪهڙي آهي؟",
+      "options": [
+        "3:4",
+        "4:3",
+        "2:3",
+        "1:4"
+      ],
+      "correct_answer": "3:4",
+      "solution_steps_sd": "ٻنهي حصن کي انهن جي گڏيل جزو 4 سان ونڊ ڪيو: 12 ÷ 4 = 3 ۽ 16 ÷ 4 = 4، تنهنڪري سادي صورت 3:4 آهي۔"
+    },
+    {
+      "chapter_id": 6,
+      "question_sd": "جيڪڏهن 3 قلم 60 رپين جا هجن، ته 5 قلم ڪيترن رپين جا ٿيندا؟",
+      "options": [
+        "100",
+        "90",
+        "120",
+        "80"
+      ],
+      "correct_answer": "100",
+      "solution_steps_sd": "هڪ قلم جي قيمت 60 ÷ 3 = 20 رپيا آهي۔ تنهنڪري 5 قلمن جي قيمت 5 × 20 = 100 رپيا ٿيندي آهي۔"
+    },
+    {
+      "chapter_id": 6,
+      "question_sd": "√144 جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "24"
+      ],
+      "correct_answer": "12",
+      "solution_steps_sd": "12 × 12 = 144، تنهنڪري 144 جو مربع جڙ 12 آهي۔"
+    },
+    {
+      "chapter_id": 7,
+      "question_sd": "500 جو 10٪ ڪيترو آهي؟",
+      "options": [
+        "50",
+        "5",
+        "100",
+        "25"
+      ],
+      "correct_answer": "50",
+      "solution_steps_sd": "10٪ جو مطلب 10 مان 100 آهي۔ 500 × 10 ÷ 100 = 50۔"
+    },
+    {
+      "chapter_id": 7,
+      "question_sd": "جيڪڏهن خريد قيمت 200 رپيا ۽ وڪرو قيمت 250 رپيا هجي، ته نفعي جو سيڪڙو ڪيترو آهي؟",
+      "options": [
+        "25٪",
+        "20٪",
+        "50٪",
+        "10٪"
+      ],
+      "correct_answer": "25٪",
+      "solution_steps_sd": "نفعو = 250 - 200 = 50 رپيا۔ نفعي جو سيڪڙو = 50 ÷ 200 × 100 = 25٪۔"
+    },
+    {
+      "chapter_id": 7,
+      "question_sd": "1000 رپين جي شئي تي 20٪ رعايت ڏني وڃي، ته وڪرو قيمت ڪيتري ٿيندي؟",
+      "options": [
+        "800",
+        "200",
+        "900",
+        "750"
+      ],
+      "correct_answer": "800",
+      "solution_steps_sd": "رعايت = 1000 × 20 ÷ 100 = 200 رپيا۔ وڪرو قيمت = 1000 - 200 = 800 رپيا۔"
+    },
+    {
+      "chapter_id": 8,
+      "question_sd": "جڏهن x = 4 هجي، ته 3x + 5 جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "17",
+        "12",
+        "20",
+        "15"
+      ],
+      "correct_answer": "17",
+      "solution_steps_sd": "x جي جاء تي 4 رکڻ سان 3 × 4 + 5 = 12 + 5 = 17 ملندو آهي۔"
+    },
+    {
+      "chapter_id": 8,
+      "question_sd": "هيٺين مان ڪهڙو جوڙو هم جنس رقمن جو آهي؟",
+      "options": [
+        "3x ۽ 5x",
+        "3x ۽ 3y",
+        "x² ۽ x",
+        "2a ۽ 3b"
+      ],
+      "correct_answer": "3x ۽ 5x",
+      "solution_steps_sd": "هم جنس رقمن ۾ متغير ۽ ان جي طاقت ساڳي هوندي آهي۔ 3x ۽ 5x ۾ متغير x ساڳيو آهي، تنهنڪري هي جوڙو هم جنس آهي۔"
+    },
+    {
+      "chapter_id": 8,
+      "question_sd": "2a + 3a کي سادو ڪرڻ سان ڇا ملندو آهي؟",
+      "options": [
+        "5a",
+        "6a",
+        "5a²",
+        "a"
+      ],
+      "correct_answer": "5a",
+      "solution_steps_sd": "هم جنس رقمن جي گڻڪن کي گڏ ڪيو ويندو آهي: 2 + 3 = 5، تنهنڪري جواب 5a آهي۔"
+    },
+    {
+      "chapter_id": 9,
+      "question_sd": "جيڪڏهن x + 7 = 15 هجي، ته x جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "8",
+        "22",
+        "7",
+        "15"
+      ],
+      "correct_answer": "8",
+      "solution_steps_sd": "ٻنهي پاسن مان 7 گھٽائڻ سان x = 15 - 7 = 8 ملندو آهي۔ جانچ: 8 + 7 = 15 درست آهي۔"
+    },
+    {
+      "chapter_id": 9,
+      "question_sd": "جيڪڏهن 2x = 18 هجي، ته x جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "9",
+        "36",
+        "6",
+        "16"
+      ],
+      "correct_answer": "9",
+      "solution_steps_sd": "ٻنهي پاسن کي 2 سان ونڊ ڪرڻ سان x = 18 ÷ 2 = 9 ملندو آهي۔"
+    },
+    {
+      "chapter_id": 9,
+      "question_sd": "جيڪڏهن 3x - 5 = 10 هجي، ته x جي قيمت ڪهڙي آهي؟",
+      "options": [
+        "5",
+        "15",
+        "3",
+        "45"
+      ],
+      "correct_answer": "5",
+      "solution_steps_sd": "ٻنهي پاسن ۾ 5 گڏ ڪرڻ سان 3x = 15، پوء ٻنهي پاسن کي 3 سان ونڊ ڪرڻ سان x = 5 ملندو آهي۔"
+    },
+    {
+      "chapter_id": 10,
+      "question_sd": "سڌي زاويي جي ماپ ڪيتري هوندي آهي؟",
+      "options": [
+        "90°",
+        "180°",
+        "45°",
+        "360°"
+      ],
+      "correct_answer": "90°",
+      "solution_steps_sd": "سڌو زاويو اهو زاويو آهي جيڪو چوٿائي ڦيري جي برابر هجي، يعني 90 درجا۔"
+    },
+    {
+      "chapter_id": 10,
+      "question_sd": "ٽڪنڊي جي ٽنهي زاوين جو مجموعو ڪيترو هوندو آهي؟",
+      "options": [
+        "180°",
+        "90°",
+        "360°",
+        "270°"
+      ],
+      "correct_answer": "180°",
+      "solution_steps_sd": "ڪنهن به ٽڪنڊي جي ٽنهي اندروني زاوين جو مجموعو هميشه 180 درجا هوندو آهي۔"
+    },
+    {
+      "chapter_id": 10,
+      "question_sd": "عمودي وچولي ليڪ ڪنهن ليڪي ٽڪري سان ڪهڙو زاويو ٺاهيندي آهي؟",
+      "options": [
+        "90°",
+        "45°",
+        "180°",
+        "60°"
+      ],
+      "correct_answer": "90°",
+      "solution_steps_sd": "عمودي وچولي ليڪ ٽڪري کي ٻن برابر حصن ۾ ورهائي ٿي ۽ ان سان 90 درجن جو زاويو ٺاهي ٿي۔"
+    },
+    {
+      "chapter_id": 11,
+      "question_sd": "5 سينٽي ميٽر ڊيگهه ۽ 3 سينٽي ميٽر ويڪر واري مستطيل جو احاطو ڪيترو آهي؟",
+      "options": [
+        "16",
+        "15",
+        "8",
+        "30"
+      ],
+      "correct_answer": "16",
+      "solution_steps_sd": "مستطيل جو احاطو = 2 × (ڊيگهه + ويڪر) = 2 × (5 + 3) = 16 سينٽي ميٽر۔"
+    },
+    {
+      "chapter_id": 11,
+      "question_sd": "5 سينٽي ميٽر ڊيگهه ۽ 3 سينٽي ميٽر ويڪر واري مستطيل جي ايراضي ڪيتري آهي؟",
+      "options": [
+        "15",
+        "16",
+        "8",
+        "30"
+      ],
+      "correct_answer": "15",
+      "solution_steps_sd": "مستطيل جي ايراضي = ڊيگهه × ويڪر = 5 × 3 = 15 چورس سينٽي ميٽر۔"
+    },
+    {
+      "chapter_id": 11,
+      "question_sd": "6 سينٽي ميٽر پاسو رکندڙ مربع جي ايراضي ڪيتري آهي؟",
+      "options": [
+        "36",
+        "24",
+        "12",
+        "48"
+      ],
+      "correct_answer": "36",
+      "solution_steps_sd": "مربع جي ايراضي = پاسو × پاسو = 6 × 6 = 36 چورس سينٽي ميٽر۔"
+    },
+    {
+      "chapter_id": 12,
+      "question_sd": "ڪعب جا ڪيترا منهن هوندا آهن؟",
+      "options": [
+        "6",
+        "8",
+        "12",
+        "4"
+      ],
+      "correct_answer": "6",
+      "solution_steps_sd": "ڪعب جي 6 هموار مٿاڇريون هونديون آهن، يعني ان جا 6 منهن هوندا آهن۔"
+    },
+    {
+      "chapter_id": 12,
+      "question_sd": "4 سينٽي ميٽر ڊيگهه، 3 سينٽي ميٽر ويڪر ۽ 2 سينٽي ميٽر اوچائي واري مستطيل ڪعب جو حجم ڪيترو آهي؟",
+      "options": [
+        "24",
+        "12",
+        "9",
+        "36"
+      ],
+      "correct_answer": "24",
+      "solution_steps_sd": "مستطيل ڪعب جو حجم = ڊيگهه × ويڪر × اوچائي = 4 × 3 × 2 = 24 ڪعب سينٽي ميٽر۔"
+    },
+    {
+      "chapter_id": 12,
+      "question_sd": "3 سينٽي ميٽر پاسو رکندڙ ڪعب جو حجم ڪيترو آهي؟",
+      "options": [
+        "27",
+        "9",
+        "18",
+        "6"
+      ],
+      "correct_answer": "27",
+      "solution_steps_sd": "ڪعب جو حجم = پاسو × پاسو × پاسو = 3 × 3 × 3 = 27 ڪعب سينٽي ميٽر۔"
+    },
+    {
+      "chapter_id": 13,
+      "question_sd": "5، 8، 8، 10 ۽ 4 جو اوسط ڪيترو آهي؟",
+      "options": [
+        "7",
+        "8",
+        "35",
+        "5"
+      ],
+      "correct_answer": "7",
+      "solution_steps_sd": "مجموعو = 5 + 8 + 8 + 10 + 4 = 35 ۽ قدرن جو تعداد 5 آهي، تنهنڪري اوسط = 35 ÷ 5 = 7۔"
+    },
+    {
+      "chapter_id": 13,
+      "question_sd": "5، 8، 8، 10 ۽ 4 ۾ گهڻو ايندڙ قدر ڪهڙو آهي؟",
+      "options": [
+        "8",
+        "5",
+        "10",
+        "4"
+      ],
+      "correct_answer": "8",
+      "solution_steps_sd": "8 ٻه ڀيرا آيو آهي ۽ ٻي ڪا قدر ٻه ڀيرا نه آئي آهي، تنهنڪري گهڻو ايندڙ قدر 8 آهي۔"
+    },
+    {
+      "chapter_id": 13,
+      "question_sd": "5، 8، 8، 10 ۽ 4 جي حد ڪيتري آهي؟",
+      "options": [
+        "6",
+        "5",
+        "10",
+        "4"
+      ],
+      "correct_answer": "6",
+      "solution_steps_sd": "حد = سڀ کان وڏي قدر - سڀ کان ننڍي قدر = 10 - 4 = 6۔"
+    }
+  ],
+  "videos": [
+    {
+      "chapter_id": 1,
+      "title_sd": "سيٽ جو تعارف",
+      "title_en": "Introduction to Set",
+      "watch_url": "https://www.youtube.com/watch?v=-man7c1--1M",
+      "source_channel": "Sindh Online School",
+      "duration": "4:13"
+    },
+    {
+      "chapter_id": 1,
+      "title_sd": "سيٽ جي نشاني ۽ ان جا رڪن",
+      "title_en": "Recognize notation of a set & its elements",
+      "watch_url": "https://www.youtube.com/watch?v=lpwdz751JbU",
+      "source_channel": "Sindh Online School",
+      "duration": "4:26"
+    },
+    {
+      "chapter_id": 1,
+      "title_sd": "سيٽ جو جدول وارو روپ",
+      "title_en": "Describe Tabular form of a Set",
+      "watch_url": "https://www.youtube.com/watch?v=mGC1BBgS0Uo",
+      "source_channel": "Sindh Online School",
+      "duration": "2:45"
+    },
+    {
+      "chapter_id": 2,
+      "title_sd": "قدرتي عدد ۽ پورا عدد",
+      "title_en": "Natural numbers and Whole numbers",
+      "watch_url": "https://www.youtube.com/watch?v=LUO359Ph6MY",
+      "source_channel": "Sindh Online School",
+      "duration": "5:06"
+    },
+    {
+      "chapter_id": 2,
+      "title_sd": "عددي ليڪ تي پورا عدد",
+      "title_en": "Represent whole numbers on number line",
+      "watch_url": "https://www.youtube.com/watch?v=Ux_eYW1A-nI",
+      "source_channel": "Sindh Online School",
+      "duration": "9:18"
+    },
+    {
+      "chapter_id": 2,
+      "title_sd": "عددي ليڪ تي وڏو ۽ ننڍو عدد",
+      "title_en": "Whole numbers greater than but less than given number on number line",
+      "watch_url": "https://www.youtube.com/watch?v=iYtLioL_K-Y",
+      "source_channel": "Sindh Online School",
+      "duration": "6:40"
+    },
+    {
+      "chapter_id": 3,
+      "title_sd": "جزا",
+      "title_en": "Factors",
+      "watch_url": "https://www.youtube.com/watch?v=kjxnQF6CsLs",
+      "source_channel": "Sindh Online School",
+      "duration": "10:41"
+    },
+    {
+      "chapter_id": 3,
+      "title_sd": "جزن جي مشق",
+      "title_en": "Factors (Exercise)",
+      "watch_url": "https://www.youtube.com/watch?v=NCypJEUjzxc",
+      "source_channel": "Sindh Online School",
+      "duration": "12:42"
+    },
+    {
+      "chapter_id": 3,
+      "title_sd": "ضربينڊڙ",
+      "title_en": "Multiples",
+      "watch_url": "https://www.youtube.com/watch?v=T4n4I6DRRYE",
+      "source_channel": "Sindh Online School",
+      "duration": "16:00"
+    },
+    {
+      "chapter_id": 4,
+      "title_sd": "سڄا عدد",
+      "title_en": "Integers",
+      "watch_url": "https://www.youtube.com/watch?v=krqN0Oo196I",
+      "source_channel": "Sindh Online School",
+      "duration": "14:00"
+    },
+    {
+      "chapter_id": 4,
+      "title_sd": "سڄن عددن جي ترتيب",
+      "title_en": "Arrangement of Integers",
+      "watch_url": "https://www.youtube.com/watch?v=hnVu8ypXn-I",
+      "source_channel": "Sindh Online School",
+      "duration": "9:04"
+    },
+    {
+      "chapter_id": 4,
+      "title_sd": "سڄي عدد جي مطلق قيمت",
+      "title_en": "Absolute Value of Integer",
+      "watch_url": "https://www.youtube.com/watch?v=ii_IhKzQU6g",
+      "source_channel": "Sindh Online School",
+      "duration": "12:49"
+    },
+    {
+      "chapter_id": 5,
+      "title_sd": "حسابي اظهار",
+      "title_en": "Arithmetic Expressions",
+      "watch_url": "https://www.youtube.com/watch?v=gs92vBlPDVA",
+      "source_channel": "Sindh Online School",
+      "duration": "9:42"
+    },
+    {
+      "chapter_id": 5,
+      "title_sd": "ڪنگڻ سادا ڪرڻ",
+      "title_en": "Simplifying Brackets",
+      "watch_url": "https://www.youtube.com/watch?v=z7HjOK-OrRQ",
+      "source_channel": "Sindh Online School",
+      "duration": "21:00"
+    },
+    {
+      "chapter_id": 5,
+      "title_sd": "عملن جي ترتيب جو قاعدو",
+      "title_en": "BODMAS Rule",
+      "watch_url": "https://www.youtube.com/watch?v=rmfoor8v0TA",
+      "source_channel": "Sindh Online School",
+      "duration": "14:27"
+    },
+    {
+      "chapter_id": 6,
+      "title_sd": "مقدارون",
+      "title_en": "Quantities",
+      "watch_url": "https://www.youtube.com/watch?v=WXtpqNyYSGs",
+      "source_channel": "Sindh Online School",
+      "duration": "14:24"
+    },
+    {
+      "chapter_id": 6,
+      "title_sd": "نسبت",
+      "title_en": "Ratio",
+      "watch_url": "https://www.youtube.com/watch?v=xCfiMSsvseE",
+      "source_channel": "Sindh Online School",
+      "duration": "12:10"
+    },
+    {
+      "chapter_id": 6,
+      "title_sd": "نسبت جون خاصيتون",
+      "title_en": "Properties of Ratio",
+      "watch_url": "https://www.youtube.com/watch?v=afM-UXEaSgs",
+      "source_channel": "Sindh Online School",
+      "duration": "15:00"
+    },
+    {
+      "chapter_id": 7,
+      "title_sd": "فيصد",
+      "title_en": "Percent",
+      "watch_url": "https://www.youtube.com/watch?v=QjdbviS5BTs",
+      "source_channel": "Sindh Online School",
+      "duration": "26:00"
+    },
+    {
+      "chapter_id": 7,
+      "title_sd": "فيصد سان عمل",
+      "title_en": "Operations with percent",
+      "watch_url": "https://www.youtube.com/watch?v=nxP_LKwxHsA",
+      "source_channel": "Sindh Online School",
+      "duration": "6:50"
+    },
+    {
+      "chapter_id": 7,
+      "title_sd": "مشق 7.1",
+      "title_en": "Exercise 7.1",
+      "watch_url": "https://www.youtube.com/watch?v=ctC-EMNGrhs",
+      "source_channel": "Sindh Online School",
+      "duration": "16:00"
+    },
+    {
+      "chapter_id": 8,
+      "title_sd": "آلجبرا جو تعارف",
+      "title_en": "Introduction to Algebra",
+      "watch_url": "https://www.youtube.com/watch?v=LHSYVIxpyN0",
+      "source_channel": "Sindh Online School",
+      "duration": "18:00"
+    },
+    {
+      "chapter_id": 8,
+      "title_sd": "الجبرائي اظهار",
+      "title_en": "Algebraic Expressions",
+      "watch_url": "https://www.youtube.com/watch?v=2eA62EXIesw",
+      "source_channel": "Sindh Online School",
+      "duration": "13:42"
+    },
+    {
+      "chapter_id": 8,
+      "title_sd": "اظهارن مان بيان ٺاهڻ",
+      "title_en": "Expressions to statements",
+      "watch_url": "https://www.youtube.com/watch?v=sq2KPk5YbL8",
+      "source_channel": "Sindh Online School",
+      "duration": "13:31"
+    },
+    {
+      "chapter_id": 9,
+      "title_sd": "الجبرائي مساواتون",
+      "title_en": "Algebraic Equations",
+      "watch_url": "https://www.youtube.com/watch?v=A2eMUGmYxOU",
+      "source_channel": "Sindh Online School",
+      "duration": "8:55"
+    },
+    {
+      "chapter_id": 9,
+      "title_sd": "الجبرائي مساواتون لکڻ",
+      "title_en": "Writing Algebraic Equations",
+      "watch_url": "https://www.youtube.com/watch?v=DasAn0XRXt4",
+      "source_channel": "Sindh Online School",
+      "duration": "15:00"
+    },
+    {
+      "chapter_id": 9,
+      "title_sd": "مشق 9.1",
+      "title_en": "Exercise 9.1",
+      "watch_url": "https://www.youtube.com/watch?v=xHftWvWMZ5g",
+      "source_channel": "Sindh Online School",
+      "duration": "9:51"
+    },
+    {
+      "chapter_id": 10,
+      "title_sd": "جاميٽري (ليڪ)",
+      "title_en": "Geometry (Line)",
+      "watch_url": "https://www.youtube.com/watch?v=vb8b-XabnDg",
+      "source_channel": "Sindh Online School",
+      "duration": "15:00"
+    },
+    {
+      "chapter_id": 10,
+      "title_sd": "ليڪي ٽڪرا گڏ ڪرڻ",
+      "title_en": "Adding Line Segments",
+      "watch_url": "https://www.youtube.com/watch?v=xXpJXLqSGHc",
+      "source_channel": "Sindh Online School",
+      "duration": "9:15"
+    },
+    {
+      "chapter_id": 10,
+      "title_sd": "ليڪي ٽڪرا گھٽ ڪرڻ",
+      "title_en": "Subtract Line Segments",
+      "watch_url": "https://www.youtube.com/watch?v=91GvsFg0svg",
+      "source_channel": "Sindh Online School",
+      "duration": "11:04"
+    },
+    {
+      "chapter_id": 11,
+      "title_sd": "ايراضي ۽ احاطو",
+      "title_en": "Area & Perimeter",
+      "watch_url": "https://www.youtube.com/watch?v=rpiHzen0bjk",
+      "source_channel": "Sindh Online School",
+      "duration": "10:16"
+    },
+    {
+      "chapter_id": 11,
+      "title_sd": "پيچيده شڪلن جي ايراضي ۽ احاطو",
+      "title_en": "Area & Perimeter of complex shapes",
+      "watch_url": "https://www.youtube.com/watch?v=Fi7wNAFDDno",
+      "source_channel": "Sindh Online School",
+      "duration": "12:56"
+    },
+    {
+      "chapter_id": 11,
+      "title_sd": "چئن پاسن واري شڪل جي ايراضي",
+      "title_en": "Area of quadrilateral",
+      "watch_url": "https://www.youtube.com/watch?v=Hp3m7f9eFlA",
+      "source_channel": "Sindh Online School",
+      "duration": "15:00"
+    },
+    {
+      "chapter_id": 12,
+      "title_sd": "ٽن پاسن واريون شيوون",
+      "title_en": "3D Shapes",
+      "watch_url": "https://www.youtube.com/watch?v=j811NMNZMNU",
+      "source_channel": "Sindh Online School",
+      "duration": "11:11"
+    },
+    {
+      "chapter_id": 12,
+      "title_sd": "ٽن پاسن واري شڪلن جي ايراضي ۽ حجم",
+      "title_en": "Area and Volume of 3-D",
+      "watch_url": "https://www.youtube.com/watch?v=0fG20n9QHmM",
+      "source_channel": "Sindh Online School",
+      "duration": "17:00"
+    },
+    {
+      "chapter_id": 12,
+      "title_sd": "باب 12 جي مشق",
+      "title_en": "Exercise Ch.12",
+      "watch_url": "https://www.youtube.com/watch?v=aY99tSmoojg",
+      "source_channel": "Sindh Online School",
+      "duration": "9:35"
+    },
+    {
+      "chapter_id": 13,
+      "title_sd": "ڊيٽا ۽ معلومات",
+      "title_en": "Data & Information",
+      "watch_url": "https://www.youtube.com/watch?v=btPERt3o1Cg",
+      "source_channel": "Sindh Online School",
+      "duration": "17:00"
+    },
+    {
+      "chapter_id": 13,
+      "title_sd": "بار گراف",
+      "title_en": "Bar Graph",
+      "watch_url": "https://www.youtube.com/watch?v=Gbq5R58OkU8",
+      "source_channel": "Sindh Online School",
+      "duration": "17:00"
+    },
+    {
+      "chapter_id": 13,
+      "title_sd": "پائي چارٽ",
+      "title_en": "Pie Chart",
+      "watch_url": "https://www.youtube.com/watch?v=7Y4WSanoPJU",
+      "source_channel": "Sindh Online School",
+      "duration": "13:54"
+    }
+  ]
+}

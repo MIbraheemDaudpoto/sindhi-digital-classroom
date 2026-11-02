@@ -1,0 +1,23 @@
+{
+  "name": "سنڌي ڊجيٽل ڪلاس روم (Sindhi Digital Classroom)",
+  "short_name": "SDC سنڌي",
+  "description": "Learn Math, Science, English and Sindhi with Voice AI and Smart Video Quiz on Sindh Textbook Board curriculum.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#10b981",
+  "dir": "rtl",
+  "lang": "sd",
+  "icons": [
+    {
+      "src": "/static/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

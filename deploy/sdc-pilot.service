@@ -1,0 +1,47 @@
+[Unit]
+Description=Sindhi Digital Classroom (SDC) Pilot Server
+Documentation=https://github.com/your-org/sindhi-digital-classroom
+After=network.target local-fs.target time-sync.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/sdc-pilot
+ExecStart=/home/pi/sdc-pilot/venv/bin/uvicorn src.api.app:app --host 0.0.0.0 --port 8000 --workers 2 --timeout-keep-alive 30
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=always
+RestartSec=3s
+TimeoutStopSec=15s
+
+# Environment configuration
+Environment=PYTHONUNBUFFERED=1
+Environment=ENVIRONMENT=production
+Environment=PORT=8000
+Environment=HOST=0.0.0.0
+Environment=DATABASE_PATH=/home/pi/sdc-pilot/data/sdc_platform.db
+
+# Resource limits tailored for Raspberry Pi 5 (8 GB RAM, solar power operation)
+LimitNOFILE=65535
+MemoryMax=2G
+MemoryHigh=1.5G
+CPUQuota=200%
+
+# Security & Sandboxing on Raspberry Pi 5
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/home/pi/sdc-pilot/data /home/pi/sdc-pilot/media
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictRealtime=true
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sdc-pilot
+
+[Install]
+WantedBy=multi-user.target

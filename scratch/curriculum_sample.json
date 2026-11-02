@@ -1,0 +1,303 @@
+{
+  "chunks_cols": [
+    {
+      "cid": 0,
+      "name": "chunk_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "chapter_id",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "topic_title_en",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "topic_title_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "pdf_page_range",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "summary_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "source",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "normalized_summary_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "normalized_title_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 9,
+      "name": "citation_formatted",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 10,
+      "name": "subject_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": "'science-6'",
+      "pk": 0
+    }
+  ],
+  "glossary_cols": [
+    {
+      "cid": 0,
+      "name": "id",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "chapter_id",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "term_en",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "term_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "definition_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "pdf_page",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "citation_formatted",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "normalized_term_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "normalized_definition_sd",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 9,
+      "name": "subject_id",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": "'science-6'",
+      "pk": 0
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "ch1-01",
+      "chapter_id": 1,
+      "topic_title_en": "The Cell - Basic Unit of Life",
+      "topic_title_sd": "جيو گهرڙو",
+      "pdf_page_range": "PDF 5-6 (printed 1-2)",
+      "summary_sd": "هر جاندار ننڍڙن جيو گهرڙن (Cell) مان ٺهيل آهي، ۽ گهرڙو زندگيءَ جو بنيادي ايڪو آهي۔ ٻوٽا ۽ جانور ٻئي گهرڙن مان ٺهن ٿا، پر انهن جي گهرڙن ۾ ڪجهه فرق به آهي۔ هڪ جاندار ۾ لکين گهرڙا گڏجي ڪم ڪن ٿا ته جيئن جسم زنده رهي ۽ وڌي۔",
+      "source": "companion+curriculum",
+      "normalized_summary_sd": "هر جاندار ننڍڙن جيو گهرڙن (Cell) مان ٺهيل آهي، ۽ گهرڙو زندگيءَ جو بنيادي ايڪو آهي۔ ٻوٽا ۽ جانور ٻئي گهرڙن مان ٺهن ٿا، پر انهن جي گهرڙن ۾ ڪجهه فرق به آهي۔ هڪ جاندار ۾ لکين گهرڙا گڏجي ڪم ڪن ٿا ته جيئن جسم زنده رهي ۽ وڌي۔",
+      "normalized_title_sd": "جيو گهرڙو",
+      "citation_formatted": "PDF 5-6 (printed 1-2)",
+      "subject_id": "science-6"
+    },
+    {
+      "chunk_id": "ch1-02",
+      "chapter_id": 1,
+      "topic_title_en": "The Microscope",
+      "topic_title_sd": "خوردبيني",
+      "pdf_page_range": "PDF 7-10 (printed 3-6)",
+      "summary_sd": "گهرڙا اک سان ڏسي نٿا سگهجن، ان ڪري انهن کي ڏسڻ لاءِ خوردبيني (Microscope) استعمال ٿئي ٿي۔ خوردبيني ۾ لينس، اسٽيج ۽ روشنيءَ جو انتظام هوندو آهي، جنهن سان ننڍي شيءِ وڏي نظر اچي ٿي۔ خوردبينيءَ جي مدد سان سائنسدانن پهريون ڀيرو گهرڙن جي دنيا کي ڏٺو ۽ سمجهيو۔",
+      "source": "companion+curriculum",
+      "normalized_summary_sd": "گهرڙا اک سان ڏسي نٿا سگهجن، ان ڪري انهن کي ڏسڻ لاءِ خوردبيني (Microscope) استعمال ٿئي ٿي۔ خوردبيني ۾ لينس، اسٽيج ۽ روشنيءَ جو انتظام هوندو آهي، جنهن سان ننڍي شيءِ وڏي نظر اچي ٿي۔ خوردبينيءَ جي مدد سان سائنسدانن پهريون ڀيرو گهرڙن جي دنيا کي ڏٺو ۽ سمجهيو۔",
+      "normalized_title_sd": "خوردبيني",
+      "citation_formatted": "PDF 7-10 (printed 3-6)",
+      "subject_id": "science-6"
+    },
+    {
+      "chunk_id": "ch1-03",
+      "chapter_id": 1,
+      "topic_title_en": "Animal and Plant Cells",
+      "topic_title_sd": "جانورن ۽ ٻوٽن جا جيو گهرڙا",
+      "pdf_page_range": "PDF 11-12 (printed 7-8)",
+      "summary_sd": "جانورن ۽ ٻوٽن جي گهرڙن ۾ ڪيتريون ئي هڪجهڙيون شيون آهن، جهڙوڪ پردو (Membrane)، سائٽوپلازم (Cytoplasm) ۽ مرڪز (Nucleus)۔ ٻوٽي جي گهرڙي ۾ وڌيڪ هڪ مضبوط ٻاهرين ڀت ۽ ڪلوروپلاسٽ (Chloroplast) به هوندو آهي۔ انهن فرقن جي ڪري ٻوٽا پنهنجي خوراڪ پاڻ ٺاهي سگهن ٿا، جڏهن ته جانور ٻاهرين خوراڪ تي گذارو ڪن ٿا۔",
+      "source": "companion+curriculum",
+      "normalized_summary_sd": "جانورن ۽ ٻوٽن جي گهرڙن ۾ ڪيتريون ئي هڪجهڙيون شيون آهن، جهڙوڪ پردو (Membrane)، سائٽوپلازم (Cytoplasm) ۽ مرڪز (Nucleus)۔ ٻوٽي جي گهرڙي ۾ وڌيڪ هڪ مضبوط ٻاهرين ڀت ۽ ڪلوروپلاسٽ (Chloroplast) به هوندو آهي۔ انهن فرقن جي ڪري ٻوٽا پنهنجي خوراڪ پاڻ ٺاهي سگهن ٿا، جڏهن ته جانور ٻاهرين خوراڪ تي گذارو ڪن ٿا۔",
+      "normalized_title_sd": "جانورن ۽ ٻوٽن جا جيو گهرڙا",
+      "citation_formatted": "PDF 11-12 (printed 7-8)",
+      "subject_id": "science-6"
+    },
+    {
+      "chunk_id": "ch1-04",
+      "chapter_id": 1,
+      "topic_title_en": "Inside a Typical Plant Cell",
+      "topic_title_sd": "ٻوٽي جي گهرڙي جو اندروني جائزو",
+      "pdf_page_range": "PDF 13-14 (printed 9-10)",
+      "summary_sd": "ٻوٽي جي گهرڙي جي اندر مرڪز (Nucleus) هوندو آهي، جيڪو گهرڙي جي سڀني ڪمن کي هلائي ٿو۔ سائٽوپلازم ۾ ننڍا عضوا هوندا آهن، ۽ ڪلوروفل (Chlorophyll) واري ڪلوروپلاسٽ ۾ روشنيءَ جي توانائي خوراڪ ۾ بدلجي ٿي۔ وڏو خال (Vacuole) گهرڙي کي پاڻي ۽ کاڌي جي ذخيري سان گڏ سهارو به ڏئي ٿو۔",
+      "source": "companion+curriculum",
+      "normalized_summary_sd": "ٻوٽي جي گهرڙي جي اندر مرڪز (Nucleus) هوندو آهي، جيڪو گهرڙي جي سڀني ڪمن کي هلائي ٿو۔ سائٽوپلازم ۾ ننڍا عضوا هوندا آهن، ۽ ڪلوروفل (Chlorophyll) واري ڪلوروپلاسٽ ۾ روشنيءَ جي توانائي خوراڪ ۾ بدلجي ٿي۔ وڏو خال (Vacuole) گهرڙي کي پاڻي ۽ کاڌي جي ذخيري سان گڏ سهارو به ڏئي ٿو۔",
+      "normalized_title_sd": "ٻوٽي جي گهرڙي جو اندروني جائزو",
+      "citation_formatted": "PDF 13-14 (printed 9-10)",
+      "subject_id": "science-6"
+    },
+    {
+      "chunk_id": "ch1-05",
+      "chapter_id": 1,
+      "topic_title_en": "Unicellular and Multicellular Organisms",
+      "topic_title_sd": "هڪ گهرڙي ۽ گهڻ گهرڙن وارا جاندار",
+      "pdf_page_range": "PDF 15-16 (printed 11-12)",
+      "summary_sd": "ڪجهه جاندار رڳو هڪ گهرڙي مان ٺهيل هوندا آهن، انهن کي هڪ گهرڙي وارا جاندار (Unicellular Organisms) چئبو آهي، جهڙوڪ اميبا۔ ٻيا جاندار، جهڙوڪ انسان ۽ وڏا ٻوٽا، ڪيترن ئي گهرڙن مان ٺهيل هوندا آهن ۽ انهن کي گهڻ گهرڙن وارا جاندار (Multicellular Organisms) چئبو آهي۔ گهڻ گهرڙن وارن جاندارن ۾ هر گهرڙي جو پنهنجو خاص ڪم هوندو آهي۔",
+      "source": "companion+curriculum",
+      "normalized_summary_sd": "ڪجهه جاندار رڳو هڪ گهرڙي مان ٺهيل هوندا آهن، انهن کي هڪ گهرڙي وارا جاندار (Unicellular Organisms) چئبو آهي، جهڙوڪ اميبا۔ ٻيا جاندار، جهڙوڪ انسان ۽ وڏا ٻوٽا، ڪيترن ئي گهرڙن مان ٺهيل هوندا آهن ۽ انهن کي گهڻ گهرڙن وارا جاندار (Multicellular Organisms) چئبو آهي۔ گهڻ گهرڙن وارن جاندارن ۾ هر گهرڙي جو پنهنجو خاص ڪم هوندو آهي۔",
+      "normalized_title_sd": "هڪ گهرڙي ۽ گهڻ گهرڙن وارا جاندار",
+      "citation_formatted": "PDF 15-16 (printed 11-12)",
+      "subject_id": "science-6"
+    }
+  ],
+  "glossary": [
+    {
+      "id": 508,
+      "chapter_id": 1,
+      "term_en": "Equal sets",
+      "term_sd": "برابر سيٽ",
+      "definition_sd": "ٻه سيٽ جن جا سڀ رڪن هڪجهڙا هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation_formatted": "PDF 5 (printed 1)",
+      "normalized_term_sd": "برابر سيٽ",
+      "normalized_definition_sd": "ٻه سيٽ جن جا سڀ رڪن هڪجهڙا هجن۔",
+      "subject_id": "math-6"
+    },
+    {
+      "id": 509,
+      "chapter_id": 1,
+      "term_en": "Empty set",
+      "term_sd": "خالي سيٽ",
+      "definition_sd": "اهو سيٽ جنهن ۾ ڪو رڪن نه هجي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation_formatted": "PDF 5 (printed 1)",
+      "normalized_term_sd": "خالي سيٽ",
+      "normalized_definition_sd": "اهو سيٽ جنهن ۾ ڪو رڪن نه هجي۔",
+      "subject_id": "math-6"
+    },
+    {
+      "id": 510,
+      "chapter_id": 1,
+      "term_en": "Subset",
+      "term_sd": "ذيلي سيٽ",
+      "definition_sd": "اهو سيٽ جنهن جا سڀ رڪن ٻئي سيٽ ۾ هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation_formatted": "PDF 5 (printed 1)",
+      "normalized_term_sd": "ذيلي سيٽ",
+      "normalized_definition_sd": "اهو سيٽ جنهن جا سڀ رڪن ٻئي سيٽ ۾ هجن۔",
+      "subject_id": "math-6"
+    },
+    {
+      "id": 511,
+      "chapter_id": 1,
+      "term_en": "Element / Member",
+      "term_sd": "رڪن",
+      "definition_sd": "سيٽ ۾ موجود هر شيء سيٽ جو رڪن آهي۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation_formatted": "PDF 5 (printed 1)",
+      "normalized_term_sd": "رڪن",
+      "normalized_definition_sd": "سيٽ ۾ موجود هر شيء سيٽ جو رڪن آهي۔",
+      "subject_id": "math-6"
+    },
+    {
+      "id": 512,
+      "chapter_id": 1,
+      "term_en": "Set",
+      "term_sd": "سيٽ",
+      "definition_sd": "شين جو واضح مجموعو جنهن جا رڪن چٽا هجن۔",
+      "pdf_page": "PDF 5 (printed 1)",
+      "citation_formatted": "PDF 5 (printed 1)",
+      "normalized_term_sd": "سيٽ",
+      "normalized_definition_sd": "شين جو واضح مجموعو جنهن جا رڪن چٽا هجن۔",
+      "subject_id": "math-6"
+    }
+  ]
+}

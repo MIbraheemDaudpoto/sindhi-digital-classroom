@@ -1,0 +1,16 @@
+[Unit]
+Description=SDC Solar & UPS Power Safety Guard
+After=sdc-pilot.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /home/pi/sdc-pilot/deploy/solar_power_monitor.py
+Restart=always
+RestartSec=10s
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sdc-power-guard
+
+[Install]
+WantedBy=multi-user.target

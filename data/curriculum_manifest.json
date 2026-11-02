@@ -1,0 +1,156 @@
+{
+  "_schema_version": "1.0.0",
+  "_description": "Sindhi Digital Classroom Curriculum Manifest. Populate only from verified evidence.",
+  "_updated_at": "2026-10-17T13:54:00Z",
+  "_updated_by": "SDC Phase 2.3 Pilot",
+  "pilots": [
+    {
+      "pilot_id": "CLASS6_SINDHI_2026",
+      "class_level": 6,
+      "subject": "Sindhi",
+      "course_db_id": "crs-sindhi-6",
+      "title_sindhi": "سنڊي سليس (Sindhi)",
+      "title_english": "Sindhi Class 6",
+      "pilot_status": "IN_PROGRESS",
+      "notes": "Phase 2.3 pilot. Textbook PDF not yet placed in repository. All lesson records are PENDING_TEXTBOOK_PDF until actual PDF is ingested and verified.",
+      "source_document": {
+        "expected_filename": "Sindhi Reader.pdf",
+        "expected_path": "data/curriculum_pdfs/class_6/sindhi/Sindhi Reader.pdf",
+        "actual_file_found": true,
+        "file_found_at": "data/curriculum_pdfs/class_6/sindhi/Sindhi Reader.pdf",
+        "file_size_bytes": 67201559,
+        "page_count": 103,
+        "publisher": "Sindh Textbook Board, Jamshoro",
+        "title_printed": "سنڌي ڇھون ڪتاب (Sindhi Chhahon Kitab)",
+        "language": "Sindhi",
+        "script": "Perso-Arabic / Nastaliq (52-letter alphabet)",
+        "ingestion_status": "SCANNED_PDF_OCR_REQUIRED",
+        "ingestion_notes": "Sindhi Reader.pdf (103 pages, 67.2 MB) verified present. Page 1, 2, and 95 contain raw text fragments; pages 3-94, 96-103 are raster DCTDecode JPEG scans requiring vision-OCR for full chunk extraction.",
+        "ocr_required": "REQUIRED",
+        "last_checked": "2026-10-17T21:20:00Z"
+      },
+      "youtube_channel": {
+        "supplied_url": "https://www.youtube.com/@SindhOnlineSchool",
+        "channel_name_verified": "Sindh Online School",
+        "channel_verified": true,
+        "verification_method": "YouTube oEmbed API on 30 video IDs extracted from channel page HTML",
+        "class6_sindhi_videos_found": 0,
+        "inspection_date": "2026-10-17T13:54:00Z",
+        "inspection_notes": "30 videos verified via oEmbed. All confirmed Class 8-10 (Math, Chemistry, Physics). Zero Class 6 Sindhi videos found in sampled page. Re-inspect with pagination for complete coverage.",
+        "inspection_status": "PARTIALLY_VERIFIED",
+        "sample_videos_confirmed": [
+          {
+            "youtube_id": "59mng_qtrnE",
+            "title": "Graph of various equations- Part 02 | Math Class 9",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "P1VtS_MsgwE",
+            "title": "Demonstrative Geometry concepts-1 | Mathematics Class 8 | Unit 10",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "NCy67-KTz7s",
+            "title": "Exercise 9.7 | Mathematics Class 8 | Unit 9",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "F-Wndjmu1_s",
+            "title": "Detailed questions | Chemistry Class 10 | Chapter 06",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "qthy2DYzaQ4",
+            "title": "Water Pollution-Part 01 | Chemistry Class 10",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "-GhLFU-E28M",
+            "title": "Role of Transformer in Power Transmission | Physics Class 10",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          },
+          {
+            "youtube_id": "BnSN4vDq2w0",
+            "title": "Disadvantages of hard water | Chemistry Class 10",
+            "channel": "Sindh Online School",
+            "relevant_to_class6_sindhi": false
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "lesson_db_id": "lesson-sindhi-6-1",
+          "lesson_order": 1,
+          "unit_number": 1,
+          "item_type": "LESSON",
+          "title_sindhi": "شاهه عبداللطيف ـڦٹائي جو تعارف",
+          "title_english": "Life and Poetry of Shah Abdul Latif Bhittai",
+          "status": "PUBLISHED",
+          "textbook_page_range": "PENDING_TEXTBOOK_PDF",
+          "textbook_verification": "PENDING_TEXTBOOK_PDF",
+          "content_notes": "Synthetic seed record only. Real chapter title, page range, and exercises to be filled from actual STBB Class 6 Sindhi textbook after PDF ingestion.",
+          "video_associations": [
+            {
+              "youtube_video_db_id": "yt-sindhi-6-1",
+              "youtube_id": "PENDING_OFFICIAL_URL",
+              "title": "PENDING - no verified video found",
+              "channel": "PENDING",
+              "match_confidence": "NO_MATCH_FOUND",
+              "verification_status": "NO_MATCH_FOUND",
+              "evidence": "Sindh Online School channel inspected 2026-10-17. No Class 6 Sindhi videos found in 30-video sample. External watch link not available.",
+              "is_embeddable": false
+            }
+          ],
+          "gaps": [
+            "No verified YouTube video found for this lesson from supplied channel.",
+            "Actual textbook chapter title not yet confirmed - PDF not ingested.",
+            "Textbook page range unknown.",
+            "Poem names, comprehension questions, grammar exercises not yet extracted."
+          ]
+        }
+      ],
+      "unmatched_textbook_items": "ALL - textbook PDF not yet ingested.",
+      "content_gaps_summary": {
+        "total_textbook_items_expected": "UNKNOWN - requires PDF inspection",
+        "total_items_with_verified_video": 0,
+        "total_items_with_no_video_match": 1,
+        "total_items_pending_pdf": 1
+      }
+    }
+  ],
+  "future_pilots": [
+    {
+      "class_level": 6,
+      "subject": "Science",
+      "status": "SEED_ONLY",
+      "course_db_id": "crs-sci-6"
+    },
+    {
+      "class_level": 6,
+      "subject": "Math",
+      "status": "SEED_ONLY",
+      "course_db_id": "crs-math-6"
+    },
+    {
+      "class_level": 6,
+      "subject": "English",
+      "status": "SEED_ONLY",
+      "course_db_id": "crs-eng-6"
+    }
+  ],
+  "ingestion_directory_convention": {
+    "pattern": "data/curriculum_pdfs/class_{N}/{subject_lowercase}/",
+    "examples": [
+      "data/curriculum_pdfs/class_6/sindhi/STBB_Class_6_Sindhi.pdf",
+      "data/curriculum_pdfs/class_6/science/STBB_Class_6_Science.pdf",
+      "data/curriculum_pdfs/class_7/sindhi/STBB_Class_7_Sindhi.pdf"
+    ],
+    "note": "Filename is a project convention only. Preserve actual publisher title and edition from the document itself. Do not overwrite existing files."
+  }
+}

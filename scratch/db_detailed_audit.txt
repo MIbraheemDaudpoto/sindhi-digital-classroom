@@ -1,0 +1,196 @@
+=== COURSES ===
+  id=crs-sci-6, class_level=6, subject=Science, title_en=General Science Class 6, title_sd=جنرل سائنس (General Science)
+  id=crs-sindhi-6, class_level=6, subject=Sindhi, title_en=Sindhi Class 6, title_sd=سنڌي سليس (Sindhi)
+  id=crs-eng-6, class_level=6, subject=English, title_en=English Class 6, title_sd=انگريزي (English Grammar)
+  id=test-crs-a24e3c, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-4fdd31, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-814aaf, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-41313a, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-4a7a47, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-5fa1e3, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-052cd4, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=test-crs-9dca49, class_level=6, subject=Science, title_en=Science, title_sd=سائنس
+  id=crs-math-6, class_level=6, subject=Math, title_en=Mathematics Class 6, title_sd=رياضي (Mathematics)
+
+=== LESSONS ===
+Total Lessons: 35
+  id=lesson-sci-6-1, course_id=crs-sci-6, unit=1, dur=600s, status=PUBLISHED | The Cell - Basic Unit of Life | جيو گهرڙو (The Cell - Basic Unit of Life)
+  id=lesson-sindhi-6-1, course_id=crs-sindhi-6, unit=1, dur=540s, status=DRAFT | Life and Poetry of Shah Latif | شاهه عبداللطيف ڀٽائي جو تعارف (Shah Latif)
+  id=lesson-eng-6-1, course_id=crs-eng-6, unit=1, dur=420s, status=PUBLISHED | Parts of Speech in English | Parts of Speech (ڳالهائڻ جا جزا)
+  id=lesson-sci-6-2, course_id=crs-sci-6, unit=2, dur=480s, status=PUBLISHED | Sense Organs | حواسن وارا عضوا (Sense Organs)
+  id=lesson-sci-6-3, course_id=crs-sci-6, unit=3, dur=720s, status=PUBLISHED | Photosynthesis and Respiration in Plants | روشنائي ترڪيب ۽ ساهه کڻڻ جو عمل (Photosynthesis & Respiration)
+  id=lesson-sci-6-4, course_id=crs-sci-6, unit=4, dur=720s, status=PUBLISHED | Environment and Ecosystem | ماحول ۽ ايڪوسسٽم (Environment and Ecosystem)
+  id=lesson-sci-6-5, course_id=crs-sci-6, unit=5, dur=720s, status=PUBLISHED | Atoms, Molecules, Mixtures and Compounds | ائٽمن ۽ ماليڪيولن جو تعارف (Atoms and Molecules)
+  id=lesson-sci-6-6, course_id=crs-sci-6, unit=6, dur=720s, status=PUBLISHED | Air and its Importance | هوا ۽ ان جي اهميت (Air and Atmosphere)
+  id=lesson-sci-6-7, course_id=crs-sci-6, unit=7, dur=720s, status=PUBLISHED | Solutions and Suspensions | محلول ۽ معلق ميلاپ (Solutions and Suspensions)
+  id=lesson-sci-6-8, course_id=crs-sci-6, unit=8, dur=720s, status=PUBLISHED | Energy and Its Forms | توانائي ۽ ان جا قسم (Energy and Its Forms)
+  id=lesson-sci-6-9, course_id=crs-sci-6, unit=9, dur=720s, status=PUBLISHED | Simple Machines: Pulleys, Wheels and Gears | ساديون مشينون (Simple Machines)
+  id=lesson-sci-6-10, course_id=crs-sci-6, unit=10, dur=720s, status=PUBLISHED | Transmission and Reflection of Light | روشنيءَ جو سفر ۽ موٽ (Transmission and Reflection of Light)
+  id=lesson-sci-6-11, course_id=crs-sci-6, unit=11, dur=720s, status=PUBLISHED | Sound and Its Properties | آواز جو سفر ۽ خاصيتون (Sound and Its Propagation)
+  id=lesson-sci-6-12, course_id=crs-sci-6, unit=12, dur=720s, status=PUBLISHED | Space, Satellites and Astronomy | خلا ۽ مصنوعي سيارا (Space and Satellites)
+  id=test-lsn-4e1884, course_id=test-crs-a24e3c, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-ceef59, course_id=test-crs-4fdd31, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-b321f7, course_id=test-crs-814aaf, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-1e4f6d, course_id=test-crs-41313a, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-911009, course_id=test-crs-4a7a47, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-7a0d1f, course_id=test-crs-5fa1e3, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-99d13d, course_id=test-crs-052cd4, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=test-lsn-f4a636, course_id=test-crs-9dca49, unit=1, dur=600s, status=PUBLISHED | Lesson 1 | سبق
+  id=lesson-math-6-1, course_id=crs-math-6, unit=1, dur=600s, status=PUBLISHED | Unit 1: Sets | سيٽ (Sets)
+  id=lesson-math-6-2, course_id=crs-math-6, unit=2, dur=600s, status=PUBLISHED | Unit 2: Whole numbers | پورا عدد (Whole numbers)
+  id=lesson-math-6-3, course_id=crs-math-6, unit=3, dur=600s, status=PUBLISHED | Unit 3: Factors and multiples | جزا ۽ ضربينڊڙ (Factors and multiples)
+  id=lesson-math-6-4, course_id=crs-math-6, unit=4, dur=600s, status=PUBLISHED | Unit 4: Integers | سڄا عدد (Integers)
+  id=lesson-math-6-5, course_id=crs-math-6, unit=5, dur=600s, status=PUBLISHED | Unit 5: Simplification | سادي صورت (Simplification)
+  id=lesson-math-6-6, course_id=crs-math-6, unit=6, dur=600s, status=PUBLISHED | Unit 6: Ratio and proportion | نسبت ۽ تناسب (Ratio and proportion)
+  id=lesson-math-6-7, course_id=crs-math-6, unit=7, dur=600s, status=PUBLISHED | Unit 7: Financial arithmetic | ماليتي حساب (Financial arithmetic)
+  id=lesson-math-6-8, course_id=crs-math-6, unit=8, dur=600s, status=PUBLISHED | Unit 8: Introduction to algebra | آلجبرا جو تعارف (Introduction to algebra)
+  id=lesson-math-6-9, course_id=crs-math-6, unit=9, dur=600s, status=PUBLISHED | Unit 9: Linear (one-degree) equations | هک درجي مساواتون (Linear (one-degree) equations)
+  id=lesson-math-6-10, course_id=crs-math-6, unit=10, dur=600s, status=PUBLISHED | Unit 10: Geometry | جاميٽري (Geometry)
+  id=lesson-math-6-11, course_id=crs-math-6, unit=11, dur=600s, status=PUBLISHED | Unit 11: Perimeter and area | احاطو ۽ ايراضي (Perimeter and area)
+  id=lesson-math-6-12, course_id=crs-math-6, unit=12, dur=600s, status=PUBLISHED | Unit 12: Three-dimensional shapes | ٽن پاسن واريون شيوون (Three-dimensional shapes)
+  id=lesson-math-6-13, course_id=crs-math-6, unit=13, dur=600s, status=PUBLISHED | Unit 13: Information handling | معلومات سيهڙڻ (Information handling)
+
+=== VIDEOS ===
+Total Videos: 17
+  id=vid-lesson-sci-6-1, lesson_id=lesson-sci-6-1, hls=/static/media/lesson-sci-6-1.m3u8, fallback=/static/media/lesson-sci-6-1.mp4, audio=/static/media/lesson-sci-6-1.mp3, res240=240p, res360=360p
+  id=vid-lesson-sindhi-6-1, lesson_id=lesson-sindhi-6-1, hls=/static/media/lesson-sindhi-6-1.m3u8, fallback=/static/media/lesson-sindhi-6-1.mp4, audio=/static/media/lesson-sindhi-6-1.mp3, res240=240p, res360=360p
+  id=vid-lesson-eng-6-1, lesson_id=lesson-eng-6-1, hls=/static/media/lesson-eng-6-1.m3u8, fallback=/static/media/lesson-eng-6-1.mp4, audio=/static/media/lesson-eng-6-1.mp3, res240=240p, res360=360p
+  id=vid-lesson-sci-6-2, lesson_id=lesson-sci-6-2, hls=/static/media/lesson-sci-6-2.m3u8, fallback=/static/media/lesson-sci-6-2.mp4, audio=/static/media/lesson-sci-6-2.mp3, res240=240p, res360=360p
+  id=vid-lesson-math-6-1, lesson_id=lesson-math-6-1, hls=/static/media/lesson-math-6-1.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-1.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-2, lesson_id=lesson-math-6-2, hls=/static/media/lesson-math-6-2.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-2.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-3, lesson_id=lesson-math-6-3, hls=/static/media/lesson-math-6-3.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-3.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-4, lesson_id=lesson-math-6-4, hls=/static/media/lesson-math-6-4.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-4.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-5, lesson_id=lesson-math-6-5, hls=/static/media/lesson-math-6-5.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-5.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-6, lesson_id=lesson-math-6-6, hls=/static/media/lesson-math-6-6.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-6.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-7, lesson_id=lesson-math-6-7, hls=/static/media/lesson-math-6-7.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-7.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-8, lesson_id=lesson-math-6-8, hls=/static/media/lesson-math-6-8.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-8.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-9, lesson_id=lesson-math-6-9, hls=/static/media/lesson-math-6-9.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-9.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-10, lesson_id=lesson-math-6-10, hls=/static/media/lesson-math-6-10.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-10.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-11, lesson_id=lesson-math-6-11, hls=/static/media/lesson-math-6-11.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-11.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-12, lesson_id=lesson-math-6-12, hls=/static/media/lesson-math-6-12.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-12.mp3, res240=None, res360=None
+  id=vid-lesson-math-6-13, lesson_id=lesson-math-6-13, hls=/static/media/lesson-math-6-13.m3u8, fallback=/static/media/lesson-math-6-1.mp4, audio=/static/media/lesson-math-6-13.mp3, res240=None, res360=None
+
+=== YOUTUBE_VIDEOS ===
+Total YouTube Videos: 30
+  id=yt-lesson-eng-6-1, lesson_id=lesson-eng-6-1, yt_id=ciJoPjhQzWk, cl=6, sub=Science, embed=1, title=Microscope | Science Class 6| Chapter 1| Lecture 1 (part 1)| by Nana Abid| Sindh Online School
+  id=yt-lesson-sindhi-6-1, lesson_id=lesson-sindhi-6-1, yt_id=ore36cHSkKY, cl=6, sub=Science, embed=1, title=Plant/Animal Cells | Science Class 6| Chapter 1| Lecture 2 part 2| by Nana Abid| Sindh Online School
+  id=yt-sci-6-1, lesson_id=lesson-sci-6-1, yt_id=ciJoPjhQzWk, cl=6, sub=Science, embed=1, title=Microscope | Science Class 6| Chapter 1| Lecture 1 (part 1)| by Nana Abid| Sindh Online School
+  id=yt-sci-6-2, lesson_id=lesson-sci-6-2, yt_id=l6OlBA4sL50, cl=6, sub=Science, embed=1, title=Sense Organs |Senses | Science Class 6| Chapter 2| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-3, lesson_id=lesson-sci-6-3, yt_id=k5fs3r3TZss, cl=6, sub=Science, embed=1, title=Plants| Science Class 6| Chapter 3| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-4, lesson_id=lesson-sci-6-4, yt_id=JVE9PmocI7w, cl=6, sub=Science, embed=1, title=Environment Components| Science Class 6| Chapter 4| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-5, lesson_id=lesson-sci-6-5, yt_id=SeGXnSFn0MY, cl=6, sub=Science, embed=1, title=Atoms and Molecules| Science Class 6| Chapter 5| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-6, lesson_id=lesson-sci-6-6, yt_id=ozaRXWSfOec, cl=6, sub=Science, embed=1, title=Air & its importance| Science Class 6| Chapter 6| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-7, lesson_id=lesson-sci-6-7, yt_id=Qr9n6ssd3e4, cl=6, sub=Science, embed=1, title=Solutions & its components| Science Class 6| Chapter 7| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-8, lesson_id=lesson-sci-6-8, yt_id=An6KSORbBBY, cl=6, sub=Science, embed=1, title=Energy & its units| Science Class 6| Chapter 8| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-9, lesson_id=lesson-sci-6-9, yt_id=DgIH685OwDg, cl=6, sub=Science, embed=1, title=Simple Machines| Science Class 6| Chapter 9| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-10, lesson_id=lesson-sci-6-10, yt_id=DNNpoinJ0Ms, cl=6, sub=Science, embed=1, title=Light| Science Class 6| Chapter 10| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-11, lesson_id=lesson-sci-6-11, yt_id=sS377lU1CzU, cl=6, sub=Science, embed=1, title=What is Sound| Science Class 6| Chapter 11| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-sci-6-12, lesson_id=lesson-sci-6-12, yt_id=ccmv6BDTYj4, cl=6, sub=Science, embed=1, title=Introduction to Astronomy| Science Class 6| Chapter 12| Lecture 1| by Nana Abid| Sindh Online School
+  id=yt-lesson-math-6-1, lesson_id=lesson-math-6-1, yt_id=-man7c1--1M, cl=6, sub=Math, embed=1, title=سيٽ جو تعارف
+  id=yt-lesson-math-6-2, lesson_id=lesson-math-6-2, yt_id=LUO359Ph6MY, cl=6, sub=Math, embed=1, title=قدرتي عدد ۽ پورا عدد
+  id=yt-lesson-math-6-3, lesson_id=lesson-math-6-3, yt_id=kjxnQF6CsLs, cl=6, sub=Math, embed=1, title=جزا
+  id=yt-lesson-math-6-4, lesson_id=lesson-math-6-4, yt_id=krqN0Oo196I, cl=6, sub=Math, embed=1, title=سڄا عدد
+  id=yt-lesson-math-6-5, lesson_id=lesson-math-6-5, yt_id=gs92vBlPDVA, cl=6, sub=Math, embed=1, title=حسابي اظهار
+  id=yt-lesson-math-6-6, lesson_id=lesson-math-6-6, yt_id=WXtpqNyYSGs, cl=6, sub=Math, embed=1, title=مقدارون
+  id=yt-lesson-math-6-7, lesson_id=lesson-math-6-7, yt_id=QjdbviS5BTs, cl=6, sub=Math, embed=1, title=فيصد
+  id=yt-lesson-math-6-8, lesson_id=lesson-math-6-8, yt_id=LHSYVIxpyN0, cl=6, sub=Math, embed=1, title=آلجبرا جو تعارف
+  id=yt-lesson-math-6-9, lesson_id=lesson-math-6-9, yt_id=A2eMUGmYxOU, cl=6, sub=Math, embed=1, title=الجبرائي مساواتون
+  id=yt-lesson-math-6-10, lesson_id=lesson-math-6-10, yt_id=vb8b-XabnDg, cl=6, sub=Math, embed=1, title=جاميٽري (ليڪ)
+  id=yt-lesson-math-6-11, lesson_id=lesson-math-6-11, yt_id=rpiHzen0bjk, cl=6, sub=Math, embed=1, title=ايراضي ۽ احاطو
+  id=yt-lesson-math-6-12, lesson_id=lesson-math-6-12, yt_id=j811NMNZMNU, cl=6, sub=Math, embed=1, title=ٽن پاسن واريون شيوون
+  id=yt-lesson-math-6-13, lesson_id=lesson-math-6-13, yt_id=btPERt3o1Cg, cl=6, sub=Math, embed=1, title=ڊيٽا ۽ معلومات
+  id=yt-math-6-1, lesson_id=lesson-math-6-1, yt_id=NuWizHnlWt8, cl=6, sub=Math, embed=1, title=سيٽ جا بنيادي تصور (Introduction to Sets)
+  id=yt-sindhi-6-1, lesson_id=lesson-sindhi-6-1, yt_id=ore36cHSkKY, cl=6, sub=Sindhi, embed=1, title=شاهه عبداللطيف ڀٽائي جو تعارف
+  id=yt-eng-6-1, lesson_id=lesson-eng-6-1, yt_id=PENDING_OFFICIAL_URL, cl=6, sub=English, embed=0, title=Parts of Speech (Pending Official SELD Video)
+
+=== QUESTIONS ===
+  lesson_id=lesson-math-6-1: total_q=4, checkpoints=4
+  lesson_id=lesson-math-6-10: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-11: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-12: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-13: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-2: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-3: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-4: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-5: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-6: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-7: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-8: total_q=3, checkpoints=3
+  lesson_id=lesson-math-6-9: total_q=3, checkpoints=3
+  lesson_id=lesson-sci-6-1: total_q=33514, checkpoints=33514
+  lesson_id=test-lsn-1e4f6d: total_q=1, checkpoints=1
+  lesson_id=test-lsn-4e1884: total_q=1, checkpoints=1
+  lesson_id=test-lsn-7a0d1f: total_q=1, checkpoints=1
+  lesson_id=test-lsn-911009: total_q=1, checkpoints=1
+  lesson_id=test-lsn-99d13d: total_q=1, checkpoints=1
+  lesson_id=test-lsn-b321f7: total_q=1, checkpoints=1
+  lesson_id=test-lsn-ceef59: total_q=1, checkpoints=1
+  lesson_id=test-lsn-f4a636: total_q=1, checkpoints=1
+
+=== ATTEMPTS ===
+Total Attempts: 13
+  user=usr-stu-101, q=q-sci-01, opt=2, correct=0, time=5.0s, created=2026-10-16T12:39:41.989378+00:00
+  user=usr-stu-101, q=q-sci-01, opt=0, correct=1, time=4.5s, created=2026-10-16T23:00:16.547018+00:00
+  user=test-usr-668bf4, q=test-q-7513e4, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-b20f1e, q=test-q-bf58fe, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-c4650d, q=test-q-b4802f, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-3cbb3a, q=test-q-abef41, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-fd5682, q=test-q-3ea6c6, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-c216ab, q=test-q-6524a1, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-265a32, q=test-q-011f96, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-9c7cb2, q=test-q-01edba, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-8ba03c, q=test-q-9933f6, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-0479bf, q=test-q-d3d457, opt=1, correct=1, time=0.0s, created=2026-10-24
+  user=test-usr-74b867, q=test-q-246486, opt=1, correct=1, time=0.0s, created=2026-10-24
+
+=== PROGRESS ===
+Total Progress records: 7
+  {'id': 'prog-stu-1', 'user_id': 'usr-stu-101', 'lesson_id': 'lesson-sci-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 40.0, 'post_test_score': 80.0, 'updated_at': '2026-10-25T18:52:05.639348+00:00'}
+  {'id': 'b250337b-0781-4617-8d80-e9d79541d725', 'user_id': 'usr-stu-101', 'lesson_id': 'lesson-eng-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-19T21:46:09.875775+00:00'}
+  {'id': '4ddd188d-57e9-420d-bcd5-9cc9cbaf8587', 'user_id': 'usr-stu-6cbb2361', 'lesson_id': 'lesson-eng-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-17T17:04:14.608053+00:00'}
+  {'id': '61da2a0b-8242-46f3-a4de-536b71a0638c', 'user_id': 'usr-stu-6cbb2361', 'lesson_id': 'lesson-sci-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-17T13:53:33.317573+00:00'}
+  {'id': '585dc36e-aced-489c-82e5-2c7e89bfda97', 'user_id': 'usr-stu-935c713e', 'lesson_id': 'lesson-math-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-17T23:31:41.557129+00:00'}
+  {'id': '56f5f160-4aaa-41b6-af7a-7f936e136f95', 'user_id': 'usr-super-admin-01', 'lesson_id': 'lesson-eng-6-1', 'last_position_seconds': 1.204949, 'is_completed': 0, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-19T21:40:16.885711+00:00'}
+  {'id': '9d21bd51-dd54-495a-9a0c-b8d02a6fd623', 'user_id': 'usr-stu-101', 'lesson_id': 'lesson-math-6-1', 'last_position_seconds': 10.0, 'is_completed': 1, 'pre_test_score': 0.0, 'post_test_score': 0.0, 'updated_at': '2026-10-26T14:25:27.043634+00:00'}
+
+=== CHAT LOGS ===
+Recent Chat Logs (total 50):
+  [7833ac95-519c-4c99-843f-a1c5db5b9cc6] user=usr-stu-101, lesson=None, refused=0 | Q: جيو گهرڙو ڇا آهي ۽ ان جا مکيه حصا ڪهڙا آهن؟
+  [756404bd-13b4-480e-8016-d08e26a91464] user=usr-stu-101, lesson=None, refused=0 | Q: ان جا مکيه حصا ڪهڙا آهن؟
+  [b6841656-a83d-485a-bd11-3c287b7ec0c5] user=usr-stu-101, lesson=lesson-math-6-10, refused=0 | Q: عمودي وچولي ليڪ ڇا آهي ۽ ڪيئن ٺاهبي آهي؟
+  [257c631f-2ceb-436b-8f51-931d7277efa6] user=usr-stu-101, lesson=lesson-math-6-4, refused=0 | Q: سڄا عدد ڇا آهن ۽ انهن جي ترتيب ڪيئن هوندي آهي؟
+  [2472e58f-2c89-4451-a7b4-8b9aa2c32fe5] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ ڇا آهي ۽ ان جا رڪن ڪيئن لکبا آهن؟
+  [18f22859-3026-4d8a-9b18-91a56158594a] user=usr-stu-101, lesson=None, refused=0 | Q: جيو گهرڙو ڇا آهي ۽ ان جا مکيه حصا ڪهڙا آهن؟
+  [0e9b417d-6e52-4424-87c0-d91d88778bbf] user=usr-stu-101, lesson=lesson-math-6-10, refused=0 | Q: عمودي وچولي ليڪ ڇا آهي ۽ ڪيئن ٺاهبي آهي؟
+  [e8c05e44-8954-4c9e-a2b7-0e9cea6020b5] user=usr-stu-101, lesson=lesson-math-6-2, refused=0 | Q: سڄا عدد ڇا آهن ۽ انهن جي ترتيب ڪيئن هوندي آهي؟
+  [aec75482-1751-4871-b034-f815508eee69] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ ڇا آهي ۽ ان جا رڪن ڪيئن لکبا آهن؟
+  [c221750f-28b5-4bd0-860e-7e2ec39b91bf] user=usr-stu-101, lesson=None, refused=0 | Q: جيو گهرڙو ڇا آهي ۽ ان جا مکيه حصا ڪهڙا آهن؟
+  [d25e7b37-745b-4397-aa66-99fcc9591747] user=usr-stu-101, lesson=None, refused=0 | Q: ان جا مکيه حصا ڪهڙا آهن؟
+  [4e96a37d-2636-483c-a7a3-f4168c2cdd66] user=usr-stu-101, lesson=None, refused=0 | Q: ان جا مکيه حصا ڪهڙا آهن؟
+  [f6c10970-337d-4b61-a0c3-b4b3c325508d] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: What is a set in class 6 mathematics? سيٽ ڇا آهي؟
+  [1c4ee7de-966f-49ba-a733-3a639b5648be] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ جا بنيادي تصور بيان ڪريو
+  [34215613-44bf-4938-a004-ffdd8bb2609b] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ ڇا آهي ۽ ان جا رڪن ڇا هوندا آهن؟
+  [d1d9852f-6eca-4db3-af20-e1fa3bee54cb] user=usr-stu-101, lesson=None, refused=0 | Q: ان جا مکيه حصا ڪهڙا آهن؟
+  [ea747348-94bd-4c02-8e4d-3039fbbe763e] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: What is a set in class 6 mathematics? سيٽ ڇا آهي؟
+  [99909345-41cf-4db3-97d6-3971c07f25cc] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ جا بنيادي تصور بيان ڪريو
+  [3a163692-33fc-4269-ae31-4ca7974cf5aa] user=usr-stu-101, lesson=lesson-math-6-1, refused=0 | Q: سيٽ ڇا آهي ۽ ان جا رڪن ڇا هوندا آهن؟
+  [201d7a01-7a68-4e26-9409-4529a106dbb4] user=usr-stu-101, lesson=None, refused=0 | Q: ان جا مکيه حصا ڪهڙا آهن؟
+
+=== LOCAL MEDIA FILES ===
+Total files in static/media: 16
+  demo_lesson.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-eng-6-1.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-math-6-1.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-1.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-10.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-11.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-12.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-2.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-3.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-4.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-5.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-6.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-7.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-8.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sci-6-9.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc
+  lesson-sindhi-6-1.mp4: size=152918 bytes, sha256=5a175cf6b948d02aab56d3f480bcd8de578dce035c83dd71a78412a9647237cc

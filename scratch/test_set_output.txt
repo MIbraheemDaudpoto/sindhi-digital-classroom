@@ -1,0 +1,7 @@
+Results for 'سيٽ' (total 6):
+[math-6] ch1 | ID=math-ch01-05 | score=-6.117 | ذيلي سيٽ، مٿانهون سيٽ ۽ صحيح ذيلي سيٽ
+[math-6] ch1 | ID=math-ch01-03 | score=-5.745 | محدود، لامحدود، خالي ۽ واحد سيٽ
+[math-6] ch1 | ID=math-ch01-01 | score=-5.504 | سيٽ ڇا آهي
+[math-6] ch1 | ID=math-ch01-02 | score=-5.035 | سيٽ جا روپ
+[math-6] ch1 | ID=math-ch01-04 | score=-4.578 | برابر ۽ هم قدر سيٽ
+[science-6] ch12 | ID=ch12-06 | score=-4.096 | مصنوعي سيارا ۽ پاڪ سيٽ-1R

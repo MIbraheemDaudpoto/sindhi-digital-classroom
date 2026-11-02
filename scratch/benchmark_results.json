@@ -1,0 +1,63 @@
+{
+  "list_courses_benchmark": {
+    "batched_queries": 2,
+    "unbatched_queries": 5,
+    "batched_stats": {
+      "min": 3.099,
+      "p50": 6.254,
+      "p95": 119.512,
+      "p99": 229.178,
+      "max": 402.568,
+      "mean": 18.125
+    },
+    "unbatched_stats": {
+      "min": 3.332,
+      "p50": 6.553,
+      "p95": 43.112,
+      "p99": 185.056,
+      "max": 217.49,
+      "mean": 14.087
+    },
+    "speedup_p50": 1.05,
+    "speedup_mean": 0.78
+  },
+  "api_endpoints_benchmark": {
+    "GET /api/ready": {
+      "rps": 36.1,
+      "p50": 198.56,
+      "p95": 878.57,
+      "p99": 1018.35,
+      "error_rate": 0.0,
+      "mem_delta_mb": 1.022
+    },
+    "GET /api/lessons?class_level=6": {
+      "rps": 23.1,
+      "p50": 307.0,
+      "p95": 1017.12,
+      "p99": 1075.01,
+      "error_rate": 0.0,
+      "mem_delta_mb": 0.678
+    },
+    "POST /api/auth/login/student": {
+      "rps": 3.9,
+      "p50": 149.82,
+      "p95": 194.28,
+      "p99": 194.28,
+      "error_rate": 0.91,
+      "mem_delta_mb": 0.641
+    },
+    "POST /api/tutor/ask (Tier 1 Local NLP)": {
+      "rps": 53.4,
+      "p50": 181.45,
+      "p95": 237.45,
+      "p99": 273.92,
+      "error_rate": 0.0,
+      "mem_delta_mb": 1.471
+    }
+  },
+  "nlp_isolated_benchmark": {
+    "norm_p50": 0.021,
+    "sim_p50": 0.075,
+    "similarity_score": 0.867
+  }
+}

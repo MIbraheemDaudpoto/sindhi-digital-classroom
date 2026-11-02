@@ -1,0 +1,23 @@
+Distinct text, distinct ID, total: (19, 33514, 33514)
+Total distinct (text_sindhi, timestamp_seconds) groups: 19
+ID=q-whisper-00017435 | ts=40.0 | count=3484 | text=وڊيو جي هن حصي مطابق: Photosynthesis in Plants ۾ اسلام جو ڪه
+ID=q-whisper-0004106d | ts=115.0 | count=3484 | text=وڊيو جي هن حصي مطابق: Photosynthesis in Plants ۾ سبق جو ڪهڙو
+ID=q-whisper-00002c3d | ts=355.0 | count=3484 | text=وڊيو جي هن حصي مطابق: Photosynthesis in Plants ۾ عمل جو ڪهڙو
+ID=q-whisper-00010a0f | ts=175.0 | count=3484 | text=وڊيو جي هن حصي مطابق: Photosynthesis in Plants ۾ فوٽوسنٿيسز 
+ID=q-whisper-003c94f8 | ts=235.0 | count=3484 | text=وڊيو جي هن حصي مطابق: Photosynthesis in Plants ۾ ٻوٽن جو ڪهڙ
+ID=q-whisper-000a5e9b | ts=40.0 | count=2883 | text=وڊيو جي هن حصي مطابق: جيو گهرڙو (The Cell - Basic Unit of Li
+ID=q-whisper-00202eb5 | ts=115.0 | count=2883 | text=وڊيو جي هن حصي مطابق: جيو گهرڙو (The Cell - Basic Unit of Li
+ID=q-whisper-0003dee6 | ts=355.0 | count=2883 | text=وڊيو جي هن حصي مطابق: جيو گهرڙو (The Cell - Basic Unit of Li
+ID=q-whisper-0013381c | ts=175.0 | count=2883 | text=وڊيو جي هن حصي مطابق: جيو گهرڙو (The Cell - Basic Unit of Li
+ID=q-whisper-0031d5e4 | ts=235.0 | count=2883 | text=وڊيو جي هن حصي مطابق: جيو گهرڙو (The Cell - Basic Unit of Li
+ID=q-whisper-001179b7 | ts=40.0 | count=335 | text=وڊيو جي هن حصي مطابق: ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthes
+ID=q-whisper-02341afd | ts=115.0 | count=335 | text=وڊيو جي هن حصي مطابق: ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthes
+ID=q-whisper-00271cf4 | ts=355.0 | count=335 | text=وڊيو جي هن حصي مطابق: ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthes
+ID=q-whisper-004171c0 | ts=175.0 | count=335 | text=وڊيو جي هن حصي مطابق: ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthes
+ID=q-whisper-0272fd20 | ts=235.0 | count=335 | text=وڊيو جي هن حصي مطابق: ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthes
+ID=q-sci-03 | ts=250.0 | count=1 | text=فوٽوسنٿيسز دوران ٻوٽا ڪهڙي گئس ٻاهر خارج ڪن ٿا؟
+ID=q-sci-01 | ts=125.0 | count=1 | text=فوٽوسنٿيسز عمل دوران ٻوٽا ڇا ٺاهيندا آهن؟
+ID=q-sci-02 | ts=185.0 | count=1 | text=ٻوٽن جي پنن کي سائي رنگ جو بڻائڻ ۾ ڪهڙو مادو مددگار آهي؟
+ID=q-sci-04-draft | ts=290.0 | count=1 | text=ڪهڙي وقت ٻوٽا فوٽوسنٿيسز جو عمل سڀ کان وڌيڪ ڪن ٿا؟
+q-sci-01 info: ('q-sci-01', 'فوٽوسنٿيسز عمل دوران ٻوٽا ڇا ٺاهيندا آهن؟')
+q-sci-01 status: ('q-sci-01', 'APPROVED', 'usr-tch-01', '2026-10-16T12:00:51.832434+00:00')

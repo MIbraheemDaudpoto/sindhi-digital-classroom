@@ -1,0 +1,64 @@
+{
+  "search": {
+    "status": 200,
+    "data": {
+      "status": "success",
+      "query": "سيٽ",
+      "chapter_id": null,
+      "total_chunks": 1,
+      "total_glossary": 1,
+      "chunks": [
+        {
+          "chunk_id": "ch12-06",
+          "chapter_id": 12,
+          "topic_title_en": "Artificial Satellites and PAKSAT-1R",
+          "topic_title_sd": "مصنوعي سيارا ۽ پاڪ سيٽ-1R",
+          "pdf_page_range": "PDF 160-162 (printed 156-158)",
+          "citation": "PDF 160-162 (printed 156-158)",
+          "summary_sd": "مصنوعي سيارا (Artificial Satellites) انسان جا ٺاهيل جسم آهن، جيڪي ڌرتي جي چوڌاري مدار (Orbit) ۾ گردش ڪن ٿا۔ پهريون مصنوعي سيارو اسپوٽنڪ 1 (Sputnik 1) 1957ع ۾ موڪليو ويو۔ پاڪستان جو پاڪ سيٽ-1R (PAKSAT-1R) 2011ع ۾ موڪليو ويو ۽ زميني اسٽيشنون (Ground Stations) ان سان رابطو رکن ٿيون۔",
+          "source": "BOOK_COMPANION Ch12 sections, PDF 160-162",
+          "is_ch7_blank": false,
+          "video_watch_url": "https://www.youtube.com/watch?v=ccmv6BDTYj4",
+          "video_title": "Introduction to Astronomy| Science Class 6| Chapter 12| Lecture 1| by Nana Abid| Sindh Online School",
+          "video_id": "ccmv6BDTYj4"
+        }
+      ],
+      "glossary": [
+        {
+          "id": 402,
+          "chapter_id": null,
+          "term_en": "PAKSAT-1R",
+          "term_sd": "پاڪ سيٽ-1R",
+          "definition_sd": "پاڪ سيٽ-1R پاڪستان جو رابطي وارو مصنوعي سيٽلائيٽ آهي جيڪو 2011ع ۾ موڪليو ويو۔",
+          "pdf_page": "PDF 161 (printed 157)",
+          "citation": "PDF 161 (printed 157)",
+          "is_ch7_blank": false
+        }
+      ]
+    }
+  },
+  "sdc_ask": {
+    "status": 422,
+    "error": "{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"query\"],\"msg\":\"Field required\",\"input\":{\"question\":\"سيٽ ڇا آهي؟\"}}]}"
+  },
+  "sdc_stats": {
+    "status": 200,
+    "data": {
+      "status": "success",
+      "stats": {
+        "chunks": 90,
+        "glossary": 201,
+        "exercises": 39,
+        "videos": 113,
+        "database_size_bytes": 20299776,
+        "database_size_mb": 19.36,
+        "journal_mode": "WAL",
+        "hardware_target": "Raspberry Pi 5 (ARM64)"
+      }
+    }
+  },
+  "dashboard_student": {
+    "status": 401,
+    "error": "{\"detail\":\"غير تصديق ٿيل: مهرباني ڪري لاگ ان ٿيو (Authentication required).\"}"
+  }
+}

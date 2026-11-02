@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sd" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سنڌي ڊجيٽل ڪلاس روم | پائلٽ (Class 6 Science RAG)</title>
+  <meta name="description" content="Offline-first RAG and curriculum system for Class 6 General Science in Sindhi medium following Sindh Textbook Board standards.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#059669">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/sdc_style.css">
+</head>
+<body>
+
+  <!-- Offline Degradation Notification Banner -->
+  <div id="offline-banner" class="offline-banner">
+    <span>⚠️</span>
+    <span>آف لائن موڊ فعال آهي: سرچ، اصطلاح ۽ مشقون مقامي طور ڪم ڪري رهيون آهن۔ وڊيوز آن لائن هجڻ وقت دستياب ٿينديون۔</span>
+  </div>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="brand-logo" aria-hidden="true" style="padding: 4px; background: #ffffff; border: 1px solid var(--border-color);">
+        <img src="/static/images/sdc-emblem.svg" alt="SDC Emblem" width="36" height="36" style="display: block; object-fit: contain;">
+      </div>
+      <div>
+        <h1 class="brand-title">سنڌي ڊجيٽل ڪلاس روم (<bdi dir="ltr">SDC</bdi>)</h1>
+        <div class="brand-subtitle">ڪلاس 6 عام سائنس — سنڌ ٽيڪسٽ بڪ بورڊ نصاب (<bdi dir="ltr">Offline RAG</bdi>)</div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <a href="/app" style="text-decoration: none; padding: 6px 14px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; color: #2563eb; font-size: 0.85rem; font-weight: 700;">
+        🏫 مڪمل <bdi dir="ltr">LMS</bdi> پورٽل
+      </a>
+      <a href="/" style="text-decoration: none; padding: 6px 14px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; color: #334155; font-size: 0.85rem; font-weight: 600;">
+        🏠 مک صفحو (Home)
+      </a>
+      <div id="connection-badge" class="status-badge">
+        <span class="status-dot"></span> آن لائن جڙيل (Online)
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <div class="nav-tabs-wrapper">
+    <nav class="nav-tabs">
+      <button id="nav-chat" class="nav-btn active" onclick="switchScreen('chat')">
+        💬 اي آءِ استاد سان چيٽ (<bdi dir="ltr">AI Tutor Chat</bdi>)
+      </button>
+      <button id="nav-search" class="nav-btn" onclick="switchScreen('search')">
+        🔍 نصابي ڳولا (Search & Ask)
+      </button>
+      <button id="nav-glossary" class="nav-btn" onclick="switchScreen('glossary')">
+        📚 سائنسي اصطلاح (201 Glossary)
+      </button>
+      <button id="nav-exercises" class="nav-btn" onclick="switchScreen('exercises')">
+        📝 مشقون ۽ سوال (39 Exercises)
+      </button>
+      <button id="nav-videos" class="nav-btn" onclick="switchScreen('videos')">
+        🎥 وڊيو ڪلاس روم (113 Videos)
+      </button>
+    </nav>
+  </div>
+
+  <!-- Main Application Body -->
+  <main class="main-content">
+
+    <!-- 0. AI Tutor Chat Screen -->
+    <section id="screen-chat" class="screen-view active">
+      <div class="search-hero">
+        <h2 class="search-title">💬 سنڌي اي آءِ استاد سان چيٽ (AI Tutor Chat)</h2>
+        <p class="search-desc">
+          ڪلاس 6 عام سائنس جي ڪنهن به سبق بابت سوال پڇو. اي آءِ استاد سنڌ ٽيڪسٽ بڪ بورڊ جي تصديق ٿيل نصاب ۽ پي ڊي ايف حوالن سميت فوري رهنمائي ڪندو.
+        </p>
+
+        <!-- Quick Question Suggestions -->
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+          <button class="ch-pill" onclick="sendQuickChatMessage('جيو گهرڙو ڇا آهي؟')">🔬 جيو گهرڙو ڇا آهي؟</button>
+          <button class="ch-pill" onclick="sendQuickChatMessage('ٻوٽن ۾ فوٽوسنٿيسز جو عمل سمجهايو')">🌿 فوٽوسنٿيسز جو عمل</button>
+          <button class="ch-pill" onclick="sendQuickChatMessage('خوردبيني جا مکيه حصا ڪهڙا آهن؟')">🔍 خوردبيني جا حصا</button>
+          <button class="ch-pill" onclick="sendQuickChatMessage('سوليوشن ڇا کي چئجي ٿو؟')">🧪 سوليوشن ڇا آهي؟</button>
+        </div>
+
+        <!-- Chat Stream Box -->
+        <div id="classroom-chat-stream" class="classroom-chat-stream">
+          <div class="chat-bubble tutor-bubble">
+            <div class="bubble-header">
+              <span class="tutor-name">🤖 سنڌي اي آءِ استاد (STBB Verified RAG)</span>
+            </div>
+            <div class="bubble-text">
+              اسلام عليڪم شاگرد دوست! مان سنڌي ڊجيٽل ڪلاس روم جو اي آءِ استاد آهيان. ڪلاس 6 سائنس جي ڪنهن به موضوع، سبق، يا مشق بابت پڇو.
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="search-box-row" onsubmit="handleClassroomChatSubmit(event)" style="margin-top: 16px;">
+          <div class="search-input-wrap">
+            <input
+              type="text"
+              id="classroom-chat-input"
+              class="search-input"
+              placeholder="پنهنجو سوال لکو... (مثال: خوردبيني ڇا آهي؟)"
+              autocomplete="off"
+            >
+          </div>
+          <button type="submit" id="classroom-chat-btn" class="search-submit-btn">
+            ✉️ موڪليو (Send)
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 1. Search & RAG Screen -->
+    <section id="screen-search" class="screen-view">
+      <div class="search-hero">
+        <h2 class="search-title">سائنسي موضوع يا سوال پڇو</h2>
+        <p class="search-desc">
+          سنڌي يا انگريزي ۾ پڇو — سسٽم 90 تصديق ٿيل چنڪس مان باقاعده حوالن "PDF X (printed Y)" سان جواب تيار ڪندو۔
+        </p>
+
+        <form class="search-box-row" onsubmit="handleSearch(event)">
+          <div class="search-input-wrap">
+            <input
+              type="text"
+              id="search-query-input"
+              class="search-input"
+              placeholder="مثال: جيو گهرڙو ڇا آهي؟ يا خوردبيني، اک جا حصا، سوليوشن..."
+              autocomplete="off"
+            >
+          </div>
+          <button type="submit" id="search-btn" class="search-submit-btn">
+            🔍 ڳولا ڪريو
+          </button>
+        </form>
+
+        <!-- Chapter Filter Bar -->
+        <div class="chapter-filter-bar">
+          <span class="filter-label">باب چونڊيو:</span>
+          <button class="ch-pill active" onclick="setChapterFilter(null, this)">سڀ باب (All)</button>
+          <button class="ch-pill" onclick="setChapterFilter(1, this)">باب 1: گهرڙو</button>
+          <button class="ch-pill" onclick="setChapterFilter(2, this)">باب 2: حواس</button>
+          <button class="ch-pill" onclick="setChapterFilter(3, this)">باب 3: فوٽوسنٿيسز</button>
+          <button class="ch-pill" onclick="setChapterFilter(4, this)">باب 4: ماحول</button>
+          <button class="ch-pill" onclick="setChapterFilter(5, this)">باب 5: مادو ۽ ائٽم</button>
+          <button class="ch-pill" onclick="setChapterFilter(6, this)">باب 6: هوا</button>
+          <button class="ch-pill" onclick="setChapterFilter(7, this)">باب 7: سوليوشن</button>
+          <button class="ch-pill" onclick="setChapterFilter(8, this)">باب 8: توانائي</button>
+          <button class="ch-pill" onclick="setChapterFilter(9, this)">باب 9: روشني</button>
+          <button class="ch-pill" onclick="setChapterFilter(10, this)">باب 10: آواز</button>
+          <button class="ch-pill" onclick="setChapterFilter(11, this)">باب 11: مقناطيس</button>
+          <button class="ch-pill" onclick="setChapterFilter(12, this)">باب 12: خلا</button>
+        </div>
+      </div>
+
+      <!-- Grounded AI Answer Card -->
+      <div id="ai-answer-card" class="ai-answer-card">
+        <div class="answer-header">
+          <div class="answer-badge">
+            <span>✨</span> نصابي تصديق ٿيل جواب (Grounded Answer)
+          </div>
+        </div>
+        <div id="ai-provenance-alert" class="provenance-alert" style="display:none;"></div>
+        <div id="ai-answer-body" class="answer-body"></div>
+        <div id="ai-citations-container" class="citations-list"></div>
+      </div>
+
+      <!-- Search Results Header & Grid -->
+      <h3 id="results-header" class="results-header-title" style="display:none;">
+        📖 لاڳاپيل نصابي مواد (Curriculum Chunks)
+      </h3>
+      <div id="search-results-grid" class="cards-grid"></div>
+    </section>
+
+    <!-- 2. Glossary Screen -->
+    <section id="screen-glossary" class="screen-view">
+      <div class="search-hero">
+        <h2 class="search-title">ڪلاس 6 عام سائنس جا 201 اهم اصطلاح</h2>
+        <p class="search-desc">انگريزي ۽ سنڌي الفابيٽ تحت اصطلاح ۽ انهن جون آسان سنڌي ۾ وصفون۔</p>
+        <div class="glossary-controls">
+          <div id="alphabet-bar" class="alphabet-bar"></div>
+        </div>
+      </div>
+      <div id="glossary-list-container"></div>
+    </section>
+
+    <!-- 3. Exercises Screen -->
+    <section id="screen-exercises" class="screen-view">
+      <div class="search-hero">
+        <h2 class="search-title">باب وائيز مشقون، خلاصا ۽ عملي ڪم (Exercises)</h2>
+        <p class="search-desc">
+          سنڌ ٽيڪسٽ بڪ بورڊ جي پي ڊي ايف ۽ ڇپيل صفحن جي حوالي سان سموريون 39 مشقون ۽ وڊيو حل۔
+        </p>
+      </div>
+      <div id="exercise-list-container"></div>
+    </section>
+
+    <!-- 4. Video Lessons Classroom Screen -->
+    <section id="screen-videos" class="screen-view">
+      <div class="search-hero">
+        <h2 class="search-title">113 مڪمل وڊيو ليڪچرز — سنڌ آن لائن اسڪول</h2>
+        <p class="search-desc">
+          استاد نانا عابد جا تصديق ٿيل سنڌي ميڊيم ليڪچرز۔ آن لائن هجڻ وقت سڌو سنئون هتي هلائي سگهجن ٿا۔
+        </p>
+      </div>
+      <div id="videos-grid-container" class="cards-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- Interactive YouTube Video Player Modal -->
+  <div id="video-modal" class="modal-overlay" onclick="if(event.target === this) closeVideoModal()">
+    <div class="video-modal-card">
+      <div class="video-modal-header">
+        <div id="video-modal-title" class="video-modal-title">ليڪچر</div>
+        <button class="modal-close-btn" onclick="closeVideoModal()" aria-label="بند ڪريو">&times;</button>
+      </div>
+      <div id="video-player-frame-container" class="video-player-container"></div>
+    </div>
+  </div>
+
+  <!-- Bottom System Bar -->
+  <footer class="bottom-bar">
+    <div>
+      <span>سنڌي ڊجيٽل ڪلاس روم (SDC) — پائلٽ ورزن</span>
+    </div>
+    <div class="system-stats-tag">
+      <span id="footer-stats-text">Raspberry Pi 5 Ready | WAL Mode</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/static/js/sdc_app.js"></script>
+</body>
+</html>

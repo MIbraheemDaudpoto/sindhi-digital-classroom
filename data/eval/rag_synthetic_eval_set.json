@@ -1,0 +1,402 @@
+[
+  {
+    "id": "eval-01",
+    "chapter_id": 1,
+    "query": "جيو گهرڙو ڇا آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch1-01",
+    "expected_citation": "PDF 5-6 (printed 1-2)",
+    "expected_keywords": ["گهرڙو", "ايڪو", "زندگي"]
+  },
+  {
+    "id": "eval-02",
+    "chapter_id": 1,
+    "query": "خوردبيني ڇا لاءِ استعمال ٿيندي آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch1-02",
+    "expected_citation": "PDF 7-10 (printed 3-6)",
+    "expected_keywords": ["خوردبيني", "لينس", "ڏسڻ"]
+  },
+  {
+    "id": "eval-03",
+    "chapter_id": 1,
+    "query": "گھرڙو ۽ ان جا بنيادي جزا (Heh variant)",
+    "language": "sd",
+    "type": "edge_case_heh",
+    "expected_chunk_id": "ch1-01",
+    "expected_citation": "PDF 5-6 (printed 1-2)",
+    "expected_keywords": ["گهرڙو", "جاندار"]
+  },
+  {
+    "id": "eval-04",
+    "chapter_id": 1,
+    "query": "What is the difference between unicellular and multicellular organisms?",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch1-05",
+    "expected_citation": "PDF 15-16 (printed 11-12)",
+    "expected_keywords": ["گهرڙي", "جاندار", "اميبا"]
+  },
+  {
+    "id": "eval-05",
+    "chapter_id": 2,
+    "query": "انسان وٽ ڪيترا حواسن وارا عضوا آهن؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch2-01",
+    "expected_citation": "PDF 23-24 (printed 19-20)",
+    "expected_keywords": ["پنج", "حواسن", "عضوا"]
+  },
+  {
+    "id": "eval-06",
+    "chapter_id": 2,
+    "query": "اک جا اهم حصا ڪهڙا آهن؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch2-02",
+    "expected_citation": "PDF 24-25 (printed 20-21)",
+    "expected_keywords": ["ڪورنيا", "بلور", "تارو", "ريٽينا"]
+  },
+  {
+    "id": "eval-07",
+    "chapter_id": 2,
+    "query": "اک",
+    "language": "sd",
+    "type": "edge_case_ak",
+    "expected_chunk_id": "ch2-02",
+    "expected_citation": "PDF 24-25 (printed 20-21)",
+    "expected_keywords": ["اک", "روشني"]
+  },
+  {
+    "id": "eval-08",
+    "chapter_id": 2,
+    "query": "What are the parts of the human ear and how does it hear?",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch2-04",
+    "expected_citation": "PDF 27-28 (printed 23-24)",
+    "expected_keywords": ["ڪن", "آواز", "پردو"]
+  },
+  {
+    "id": "eval-09",
+    "chapter_id": 3,
+    "query": "ٻوٽن ۾ فوٽوسنٿيسز جو عمل ڪيئن ٿيندو آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch3-02",
+    "expected_citation": "PDF 38-39 (printed 34-35)",
+    "expected_keywords": ["فوٽوسنٿيسز", "سج", "روشني", "کاڌو"]
+  },
+  {
+    "id": "eval-10",
+    "chapter_id": 3,
+    "query": "پن جي اندروني بناوٽ ۾ ڪلوروفل جو ڪم ڇا آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch3-01",
+    "expected_citation": "PDF 36-37 (printed 32-33)",
+    "expected_keywords": ["ڪلوروفل", "پن"]
+  },
+  {
+    "id": "eval-11",
+    "chapter_id": 3,
+    "query": "Photosynthesis versus Respiration in plants",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch3-05",
+    "expected_citation": "PDF 42-43 (printed 38-39)",
+    "expected_keywords": ["فوٽوسنٿيسز", "ساهه"]
+  },
+  {
+    "id": "eval-12",
+    "chapter_id": 4,
+    "query": "ماحول جا جاندار ۽ بي جان جزا ڪهڙا آهن؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch4-01",
+    "expected_citation": "PDF 46-47 (printed 42-43)",
+    "expected_keywords": ["ماحول", "جاندار", "جزا"]
+  },
+  {
+    "id": "eval-13",
+    "chapter_id": 4,
+    "query": "کاڌي جي زنجير ڇا هوندي آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch4-07",
+    "expected_citation": "PDF 54-55 (printed 50-51)",
+    "expected_keywords": ["زنجير", "کاڌو", "توانائي"]
+  },
+  {
+    "id": "eval-14",
+    "chapter_id": 4,
+    "query": "Ecology and ecosystems in nature",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch4-05",
+    "expected_citation": "PDF 51-52 (printed 47-48)",
+    "expected_keywords": ["ايڪو سسٽم", "ماحول"]
+  },
+  {
+    "id": "eval-15",
+    "chapter_id": 5,
+    "query": "ائٽم ۽ ماليڪيول مان ڇا مراد آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch5-01",
+    "expected_citation": "PDF 58-59 (printed 54-55)",
+    "expected_keywords": ["ائٽم", "ماليڪيول", "مادو"]
+  },
+  {
+    "id": "eval-16",
+    "chapter_id": 5,
+    "query": "ڌاتن ۽ اڻ ڌاتن ۾ ڪهڙو فرق آهي؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch5-04",
+    "expected_citation": "PDF 64-65 (printed 60-61)",
+    "expected_keywords": ["ڌاتو", "اڻ ڌاتو"]
+  },
+  {
+    "id": "eval-17",
+    "chapter_id": 5,
+    "query": "آميزي ۽ مرڪب ۾ بنيادي فرق",
+    "language": "sd",
+    "type": "synthesis",
+    "expected_chunk_id": "ch5-05",
+    "expected_citation": "PDF 66-67 (printed 62-63)",
+    "expected_keywords": ["مرڪب", "آميزو"]
+  },
+  {
+    "id": "eval-18",
+    "chapter_id": 6,
+    "query": "هوا جي بناوٽ ۾ نائيٽروجن ۽ آڪسيجن جي شرح",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch6-02",
+    "expected_citation": "PDF 72-73 (printed 68-69)",
+    "expected_keywords": ["هوا", "نائيٽروجن", "آڪسيجن"]
+  },
+  {
+    "id": "eval-19",
+    "chapter_id": 6,
+    "query": "آڪسيجن گئس جون خاصيتون ۽ استعمال",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch6-04",
+    "expected_citation": "PDF 75-76 (printed 71-72)",
+    "expected_keywords": ["آڪسيجن", "زندگي", "ساهه"]
+  },
+  {
+    "id": "eval-20",
+    "chapter_id": 6,
+    "query": "Composition of air and greenhouse effect",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch6-06",
+    "expected_citation": "PDF 79-80 (printed 75-76)",
+    "expected_keywords": ["گئسون", "گرين هائوس"]
+  },
+  {
+    "id": "eval-21",
+    "chapter_id": 7,
+    "query": "سوليوشن ڇا آهي ۽ ان جا اهم جزا ڪهڙا آهن؟",
+    "language": "sd",
+    "type": "ch7_provenance",
+    "expected_chunk_id": "ch7-01",
+    "expected_citation": "PDF 83-95 (printed 79-91; blank in official PDF)",
+    "expected_keywords": ["سوليوشن", "سوليوٽ", "سالوينٽ"]
+  },
+  {
+    "id": "eval-22",
+    "chapter_id": 7,
+    "query": "پاڻي هڪ عالمگير حل ڪندڙ (Universal solvent) ڪيئن آهي؟",
+    "language": "sd",
+    "type": "ch7_provenance",
+    "expected_chunk_id": "ch7-03",
+    "expected_citation": "PDF 83-95 (printed 79-91; blank in official PDF)",
+    "expected_keywords": ["پاڻي", "عالمگير", "حل"]
+  },
+  {
+    "id": "eval-23",
+    "chapter_id": 7,
+    "query": "Difference between dilute and concentrated solutions",
+    "language": "en",
+    "type": "ch7_provenance",
+    "expected_chunk_id": "ch7-04",
+    "expected_citation": "PDF 83-95 (printed 79-91; blank in official PDF)",
+    "expected_keywords": ["هلڪو", "گهاٽو", "سوليوشن"]
+  },
+  {
+    "id": "eval-24",
+    "chapter_id": 8,
+    "query": "توانائي ڇا آهي ۽ ان جون مختلف صورتون ڪهڙيون آهن؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch8-01",
+    "expected_citation": "PDF 96-97 (printed 92-93)",
+    "expected_keywords": ["توانائي", "ڪم", "طاقت"]
+  },
+  {
+    "id": "eval-25",
+    "chapter_id": 8,
+    "query": "توانائيءَ کي هڪ صورت مان ٻي صورت ۾ تبديل ڪرڻ",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch8-03",
+    "expected_citation": "PDF 100-101 (printed 96-97)",
+    "expected_keywords": ["تبديل", "توانائي"]
+  },
+  {
+    "id": "eval-26",
+    "chapter_id": 8,
+    "query": "Forms of energy: kinetic and potential energy",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch8-02",
+    "expected_citation": "PDF 98-99 (printed 94-95)",
+    "expected_keywords": ["توانائي", "حرڪت"]
+  },
+  {
+    "id": "eval-27",
+    "chapter_id": 9,
+    "query": "سادا مشينون جهڙوڪ ڦيٿو ۽ ايڪسل",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch9-01",
+    "expected_citation": "PDF 106-107 (printed 102-103)",
+    "expected_keywords": ["مشين", "ڦيٿو"]
+  },
+  {
+    "id": "eval-28",
+    "chapter_id": 9,
+    "query": "ڪرين ۽ ڳري وزن کڻڻ لاءِ پليءَ جو نظام",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch9-03",
+    "expected_citation": "PDF 109-110 (printed 105-106)",
+    "expected_keywords": ["پلي", "وزن"]
+  },
+  {
+    "id": "eval-29",
+    "chapter_id": 9,
+    "query": "How do gears and pulley systems work in simple machines?",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch9-05",
+    "expected_citation": "PDF 113-114 (printed 109-110)",
+    "expected_keywords": ["گيئر", "مشين"]
+  },
+  {
+    "id": "eval-30",
+    "chapter_id": 10,
+    "query": "روشنيءَ جو موٽڻ يا منعڪس ٿيڻ (Reflection of Light)",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch10-02",
+    "expected_citation": "PDF 118-119 (printed 114-115)",
+    "expected_keywords": ["روشني", "عڪس", "آئينو"]
+  },
+  {
+    "id": "eval-31",
+    "chapter_id": 10,
+    "query": "روشنيءَ جي موٽ جو قانون (Law of Reflection)",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch10-03",
+    "expected_citation": "PDF 120-121 (printed 116-117)",
+    "expected_keywords": ["قانون", "زاويو", "روشني"]
+  },
+  {
+    "id": "eval-32",
+    "chapter_id": 10,
+    "query": "Images formed by plane mirrors and pinhole camera",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch10-05",
+    "expected_citation": "PDF 124-125 (printed 120-121)",
+    "expected_keywords": ["آئينو", "عڪس"]
+  },
+  {
+    "id": "eval-33",
+    "chapter_id": 11,
+    "query": "آواز ڇا آهي ۽ اهو ڪيئن پيدا ٿئي ٿو؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch11-01",
+    "expected_citation": "PDF 130-131 (printed 126-127)",
+    "expected_keywords": ["آواز", "ڌڙڪڻ", "لرزش"]
+  },
+  {
+    "id": "eval-34",
+    "chapter_id": 11,
+    "query": "آواز مختلف مادن مان ڪيئن گذري ٿو؟",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch11-04",
+    "expected_citation": "PDF 134-135 (printed 130-131)",
+    "expected_keywords": ["آواز", "مادو", "رفتار"]
+  },
+  {
+    "id": "eval-35",
+    "chapter_id": 11,
+    "query": "How does sound travel through compression and rarefaction?",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch11-03",
+    "expected_citation": "PDF 133-134 (printed 129-130)",
+    "expected_keywords": ["آواز", "لهرون"]
+  },
+  {
+    "id": "eval-36",
+    "chapter_id": 12,
+    "query": "خلائي نظام ۽ هٿرادو سيٽلائيٽ جو استعمال",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch12-01",
+    "expected_citation": "PDF 140-141 (printed 136-137)",
+    "expected_keywords": ["خلا", "سيٽلائيٽ"]
+  },
+  {
+    "id": "eval-37",
+    "chapter_id": 12,
+    "query": "قدرتي سيٽلائيٽ ۽ چنڊ جي گردش",
+    "language": "sd",
+    "type": "factual",
+    "expected_chunk_id": "ch12-02",
+    "expected_citation": "PDF 142-143 (printed 138-139)",
+    "expected_keywords": ["چنڊ", "ڌرتي", "گردش"]
+  },
+  {
+    "id": "eval-38",
+    "chapter_id": 12,
+    "query": "The Solar System and Planets orbiting the Sun",
+    "language": "en",
+    "type": "cross_lingual",
+    "expected_chunk_id": "ch12-03",
+    "expected_citation": "PDF 144-145 (printed 140-141)",
+    "expected_keywords": ["نظام شمسي", "سيارا", "سج"]
+  },
+  {
+    "id": "eval-39",
+    "chapter_id": 1,
+    "query": "جاندارن ۾ خوراڪ ۽ توانائي جو بنيادي عمل",
+    "language": "sd",
+    "type": "synthesis_food",
+    "expected_chunk_id": "ch1-03",
+    "expected_citation": "PDF 11-12 (printed 7-8)",
+    "expected_keywords": ["خوراڪ", "گهرڙا"]
+  },
+  {
+    "id": "eval-40",
+    "chapter_id": 7,
+    "query": "Suspensions and filtration in solutions",
+    "language": "en",
+    "type": "ch7_provenance",
+    "expected_chunk_id": "ch7-06",
+    "expected_citation": "PDF 83-95 (printed 79-91; blank in official PDF)",
+    "expected_keywords": ["سسپينشن", "فلٽر"]
+  }
+]

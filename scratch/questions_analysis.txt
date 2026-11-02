@@ -1,0 +1,19 @@
+  topic=گئسن جو مٽاسٽا, ts=250.0s, count=1
+  topic=فوٽوسنٿيسز جا نتيجا, ts=125.0s, count=1
+  topic=Photosynthesis in Plants, ts=40.0s, count=3484
+  topic=Photosynthesis in Plants, ts=115.0s, count=3484
+  topic=Photosynthesis in Plants, ts=355.0s, count=3484
+  topic=Photosynthesis in Plants, ts=175.0s, count=3484
+  topic=Photosynthesis in Plants, ts=235.0s, count=3484
+  topic=جيو گهرڙو (The Cell - Basic Unit of Life), ts=40.0s, count=2883
+  topic=جيو گهرڙو (The Cell - Basic Unit of Life), ts=115.0s, count=2883
+  topic=جيو گهرڙو (The Cell - Basic Unit of Life), ts=355.0s, count=2883
+  topic=جيو گهرڙو (The Cell - Basic Unit of Life), ts=175.0s, count=2883
+  topic=جيو گهرڙو (The Cell - Basic Unit of Life), ts=235.0s, count=2883
+  topic=ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis), ts=40.0s, count=335
+  topic=ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis), ts=115.0s, count=335
+  topic=ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis), ts=355.0s, count=335
+  topic=ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis), ts=175.0s, count=335
+  topic=ٻوٽن ۾ فوٽوسنٿيسز جو عمل (Photosynthesis), ts=235.0s, count=335
+  topic=ڪلوروفل جو ڪردار, ts=185.0s, count=1
+  topic=سج جي روشني, ts=290.0s, count=1

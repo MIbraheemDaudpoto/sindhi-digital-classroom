@@ -1,0 +1,46 @@
+Math Courses: 1
+Course: crs-math-6, Subject: Math, Lessons: 13
+  Unit 1 [lesson-math-6-1]: سيٽ (Sets) (Unit 1: Sets)
+  Unit 2 [lesson-math-6-2]: پورا عدد (Whole numbers) (Unit 2: Whole numbers)
+  Unit 3 [lesson-math-6-3]: جزا ۽ ضربينڊڙ (Factors and multiples) (Unit 3: Factors and multiples)
+  Unit 4 [lesson-math-6-4]: سڄا عدد (Integers) (Unit 4: Integers)
+  Unit 5 [lesson-math-6-5]: سادي صورت (Simplification) (Unit 5: Simplification)
+  Unit 6 [lesson-math-6-6]: نسبت ۽ تناسب (Ratio and proportion) (Unit 6: Ratio and proportion)
+  Unit 7 [lesson-math-6-7]: ماليتي حساب (Financial arithmetic) (Unit 7: Financial arithmetic)
+  Unit 8 [lesson-math-6-8]: آلجبرا جو تعارف (Introduction to algebra) (Unit 8: Introduction to algebra)
+  Unit 9 [lesson-math-6-9]: هک درجي مساواتون (Linear (one-degree) equations) (Unit 9: Linear (one-degree) equations)
+  Unit 10 [lesson-math-6-10]: جاميٽري (Geometry) (Unit 10: Geometry)
+  Unit 11 [lesson-math-6-11]: احاطو ۽ ايراضي (Perimeter and area) (Unit 11: Perimeter and area)
+  Unit 12 [lesson-math-6-12]: ٽن پاسن واريون شيوون (Three-dimensional shapes) (Unit 12: Three-dimensional shapes)
+  Unit 13 [lesson-math-6-13]: معلومات سيهڙڻ (Information handling) (Unit 13: Information handling)
+
+Science Courses: 9
+Course: crs-sci-6, Subject: Science, Lessons: 12
+  Unit 1 [lesson-sci-6-1]: جيو گهرڙو (The Cell - Basic Unit of Life) (The Cell - Basic Unit of Life)
+  Unit 2 [lesson-sci-6-2]: حواسن وارا عضوا (Sense Organs) (Sense Organs)
+  Unit 3 [lesson-sci-6-3]: روشنائي ترڪيب ۽ ساهه کڻڻ جو عمل (Photosynthesis & Respiration) (Photosynthesis and Respiration in Plants)
+  Unit 4 [lesson-sci-6-4]: ماحول ۽ ايڪوسسٽم (Environment and Ecosystem) (Environment and Ecosystem)
+  Unit 5 [lesson-sci-6-5]: ائٽمن ۽ ماليڪيولن جو تعارف (Atoms and Molecules) (Atoms, Molecules, Mixtures and Compounds)
+  Unit 6 [lesson-sci-6-6]: هوا ۽ ان جي اهميت (Air and Atmosphere) (Air and its Importance)
+  Unit 7 [lesson-sci-6-7]: محلول ۽ معلق ميلاپ (Solutions and Suspensions) (Solutions and Suspensions)
+  Unit 8 [lesson-sci-6-8]: توانائي ۽ ان جا قسم (Energy and Its Forms) (Energy and Its Forms)
+  Unit 9 [lesson-sci-6-9]: ساديون مشينون (Simple Machines) (Simple Machines: Pulleys, Wheels and Gears)
+  Unit 10 [lesson-sci-6-10]: روشنيءَ جو سفر ۽ موٽ (Transmission and Reflection of Light) (Transmission and Reflection of Light)
+  Unit 11 [lesson-sci-6-11]: آواز جو سفر ۽ خاصيتون (Sound and Its Propagation) (Sound and Its Properties)
+  Unit 12 [lesson-sci-6-12]: خلا ۽ مصنوعي سيارا (Space and Satellites) (Space, Satellites and Astronomy)
+Course: test-crs-a24e3c, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-4e1884]: سبق (Lesson 1)
+Course: test-crs-4fdd31, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-ceef59]: سبق (Lesson 1)
+Course: test-crs-814aaf, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-b321f7]: سبق (Lesson 1)
+Course: test-crs-41313a, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-1e4f6d]: سبق (Lesson 1)
+Course: test-crs-4a7a47, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-911009]: سبق (Lesson 1)
+Course: test-crs-5fa1e3, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-7a0d1f]: سبق (Lesson 1)
+Course: test-crs-052cd4, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-99d13d]: سبق (Lesson 1)
+Course: test-crs-9dca49, Subject: Science, Lessons: 1
+  Unit 1 [test-lsn-f4a636]: سبق (Lesson 1)

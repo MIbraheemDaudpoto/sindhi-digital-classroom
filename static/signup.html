@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sd" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شاگرد رجسٽريشن | سنڌي ڊجيٽل ڪلاس روم</title>
+  <meta name="description" content="سنڌ ٽيڪسٽ بڪ بورڊ نصاب لاءِ نئون آزاد شاگرد اڪائونٽ ٺاهيو.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/icons.js"></script>
+</head>
+<body class="auth-wrapper">
+
+  <!-- Mini Header -->
+  <a href="/" class="auth-header-mini" title="مک صفحي ڏانهن واپس وڃو">
+    <div class="public-brand-emblem" style="height: 46px; width: auto; min-width: 52px; padding: 2px 6px;">
+      <img src="/static/images/sdc-emblem.svg" alt="SDC Emblem" width="46" height="38">
+    </div>
+    <div>
+      <span style="font-weight: 700; font-size: 1.05rem;">سنڌي ڊجيٽل ڪلاس روم</span>
+      <span style="font-size: 0.76rem; color: var(--text-muted); display: block;">&larr; مک صفحي ڏانهن واپس وڃو</span>
+    </div>
+  </a>
+
+  <!-- Two-Column Container -->
+  <div class="auth-card-container">
+    <!-- Form Side -->
+    <div class="auth-form-side">
+      <div class="auth-heading-area">
+        <h2>نئون شاگرد اڪائونٽ کوليون</h2>
+        <p>سنڌ ٽيڪسٽ بڪ بورڊ جي مفت درسي سبقن ۽ ڪوئيز تائين فوري رسائي</p>
+      </div>
+
+      <!-- Registration Notice Box -->
+      <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 20px;">
+        <strong style="color: var(--accent-emerald); display: inline-flex; align-items: center; gap: 4px;">
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-shield"></use></svg> آزاد شاگرد داخلا:
+        </strong>
+        رجسٽريشن لاءِ اسڪول جي منتظم کان هڪ ڀيرو استعمال ٿيندڙ داخلا ڪوڊ وٺو. هن وقت ڪلاس 6 جا رياضي ۽ سائنس جا سبق موجود آهن.
+      </div>
+
+      <!-- Error Alert Box -->
+      <div id="signup-error-alert" class="auth-error-box" role="alert" style="display: none;"></div>
+
+      <!-- Student Registration Form -->
+      <form id="form-signup" onsubmit="handleStudentSignup(event)">
+        <div class="auth-field-group">
+          <label for="signup-invite-code">منتظم جو ڏنل داخلا ڪوڊ</label>
+          <div class="auth-input-container">
+            <input type="text" id="signup-invite-code" class="auth-input" required minlength="8" maxlength="80" autocomplete="off" autocapitalize="characters" placeholder="SDC-…">
+          </div>
+        </div>
+        <div class="auth-field-group">
+          <label for="signup-fullname">شاگرد جو نالو</label>
+          <div class="auth-input-container">
+            <input type="text" id="signup-fullname" class="auth-input" required minlength="3" maxlength="100" autocomplete="name">
+          </div>
+        </div>
+        <div class="auth-field-group">
+          <label>درجو</label>
+          <div class="auth-input-container"><input class="auth-input" value="ڪلاس 6" readonly aria-label="ڪلاس 6"></div>
+        </div>
+
+        <!-- 4-6 Digit PIN / Password and Confirm PIN -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div class="auth-field-group">
+            <label for="signup-pin">4–6 عددن جو پن / پاسورڊ (PIN)</label>
+            <div class="auth-input-container">
+              <input type="password" id="signup-pin" class="auth-input" placeholder="••••" required minlength="4" maxlength="6" inputmode="numeric" pattern="[0-9]{4,6}" autocomplete="new-password">
+              <button type="button" class="auth-password-toggle" onclick="togglePasswordVisibility('signup-pin', this)" aria-label="پن ڏيکاريو" title="پن ڏيکاريو">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth-field-group">
+            <label for="signup-confirm-pin">پن جي تصديق (Confirm PIN)</label>
+            <div class="auth-input-container">
+              <input type="password" id="signup-confirm-pin" class="auth-input" placeholder="••••" required minlength="4" maxlength="6" inputmode="numeric" pattern="[0-9]{4,6}" autocomplete="new-password">
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms Agreement -->
+        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px;">
+          <input type="checkbox" id="signup-terms" required style="margin-top: 5px; accent-color: var(--accent-emerald); cursor: pointer;">
+          <label for="signup-terms" style="font-size: 0.82rem; color: var(--text-secondary); cursor: pointer; line-height: 1.5;">
+            مان سنڌي ڊجيٽل ڪلاس روم جي <a href="/terms" target="_blank" style="color: var(--accent-emerald);">استعمال جي شرطن</a> ۽ <a href="/privacy" target="_blank" style="color: var(--accent-emerald);">رازداري پاليسي</a> سان متفق آهيان.
+          </label>
+        </div>
+
+        <button type="submit" id="btn-submit-signup" class="auth-submit-btn">
+          <span>شاگرد کاتو ٺاهيو (Complete Registration)</span>
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+        </button>
+      </form>
+
+      <!-- Already have account -->
+      <div class="auth-footer-links">
+        <div>
+          اڳ ۾ ئي کاتو موجود آهي؟ 
+          <a href="/login">هتي لاگ ان ٿيو (Login here)</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Showcase Side (Right for RTL) -->
+    <div class="auth-side-showcase">
+      <div>
+        <div class="auth-showcase-badge">
+          <span style="display: inline-flex; align-items: center; gap: 6px;">
+            <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-shield"></use></svg> سنڌي ٻوليءَ ۾ سمارٽ تعليم
+          </span>
+        </div>
+        <div class="auth-showcase-content">
+          <h3>معياري سنڌي تعليم هر شاگرد تائين</h3>
+          <p>
+            سنڌي ڊجيٽل ڪلاس روم ٻارن جي صلاحيتن کي اجاگر ڪرڻ لاءِ سنڌ جي ثقافت ۽ ٻوليءَ سان سچو رابطو قائم ڪري ٿو.
+          </p>
+        </div>
+
+        <ul class="auth-features-list">
+          <li class="auth-feature-bullet"><svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg><span>ڪلاس 6 جا موجود رياضي ۽ سائنس جا سبق.</span></li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>سمارٽ وڊيو پاپ اپ سوال ۽ فوري نتيجا.</span>
+          </li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>ڪورس مواد ۽ رابطي جون خاصيتون دستياب نيٽ ورڪ موجب ڪم ڪن ٿيون.</span>
+          </li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>سبق سان ڳنڍيل Tutor دستياب خدمتن جي حالت ڏيکاري ٿو.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="font-size: 0.78rem; color: var(--text-dim); border-top: 1px solid var(--border-glass); padding-top: 16px;">
+        سنڌ ايجوڪيشن اينڊ لٽريسي ڊپارٽمينٽ نصاب مطابق
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal for Unique ID Display -->
+  <div id="signup-success-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 9999; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 20px;">
+    <div class="glass-card" style="max-width: 500px; width: 100%; padding: 32px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--accent-emerald); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+      <div style="width: 64px; height: 64px; margin: 0 auto 16px; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--accent-emerald); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-emerald);">
+        <svg class="sdc-icon" style="width: 32px; height: 32px;" aria-hidden="true"><use href="#icon-check"></use></svg>
+      </div>
+      <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">مبارڪون! اڪائونٽ ڪاميابيءَ سان ٺهي ويو</h3>
+      <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 24px;">سنڌي ڊجيٽل ڪلاس روم ۾ ڀلي ڪري آيا. اوهان جي سڃاڻپ لاءِ مستقل آءِ ڊي جاري ڪئي وئي آهي:</p>
+      
+      <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px; margin-bottom: 24px;">
+        <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-bottom: 4px;">توهان جي مستقل شاگرد آءِ ڊي (Unique Student ID)</span>
+        <strong id="modal-assigned-id" style="font-size: 1.8rem; color: var(--accent-emerald); letter-spacing: 2px; font-family: monospace;">STU-XXXXX</strong>
+        <span style="font-size: 0.78rem; color: var(--text-secondary); display: block; margin-top: 6px;">
+          موبائل نمبر: <strong id="modal-assigned-phone" style="color: #fff;">03XXXXXXXXX</strong>
+        </span>
+      </div>
+
+      <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 24px;">
+        توهان هاڻي پنهنجي موبائل نمبر يا هن شاگرد آءِ ڊي ۽ پنهنجي پن ڪوڊ ذريعي ڪڏهن به لاگ ان ٿي سگهو ٿا.
+      </p>
+
+      <button type="button" class="btn-public-signup" onclick="proceedToLMS()" style="width: 100%; padding: 12px; font-size: 1rem; justify-content: center;">
+        <span>ڪلاس روم ۾ داخل ٿيو (Proceed to LMS)</span>
+        <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let newlyCreatedUser = null;
+
+    const SVG_EYE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+    const SVG_EYE_OFF = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
+
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = SVG_EYE_OFF;
+        btn.setAttribute('aria-label', 'پاسورڊ لڪايو');
+        btn.setAttribute('title', 'پاسورڊ لڪايو');
+      } else {
+        input.type = 'password';
+        btn.innerHTML = SVG_EYE;
+        btn.setAttribute('aria-label', 'پاسورڊ ڏيکاريو');
+        btn.setAttribute('title', 'پاسورڊ ڏيکاريو');
+      }
+      input.focus();
+    }
+
+    function showError(msg) {
+      const errBox = document.getElementById('signup-error-alert');
+      if (errBox) {
+        errBox.textContent = msg;
+        errBox.style.display = 'block';
+        window.scrollTo({ top: errBox.offsetTop - 30, behavior: 'smooth' });
+      }
+    }
+
+    function hideError() {
+      const errBox = document.getElementById('signup-error-alert');
+      if (errBox) errBox.style.display = 'none';
+    }
+
+    // Handle Student Registration Form Submit
+    async function handleStudentSignup(e) {
+      e.preventDefault();
+      hideError();
+
+      const inviteCode = document.getElementById('signup-invite-code').value.trim().toUpperCase();
+      const fullName = document.getElementById('signup-fullname').value.trim();
+      const pin = document.getElementById('signup-pin').value.trim();
+      const confirmPin = document.getElementById('signup-confirm-pin').value.trim();
+      const termsAccepted = document.getElementById('signup-terms').checked;
+      const submitBtn = document.getElementById('btn-submit-signup');
+
+      if (!fullName) {
+        showError('مهرباني ڪري شاگرد جو پورو نالو لکو.');
+        return;
+      }
+
+      if (!inviteCode) {
+        showError('رجسٽريشن لاءِ منتظم کان حاصل ڪيل داخلا ڪوڊ داخل ڪريو.');
+        return;
+      }
+
+      if (pin !== confirmPin) {
+        showError('پن ڪوڊ ۽ تصديقي پن هڪجهڙا ناهن.');
+        return;
+      }
+
+      if (!pin.match(/^[0-9]{4,6}$/)) {
+        showError('پن ڪوڊ 4 کان 6 عددن تي ٻڌل هجڻ گهرجي.');
+        return;
+      }
+
+      if (!termsAccepted) {
+        showError('مهرباني ڪري استعمال جي شرطن سان اتفاق ڪريو.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>شاگرد کاتو ٺهي رهيو آهي...</span>';
+
+      try {
+        const payload = {
+          invite_code: inviteCode,
+          full_name: fullName,
+          pin: pin,
+          class_level: 6,
+          language: 'sindhi'
+        };
+
+        const res = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          newlyCreatedUser = {
+            user_id: data.user_id,
+            role: data.role,
+            pseudonymous_code: data.pseudonymous_code,
+            full_name: data.full_name || fullName,
+            school_id: data.school_id,
+            school_name: data.school_name || '',
+            language: data.language || 'sindhi',
+            token: data.token
+          };
+          localStorage.setItem('sdc_current_user', JSON.stringify(newlyCreatedUser));
+
+          // Show assigned Unique ID in celebratory modal
+          document.getElementById('modal-assigned-id').textContent = data.pseudonymous_code;
+          const phoneLabel = document.getElementById('modal-assigned-phone');
+          if (phoneLabel) phoneLabel.closest('span').hidden = true;
+          const modal = document.getElementById('signup-success-modal');
+          modal.style.display = 'flex';
+        } else {
+          const err = await res.json().catch(() => ({}));
+          showError(err.detail || 'رجسٽريشن ناڪام ٿي. مهرباني ڪري تفصيل چيڪ ڪريو.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>شاگرد کاتو ٺاهيو (Complete Registration)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+        }
+      } catch (err) {
+        showError('سرور سان رابطي ۾ خرابي. مهرباني ڪري نيٽ ورڪ چيڪ ڪريو.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>شاگرد کاتو ٺاهيو (Complete Registration)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+      }
+    }
+
+    function proceedToLMS() {
+      window.location.href = '/app/learn';
+    }
+  </script>
+</body>
+</html>

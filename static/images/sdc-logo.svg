@@ -1,0 +1,41 @@
+<svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" aria-label="Sindhi Digital Classroom SDC logo">
+  <!-- SDC Emblem -->
+  <g transform="translate(60, 20) scale(1)">
+    <!-- graduation cap -->
+    <path d="M78,60 V84 C78,98 162,98 162,84 V60 L120,74 Z" fill="#10A56A"/>
+    <polygon points="120,16 192,43 120,70 48,43" fill="#0B4D2E"/>
+    <!-- ajrak-style diamond motif (Sindh) -->
+    <polygon points="120,32 134,43 120,54 106,43" fill="#A3E635"/>
+    <polygon points="120,38 127,43 120,48 113,43" fill="#0B4D2E"/>
+    <!-- tassel -->
+    <line x1="192" y1="43" x2="192" y2="74" stroke="#A3E635" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="192" cy="79" r="5" fill="#A3E635"/>
+    <!-- open book -->
+    <path d="M117,114 C98,100 68,98 36,106 V162 C68,154 98,156 117,170 Z" fill="#0B4D2E"/>
+    <path d="M123,114 C142,100 172,98 204,106 V162 C172,154 142,156 123,170 Z" fill="#10A56A"/>
+    <!-- page lines -->
+    <path d="M52,122 C68,118 84,119 100,126 M52,136 C68,132 84,133 100,140" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
+    <!-- digital pixels -->
+    <rect x="148" y="124" width="9" height="9" fill="#A3E635"/>
+    <rect x="162" y="124" width="9" height="9" fill="#ffffff"/>
+    <rect x="162" y="138" width="9" height="9" fill="#A3E635"/>
+    <rect x="176" y="124" width="9" height="9" fill="#ffffff" opacity=".7"/>
+    <rect x="176" y="138" width="9" height="9" fill="#ffffff"/>
+    <rect x="212" y="92" width="9" height="9" fill="#A3E635"/>
+    <rect x="224" y="106" width="6" height="6" fill="#10A56A"/>
+    <!-- ajrak diamond row base -->
+    <polygon points="96,186 102,180 108,186 102,192" fill="#10A56A"/>
+    <polygon points="114,186 120,179 126,186 120,193" fill="#A3E635"/>
+    <polygon points="132,186 138,180 144,186 138,192" fill="#10A56A"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="180" y="255" text-anchor="middle" font-family="'Montserrat', 'Inter', system-ui, sans-serif" font-weight="800" font-size="44" fill="#0B4D2E" letter-spacing="3">SDC</text>
+  <text x="180" y="280" text-anchor="middle" font-family="'Montserrat', 'Inter', system-ui, sans-serif" font-weight="600" font-size="14" fill="#10A56A" letter-spacing="1.5">SINDHI DIGITAL CLASSROOM</text>
+  
+  <!-- Accent divider -->
+  <rect x="150" y="294" width="60" height="3" rx="1.5" fill="#A3E635"/>
+  
+  <!-- Sindhi Tagline -->
+  <text x="180" y="325" text-anchor="middle" font-family="'Noto Sans Arabic', 'Noto Naskh Arabic', sans-serif" font-weight="700" font-size="16" fill="#0B4D2E" direction="rtl">سنڌيءَ ۾ سکو، پنهنجي رفتار سان اڳتي وڌو</text>
+</svg>

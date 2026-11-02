@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="sd" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سنڌي ڊجيٽل ڪلاس روم | Sindhi Digital Classroom (SDC)</title>
+  <meta name="description" content="سنڌي RTL ڊجيٽل ڪلاس روم: ڪلاس 6 جا موجود رياضي ۽ سائنس جا سبق، Tutor، ڪوئيز ۽ محفوظ شاگردي ترقي.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/icons.js"></script>
+</head>
+<body>
+
+  <!-- Public Responsive Navigation Header -->
+  <header class="public-header" role="banner">
+    <div class="public-header-container">
+      <a href="/" class="public-brand-link" aria-label="سنڌي ڊجيٽل ڪلاس روم (SDC) مک صفحو" title="سنڌي ڊجيٽل ڪلاس روم (SDC)">
+        <div class="public-brand-emblem" aria-hidden="true">
+          <img src="/static/images/sdc-emblem.svg" alt="سنڌي ڊجيٽل ڪلاس روم (SDC)" width="56" height="44">
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="public-nav-menu" aria-label="عوامي نيويگيشن">
+        <a href="/" class="public-nav-link" id="nav-home">مک صفحو</a>
+        <a href="/curriculum" class="public-nav-link" id="nav-curriculum">نصاب (Curriculum)</a>
+        <a href="/about" class="public-nav-link" id="nav-about">اسان بابت (About)</a>
+        <a href="/help" class="public-nav-link" id="nav-help">مدد ۽ رهنمائي (Help)</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="public-header-actions">
+        <a href="/login" class="btn-public-login" id="btn-header-login">
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-key"></use></svg>
+          <span>لاگ ان (Login)</span>
+        </a>
+        <a href="/signup" class="btn-public-signup" id="btn-header-signup">
+          <span>سکيا شروع ڪريو</span>
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+        </a>
+        <button class="public-mobile-toggle" id="btn-mobile-toggle" aria-label="مينيو کوليو" onclick="toggleMobileMenu()">
+          <svg class="sdc-icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="public-mobile-drawer" id="mobile-drawer">
+      <a href="/" class="public-nav-link" onclick="closeMobileMenu()">مک صفحو (Home)</a>
+      <a href="/curriculum" class="public-nav-link" onclick="closeMobileMenu()">نصاب (Curriculum)</a>
+      <a href="/about" class="public-nav-link" onclick="closeMobileMenu()">اسان بابت (About SDC)</a>
+      <a href="/help" class="public-nav-link" onclick="closeMobileMenu()">مدد ۽ رهنمائي (Help)</a>
+      <a href="/privacy" class="public-nav-link" onclick="closeMobileMenu()">رازداري پاليسي (Privacy)</a>
+      <a href="/terms" class="public-nav-link" onclick="closeMobileMenu()">شرطون (Terms)</a>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <a href="/login" class="btn-public-login" style="flex: 1; text-align: center;">لاگ ان</a>
+        <a href="/signup" class="btn-public-signup" style="flex: 1; text-align: center;">شاگرد رجسٽريشن</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Sindhi-First Educational Message) -->
+  <main>
+    <section class="landing-hero" id="sec-hero">
+      <div class="landing-hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>هن وقت دستياب نصاب • ڪلاس 6 رياضي ۽ سائنس</span>
+      </div>
+
+      <h1 class="landing-hero-title">
+        سنڌيءَ ۾ سکو، پنهنجي رفتار سان اڳتي وڌو
+      </h1>
+
+      <p class="landing-hero-subtitle">
+        سنڌيءَ ۾ پڙهڻ لاءِ ڪلاس 6 جي موجود رياضي ۽ سائنس جي سبقن ۾ داخل ٿيو. وڊيو ۽ Tutor جي دستيابي نيٽ ورڪ ۽ فعال خدمتن تي دارومدار رکي ٿي؛ ڪوئيز وڊيو کان الڳ کوليو وڃي ٿو.
+      </p>
+
+      <div class="landing-hero-cta">
+        <a href="/signup" class="btn-hero-primary" style="text-decoration: none;">
+          <span>سکيا شروع ڪريو (Start Learning)</span>
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+        </a>
+        <a href="/curriculum" class="btn-hero-secondary" style="text-decoration: none;">
+          <svg class="sdc-icon" aria-hidden="true"><use href="#icon-book"></use></svg>
+          <span>نصاب ڏسو (Explore Curriculum)</span>
+        </a>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="landing-trust-bar">
+        <div class="landing-trust-item"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-academic"></use></svg> <span>سنڌ ٽيڪسٽ بڪ بورڊ مطابقت</span></div>
+        <div class="trust-dot">•</div>
+        <div class="landing-trust-item"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-offline"></use></svg> <span>انٽرنيٽ مطابق مواد جي دستيابي</span></div>
+        <div class="trust-dot">•</div>
+        <div class="landing-trust-item"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-robot"></use></svg> <span>سبق سان ڳنڍيل Tutor</span></div>
+        <div class="trust-dot">•</div>
+        <div class="landing-trust-item"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-shield"></use></svg> <span>شاگردن جي مڪمل رازداري</span></div>
+      </div>
+    </section>
+
+    <!-- Section 1: Current published curriculum -->
+    <section class="public-section" id="sec-curriculum">
+      <div class="public-section-header">
+        <span class="public-section-badge">تعليمي دائرو</span>
+        <h2 class="public-section-title">هن وقت موجود ڪلاس 6 جو نصاب</h2>
+        <p class="public-section-desc">
+          ڪورس ۽ سبق موجود نصابي ڊيٽا مان ڏيکاريا وڃن ٿا. هن رليز ۾ رياضي ۽ عام سائنس موجود آهن.
+        </p>
+      </div>
+
+      <div class="public-class-grid">
+        <div class="public-class-card">
+          <span class="public-class-badge">درجو ڇهون (Grade 6)</span>
+          <h3 class="public-class-title">ڪلاس 6: رياضي ۽ عام سائنس</h3>
+          <ul class="public-class-subjects">
+            <li>رياضي: موجود ڇپيل سبق ۽ انهن جو مواد</li>
+            <li>عام سائنس: موجود ڇپيل سبق ۽ انهن جو مواد</li>
+            <li>سبق، Tutor ۽ ڪوئيز جون خاصيتون سروس جي دستيابي موجب</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Live Lesson Preview Explorer (No Private Data) -->
+      <div class="glass-card" style="margin-top: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 700;">دستياب پائلٽ سبق (Public Lessons Discovery)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">اهي سبق بنا اڪائونٽ پڻ نصابي دائري طور ڏسي سگهجن ٿا.</p>
+          </div>
+          <span class="status-pill online">سرڪاري نصاب</span>
+        </div>
+        <div id="public-lessons-catalog" class="public-feature-grid">
+          <div style="color: var(--text-dim); padding: 16px;">سبقن جي فهرست لوڊ ٿي رهي آهي...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: How Learning Works -->
+    <section class="public-section" style="background: var(--bg-subtle); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="public-section-header">
+        <span class="public-section-badge">طريقيڪار</span>
+        <h2 class="public-section-title">سکيا جو عمل ڪيئن ڪم ڪري ٿو؟</h2>
+        <p class="public-section-desc">
+          شاگردن جي سمجھ کي مضبوط ڪرڻ لاءِ 4 سادا ۽ اثرائتا مرحلا:
+        </p>
+      </div>
+
+      <div class="public-step-grid">
+        <div class="public-step-card">
+          <div class="public-step-number">1</div>
+          <h3 class="public-step-title">ڪلاس ۽ مضمون چونڊيو</h3>
+          <p class="public-step-desc">
+            پنهنجي درجي ۽ مضمون مطابق يونٽ چونڊيو. سمورو مواد سنڌ ٽيڪسٽ بڪ بورڊ سان مڪمل مطابقت رکي ٿو.
+          </p>
+        </div>
+
+        <div class="public-step-card">
+          <div class="public-step-number">2</div>
+          <h3 class="public-step-title">ليڪچر ڏسو ۽ پڙهو</h3>
+          <p class="public-step-desc">
+            مقامي سنڌي وڊيو ڏسو يا يوٽيوب لنڪ ذريعي سبق ٻڌو، گڏوگڏ لفظ به لفظ سنڌي ٽرانسڪرپٽ مان به فائدو وٺو.
+          </p>
+        </div>
+
+        <div class="public-step-card">
+          <div class="public-step-number">3</div>
+          <h3 class="public-step-title">سمارٽ چيڪ پوائنٽ ڪوئيز</h3>
+          <p class="public-step-desc">
+            چونڊيل سبق يا مضمون لاءِ الڳ ڪوئيز شروع ڪريو؛ وڊيو هلڻ ضروري ناهي.
+          </p>
+        </div>
+
+        <div class="public-step-card">
+          <div class="public-step-number">4</div>
+          <h3 class="public-step-title">سبق جي Tutor سان سوال</h3>
+          <p class="public-step-desc">
+            Tutor جي موجوده فراهم ڪندڙ ۽ جواب جي حالت اسڪرين تي ڏسو. جيڪڏهن لائيو ماڊل دستياب نه هجي ته ايپ ان ڳالهه کي واضح ڪندي.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Student & Teacher Features -->
+    <section class="public-section">
+      <div class="public-section-header">
+        <span class="public-section-badge">خصوصيتون</span>
+        <h2 class="public-section-title">شاگردن لاءِ موجود خاصيتون</h2>
+        <p class="public-section-desc">
+          هن رليز ۾ ڪلاس 6 جي موجود رياضي ۽ سائنس تي ڌيان ڏنو ويو آهي.
+        </p>
+      </div>
+
+      <div class="public-feature-grid">
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: var(--accent-primary);" aria-hidden="true"><use href="#icon-robot"></use></svg></div>
+          <h3 class="public-feature-title">مادري ٻولي سنڌي ترجيح</h3>
+          <p class="public-feature-desc">
+            يوزر انٽرفيس کان وٺي سبقن ۽ سوالن تائين سمورو نظام سنڌي رسم الخط ۾ دستياب آهي، جنهن سان ٻار بنا جھجھڪ سکي سگهن ٿا.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-offline"></use></svg></div>
+          <h3 class="public-feature-title">نيٽ ورڪ ۽ مواد جي حالت</h3>
+          <p class="public-feature-desc">
+            لاگ ان، لائيو Tutor ۽ سرور تي محفوظ نتيجن لاءِ انٽرنيٽ گهربل آهي. هن رليز ۾ مڪمل آف لائن پڙهائي يا سنڪ جي ضمانت نٿي ڏني وڃي.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: #8b5cf6;" aria-hidden="true"><use href="#icon-robot"></use></svg></div>
+          <h3 class="public-feature-title">سبق سان ڳنڍيل Tutor</h3>
+          <p class="public-feature-desc">
+            Tutor سوالن کي موجود نصابي مواد سان ڳنڍڻ جي ڪوشش ڪري ٿو؛ جواب ۽ AI فراهم ڪندڙ جي حالت سان گڏ حوالا ڏسو.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: #f59e0b;" aria-hidden="true"><use href="#icon-shield"></use></svg></div>
+          <h3 class="public-feature-title">محفوظ ترقي جا رڪارڊ</h3>
+          <p class="public-feature-desc">
+            شاگرد پنهنجا محفوظ ڪيل سبق ۽ مڪمل ٿيل ڪوئيز ڏسن ٿا؛ منتظم سڀني شاگردن جا ترقي رڪارڊ ڏسي سگهي ٿو.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: #06b6d4;" aria-hidden="true"><use href="#icon-document"></use></svg></div>
+          <h3 class="public-feature-title">ڪوئيز جا نتيجا</h3>
+          <p class="public-feature-desc">
+            جوابن جي جاچ سرور ڪري ٿو ۽ مڪمل نتيجا شاگرد جي اڪائونٽ ۾ محفوظ ٿين ٿا.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: #10b981;" aria-hidden="true"><use href="#icon-shield"></use></svg></div>
+          <h3 class="public-feature-title">ننڍن ٻارن جي ڊيٽا تحفظ</h3>
+          <p class="public-feature-desc">
+            شاگردن جي ذاتي سڃاڻپ کانسواءِ رڳو فرضي ڪوڊ (Pseudonymous Code) استعمال ڪيو وڃي ٿو. ڪو به اشتهار يا ڊيٽا وڪرو نٿو ڪيو وڃي.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Offline Architecture Explanation & Honest Limitations -->
+    <section class="public-section" style="background: var(--bg-subtle); border-radius: var(--radius-lg); border: 1px solid var(--border-subtle);">
+      <div class="public-section-header">
+        <span class="public-section-badge">شفافيت ۽ اصول</span>
+        <h2 class="public-section-title">آف لائن ڪم ڪرڻ جو پتو ۽ مخلص حدون</h2>
+        <p class="public-section-desc">
+          اسان ڪوڙا دعويٰ نٿا ڪريون. اسان جو سسٽم حقيقي حالتن کي سامهون رکي ٺاهيو ويو آهي.
+        </p>
+      </div>
+
+      <div class="public-step-grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div class="public-step-card" style="border-right: 3px solid var(--accent-emerald);">
+          <h3 style="color: var(--accent-emerald); font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">
+            &#10004; ڇا آف لائن ممڪن آهي:
+          </h3>
+          <ul class="public-class-subjects" style="gap: 10px;">
+            <li>ڪيش ٿيل ايپ شيل ڪجهه ڊوائيسن تي کلي سگهي ٿو.</li>
+            <li>لاگ ان، لائيو Tutor، نئون ڪوئيز ۽ نتيجا محفوظ ڪرڻ لاءِ نيٽ ورڪ گهربل آهي.</li>
+            <li>مڪمل آف لائن مواد ۽ نتيجن جي هم وقتي هن رليز ۾ تصديق ٿيل نه آهن.</li>
+          </ul>
+        </div>
+
+        <div class="public-step-card" style="border-right: 3px solid var(--accent-amber);">
+          <h3 style="color: var(--accent-amber); font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">
+            &#9888; آف لائن حدون (سچائي سان):
+          </h3>
+          <ul class="public-class-subjects" style="gap: 10px;">
+            <li style="color: var(--text-secondary);">يوٽيوب وڊيوز ڏسڻ لاءِ فعال انٽرنيٽ گهربل آهي (يوٽيوب آف لائن ڪيش نٿو ٿئي).</li>
+            <li style="color: var(--text-secondary);">وڊيو جي دستيابي انٽرنيٽ، ميزبان لنڪ ۽ مواد تي دارومدار رکي ٿي.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: About SDC (/about) -->
+    <section class="public-section" id="sec-about">
+      <div class="public-section-header">
+        <span class="public-section-badge">اسان بابت</span>
+        <h2 class="public-section-title">سنڌي ڊجيٽل ڪلاس روم (SDC) ڇا آهي؟</h2>
+        <p class="public-section-desc">
+          SDC هڪ آزاد، غير تجارتي تعليمي پليٽ فارم آهي، جنهن جو مقصد سنڌ جي ٻارن کي انهن جي مادري زبان ۾ معيار جي سائنسي ۽ رياضي تعليم مهيا ڪرڻ آهي.
+        </p>
+      </div>
+
+      <div class="glass-card" style="padding: 32px; line-height: 1.85;">
+        <h3 style="color: var(--text-primary); font-size: 1.25rem; font-weight: 700; margin-bottom: 14px;">
+          اسان جو نظريو ۽ مقصد
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          SDC جو مقصد موجود ڪلاس 6 جي رياضي ۽ سائنس جي سبقن کي سنڌي RTL انٽرفيس ۾ شاگردن تائين پهچائڻ آهي.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          شاگرد سبق پڙهي سگهن ٿا، موجود هجي ته وڊيو ڏسي سگهن ٿا، سبق جي حوالي سان Tutor کان پڇي سگهن ٿا ۽ وڊيو کان الڳ ڪوئيز مڪمل ڪري سگهن ٿا.
+        </p>
+        <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
+          <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-sm); padding: 14px 20px; flex: 1; min-width: 200px;">
+            <div style="color: var(--accent-emerald); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px;">سنڌي RTL انٽرفيس</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">مواد ۽ خدمت جي حالت اسڪرين تي واضح ڏيکاري وڃي ٿي.</div>
+          </div>
+          <div style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: var(--radius-sm); padding: 14px 20px; flex: 1; min-width: 200px;">
+            <div style="color: var(--accent-cyan); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px;">ڪلاس 6</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">هن وقت رياضي ۽ عام سائنس جا موجود سبق.</div>
+          </div>
+          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-sm); padding: 14px 20px; flex: 1; min-width: 200px;">
+            <div style="color: var(--accent-amber); font-weight: 700; font-size: 1.1rem; margin-bottom: 4px;">شفاف رازداري</div>
+            <div style="color: var(--text-muted); font-size: 0.85rem;">شاگردن جي ڪابه ذاتي تفصيل تجارتي مقصدن لاءِ استعمال نٿي ٿئي.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Help & Guidance (/help) -->
+    <section class="public-section" id="sec-help">
+      <div class="public-section-header">
+        <span class="public-section-badge">مدد ۽ رهنمائي</span>
+        <h2 class="public-section-title">شاگردن ۽ منتظمين لاءِ رهنمائي</h2>
+        <p class="public-section-desc">
+          سسٽم ڪيئن استعمال ڪجي ۽ عام مسئلن جا حل.
+        </p>
+      </div>
+
+      <div class="public-feature-grid">
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: var(--accent-primary);" aria-hidden="true"><use href="#icon-key"></use></svg></div>
+          <h3 class="public-feature-title">شاگرد لاگ ان ڪيئن ڪن؟</h3>
+          <p class="public-feature-desc">
+            پنهنجي شاگرد آءِ ڊي ۽ ٺاهيل 4 کان 6 عددن وارو پن استعمال ڪريو. منتظم کان مليل اڪائونٽ تفصيل محفوظ رکو.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-users"></use></svg></div>
+          <h3 class="public-feature-title">نئون شاگرد ڪيئن رجسٽر ٿئي؟</h3>
+          <p class="public-feature-desc">
+            "سکيا شروع ڪريو" تي وڃو، منتظم جو هڪ ڀيرو استعمال ٿيندڙ داخلا ڪوڊ داخل ڪريو ۽ پنهنجو نالو ۽ پن مقرر ڪريو.
+          </p>
+        </div>
+
+        <div class="public-feature-card">
+          <div class="public-feature-icon"><svg class="sdc-icon sdc-icon-lg" style="color: #f59e0b;" aria-hidden="true"><use href="#icon-help"></use></svg></div>
+          <h3 class="public-feature-title">داخلا ڪوڊ يا شاگرد آءِ ڊي بابت مدد؟</h3>
+          <p class="public-feature-desc">
+            داخلا ڪوڊ لاءِ منتظم سان رابطو ڪريو. لاگ ان لاءِ رجسٽريشن وقت مليل شاگرد آءِ ڊي ۽ پنهنجو پن استعمال ڪريو.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: FAQs -->
+    <section class="public-section">
+      <div class="public-section-header">
+        <span class="public-section-badge">عام سوال</span>
+        <h2 class="public-section-title">گهڻا پڇيا ويندڙ سوال (FAQ)</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>ڇا سنڌي ڊجيٽل ڪلاس روم انٽرنيٽ کانسواءِ هلي سگهي ٿو؟</span>
+            <span class="faq-icon">&#43;</span>
+          </button>
+          <div class="faq-answer">
+            هن رليز ۾ مڪمل آف لائن سکيا يا نتيجن جي sync جي ضمانت نٿي ڏني وڃي. لاگ ان، Tutor، نئون ڪوئيز ۽ نتيجا محفوظ ڪرڻ لاءِ انٽرنيٽ گهربل آهي.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>ڇا عوامي رجسٽريشن ذريعي ايڊمن اڪائونٽ کلي سگهي ٿو؟</span>
+            <span class="faq-icon">&#43;</span>
+          </button>
+          <div class="faq-answer">
+            نه. سيڪيورٽي ۽ رازداري جي اصولن تحت عوامي رجسٽريشن رڳو شاگرد (STUDENT) لاءِ کليل آهي. ايڊمن (ADMIN) اڪائونٽس باقاعده بااختيار تصديق سان جاري ڪيا وڃن ٿا.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>هن پليٽ فارم تي ڪهڙا درجا شامل آهن؟</span>
+            <span class="faq-icon">&#43;</span>
+          </button>
+          <div class="faq-answer">
+            هن وقت رڳو ڪلاس 6 جي رياضي ۽ عام سائنس جا ڇپيل سبق ڏيکاريا وڃن ٿا.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Tutor جي موجودگي ڪيئن معلوم ڪجي؟</span>
+            <span class="faq-icon">&#43;</span>
+          </button>
+          <div class="faq-answer">
+            Tutor اسڪرين جواب جو فراهم ڪندڙ، حالت ۽ موجود نصابي حوالا ڏيکاري ٿي. لائيو ماڊل موجود نه هجي ته درخواست کي AI جواب طور پيش نٿو ڪيو وڃي.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Privacy & Child Protection (/privacy) -->
+    <section class="public-section" id="sec-privacy" style="background: rgba(16, 23, 37, 0.2); border-top: 1px solid var(--border-glass);">
+      <div class="public-section-header">
+        <span class="public-section-badge">رازداري جو پڪو انجام</span>
+        <h2 class="public-section-title">ٻارن جي ڊيٽا تحفظ ۽ رازداري پاليسي</h2>
+        <p class="public-section-desc">
+          شاگردي ڊيٽا تائين رسائي سرور تي سڃاڻپ ۽ ڪردار جي چڪاس سان محدود ڪئي وڃي ٿي. هن سائيٽ تي ذاتي معلومات گهٽ ۾ گهٽ داخل ڪريو.
+        </p>
+      </div>
+
+      <div class="glass-card" style="padding: 28px; line-height: 1.8;">
+        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 10px;">شاگردن جي سڃاڻپ جو تحفظ</h4>
+        <p style="color: var(--text-secondary); margin-bottom: 14px;">
+          اسان ڪڏهن به شاگردن جا اصلي نالا، رهائشي پتو، فون نمبر يا تصويرون محفوظ نٿا ڪريون. هر شاگرد رڳو فرضي ڪوڊ (مثال: STU-101) ۽ 4-6 عددن جي پن ڪوڊ ذريعي سڃاتو وڃي ٿو.
+        </p>
+        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 10px;">ڪوبه اشتهار يا تجارتي ڊيٽا وڪرو نه</h4>
+        <p style="color: var(--text-secondary); margin-bottom: 14px;">
+          هن پليٽ فارم تي ڪوبه تجارتي اشتهار ناهي ۽ نه ئي ڪنهن ٽئين ڌر کي ٻارن جي پڙهائي جو ڊيٽا وڪرو يا منتقلي ڪيو ويندو آهي.
+        </p>
+        <h4 style="color: var(--text-primary); font-size: 1.1rem; margin-bottom: 10px;">آڊٽ لاگز ۽ مانيٽرنگ</h4>
+        <p style="color: var(--text-secondary);">
+          سسٽم اندر هر عمل جي نگراني بااختيار تعليمي آفيسرن ۽ اسڪول انتظاميه پاران شفافيت برقرار رکڻ لاءِ ڪئي وڃي ٿي.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 9: Terms of Use (/terms) -->
+    <section class="public-section" id="sec-terms">
+      <div class="public-section-header">
+        <span class="public-section-badge">قانوني شرطون</span>
+        <h2 class="public-section-title">استعمال جون شرطون (Terms of Use)</h2>
+      </div>
+
+      <div class="glass-card" style="padding: 28px; line-height: 1.8;">
+        <p style="color: var(--text-secondary); margin-bottom: 12px;">
+          1. سنڌي ڊجيٽل ڪلاس روم رڳو غير تجارتي ۽ تعليمي مقصدن لاءِ دستياب آهي.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 12px;">
+          2. سنڌ ٽيڪسٽ بڪ بورڊ جي نصابي ڪتابن ۽ مواد تي جملي حق واسطا لاڳاپيل سرڪاري ادارن وٽ محفوظ آهن.
+        </p>
+        <p style="color: var(--text-secondary);">
+          3. سرڪاري چينلن مان ورتل يوٽيوب مواد جا مالڪي حق لاڳاپيل ادارن جا آهن ۽ انهن جو ذڪر مناسب حوالن سان ڪيو ويو آهي.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Public Footer -->
+  <footer class="public-footer">
+    <div class="public-footer-grid">
+      <div class="footer-col">
+        <div class="public-brand-link" style="margin-bottom: 14px;">
+          <div class="public-brand-emblem"><img src="/static/images/sdc-emblem.svg" alt="SDC Emblem" width="32" height="32"></div>
+          <div class="public-brand-text">
+            <h1 style="font-size: 1.1rem;">سنڌي ڊجيٽل ڪلاس روم</h1>
+            <p>Sindhi Digital Classroom</p>
+          </div>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; max-width: 320px;">
+          ڪلاس 6 جي موجود رياضي ۽ سائنس جي سبقن لاءِ سنڌي RTL ڊجيٽل ڪلاس روم.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>نصاب ۽ درجا</h4>
+        <ul>
+          <li><a href="/curriculum">ڪلاس 6 نصاب</a></li>
+          <li><a href="/curriculum">ڪلاس 7 نصاب</a></li>
+          <li><a href="/curriculum">ڪلاس 8 نصاب</a></li>
+          <li><a href="/curriculum">ڪلاس 9 نصاب</a></li>
+          <li><a href="/curriculum">ڪلاس 10 نصاب</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>پليٽ فارم</h4>
+        <ul>
+          <li><a href="/about">اسان بابت (About)</a></li>
+          <li><a href="/help">مدد ۽ هدايتون (Help)</a></li>
+          <li><a href="/privacy">رازداري پاليسي (Privacy)</a></li>
+          <li><a href="/terms">شرطون (Terms)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>رسائي ۽ اڪائونٽ</h4>
+        <ul>
+          <li><a href="/login"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-key"></use></svg> <span>لاگ ان (Login)</span></a></li>
+          <li><a href="/signup"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-user"></use></svg> <span>شاگرد رجسٽريشن</span></a></li>
+          <li><a href="/forgot-password">پاسورڊ يا پن بحالي</a></li>
+          <li><a href="/app"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-academic"></use></svg> <span>محفوظ LMS ايپليڪيشن</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="public-footer-bottom">
+      <div>&copy; 2026 سنڌي ڊجيٽل ڪلاس روم (SDC) • سمورا حق سنڌ ٽيڪسٽ بڪ بورڊ نصاب لاءِ محفوظ آهن.</div>
+      <div>Sindhi Digital Classroom &bull; Open Educational Initiative</div>
+    </div>
+  </footer>
+
+  <!-- Public JavaScript Controller -->
+  <script>
+    // Modern High-Precision Navigation Routing & Scroll-Spy Controller
+    let isUserInitiatedScroll = false;
+
+    function setActiveNavById(id) {
+      document.querySelectorAll('.public-nav-link').forEach(l => l.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+    }
+
+    function handlePublicRoute() {
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+
+      if (path === '/curriculum' || hash === '#sec-curriculum') {
+        setActiveNavById('nav-curriculum');
+        document.getElementById('sec-curriculum')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (path === '/about' || hash === '#sec-about') {
+        setActiveNavById('nav-about');
+        document.getElementById('sec-about')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (path === '/help' || hash === '#sec-help') {
+        setActiveNavById('nav-help');
+        document.getElementById('sec-help')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (path === '/privacy' || hash === '#sec-privacy') {
+        document.querySelectorAll('.public-nav-link').forEach(l => l.classList.remove('active'));
+        document.getElementById('sec-privacy')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (path === '/terms' || hash === '#sec-terms') {
+        document.querySelectorAll('.public-nav-link').forEach(l => l.classList.remove('active'));
+        document.getElementById('sec-terms')?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        setActiveNavById('nav-home');
+      }
+    }
+
+    // Scroll Observer to dynamically keep navbar active indicator in sync
+    function initPublicScrollSpy() {
+      const sections = [
+        { id: 'sec-curriculum', nav: 'nav-curriculum' },
+        { id: 'sec-about', nav: 'nav-about' },
+        { id: 'sec-help', nav: 'nav-help' }
+      ];
+
+      const observer = new IntersectionObserver((entries) => {
+        if (isUserInitiatedScroll) return;
+        let visibleSection = null;
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+            visibleSection = entry.target.id;
+          }
+        });
+
+        if (visibleSection) {
+          const match = sections.find(s => s.id === visibleSection);
+          if (match) setActiveNavById(match.nav);
+        } else if (window.scrollY < 200) {
+          setActiveNavById('nav-home');
+        }
+      }, {
+        root: null,
+        rootMargin: '-80px 0px -40% 0px',
+        threshold: [0.25, 0.5]
+      });
+
+      sections.forEach(s => {
+        const el = document.getElementById(s.id);
+        if (el) observer.observe(el);
+      });
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < 180) {
+          setActiveNavById('nav-home');
+        }
+      }, { passive: true });
+    }
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      if (drawer) drawer.classList.toggle('open');
+    }
+    function closeMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      if (drawer) drawer.classList.remove('open');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      if (item) item.classList.toggle('open');
+    }
+
+    // Load Public Lessons from API for discovery
+    async function loadPublicLessonsDiscovery() {
+      const container = document.getElementById('public-lessons-catalog');
+      if (!container) return;
+
+      try {
+        const res = await fetch('/api/lessons?class_level=6');
+        if (res.ok) {
+          const courses = await res.json();
+          let allLessons = [];
+          courses.forEach(c => {
+            if (c.lessons && c.lessons.length > 0) {
+              c.lessons.forEach(l => {
+                allLessons.push({ ...l, subject: c.subject, course_title: c.title_sindhi });
+              });
+            }
+          });
+
+          if (allLessons.length === 0) {
+            container.innerHTML = '<div style="color: var(--text-dim); padding: 12px;">هن وقت ڪلاس 6 لاءِ درسي يونٽ شايع ٿي رهيا آهن.</div>';
+            return;
+          }
+
+          container.innerHTML = allLessons.map(l => `
+            <div class="public-feature-card" style="padding: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span class="public-class-badge">${l.course_title || 'ڪلاس 6'} • يونٽ ${l.unit_number}</span>
+                <span style="font-size: 0.75rem; color: var(--accent-emerald); display: inline-flex; align-items: center; gap: 4px;"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-play"></use></svg> ليڪچر</span>
+              </div>
+              <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">${l.title_sindhi}</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;" class="ltr-text">${l.title_english}</p>
+              <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
+                ${l.summary_sindhi || 'هن سبق ۾ سنڌ ٽيڪسٽ بڪ بورڊ جي نصابي تصورن ۽ چيڪ پوائنٽ ڪوئيز سوالن جي سمجهاڻي شامل آهي.'}
+              </p>
+              <a href="/login?next=/app/learn/${l.id}" class="btn-ctrl" style="display: inline-block; font-size: 0.84rem; text-decoration: none; padding: 6px 14px; text-align: center;">
+                سبق کوليو (Open in LMS) &larr;
+              </a>
+            </div>
+          `).join('');
+        }
+      } catch (e) {
+        container.innerHTML = '<div style="color: var(--text-dim); padding: 12px;">نصابي سبق ڳولڻ لاءِ سرور سان رابطو ڪيو پيو وڃي...</div>';
+      }
+    }
+
+    // Check active session to provide continuous, seamless navigation back to LMS
+    function syncAuthNavState() {
+      const saved = localStorage.getItem('sdc_current_user');
+      if (!saved) return;
+      try {
+        const user = JSON.parse(saved);
+        if (user && user.token) {
+          const loginBtn = document.getElementById('btn-header-login');
+          if (loginBtn) {
+            loginBtn.href = '/app';
+            loginBtn.innerHTML = `
+              <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+              <span>LMS ڏانهن واپس (${user.pseudonymous_code || 'Dashboard'})</span>
+            `;
+          }
+          const signupBtn = document.getElementById('btn-header-signup');
+          if (signupBtn) {
+            signupBtn.href = '/app';
+            signupBtn.innerHTML = `
+              <span>پڙهائي جاري رکو</span>
+              <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+            `;
+          }
+        }
+      } catch (e) {}
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      syncAuthNavState();
+      handlePublicRoute();
+      initPublicScrollSpy();
+      loadPublicLessonsDiscovery();
+    });
+  </script>
+</body>
+</html>

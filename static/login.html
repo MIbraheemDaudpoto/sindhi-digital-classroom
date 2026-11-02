@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="sd" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لاگ ان | سنڌي ڊجيٽل ڪلاس روم</title>
+  <meta name="description" content="سنڌي ڊجيٽل ڪلاس روم محفوظ لاگ ان صفحو.">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/icons.js"></script>
+</head>
+<body class="auth-wrapper">
+
+  <!-- Mini Header with Home link -->
+  <a href="/" class="auth-header-mini" title="مک صفحي ڏانهن واپس وڃو">
+    <div class="public-brand-emblem" style="height: 46px; width: auto; min-width: 52px; padding: 2px 6px;"><img src="/static/images/sdc-emblem.svg" alt="SDC Emblem" width="46" height="38"></div>
+    <div>
+      <span style="font-weight: 700; font-size: 1.05rem;">سنڌي ڊجيٽل ڪلاس روم</span>
+      <span style="font-size: 0.76rem; color: var(--text-muted); display: block;">&larr; مک صفحي ڏانهن واپس وڃو</span>
+    </div>
+  </a>
+
+  <!-- Two-Column Auth Container -->
+  <div class="auth-card-container">
+    <!-- Form Side -->
+    <div class="auth-form-side">
+      <div class="auth-heading-area">
+        <h2>پنهنجي اڪائونٽ ۾ لاگ ان ٿيو</h2>
+        <p>سنڌ ٽيڪسٽ بڪ بورڊ نصاب ذريعي پنهنجي پڙهائي جاري رکو</p>
+      </div>
+
+      <!-- Mode Selector Tabs: Students & Admin only -->
+      <div class="auth-mode-tabs" role="tablist">
+        <button id="tab-student" class="auth-tab-btn active" onclick="switchLoginMode('STUDENT')" role="tab" aria-selected="true">
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-academic"></use></svg> <span>شاگرد (Student)</span>
+        </button>
+        <button id="tab-admin" class="auth-tab-btn" onclick="switchLoginMode('ADMIN')" role="tab" aria-selected="false">
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-shield"></use></svg> <span>ايڊمن (Admin)</span>
+        </button>
+      </div>
+
+      <!-- Error Alert Box -->
+      <div id="login-error-alert" class="auth-error-box" role="alert"></div>
+
+      <!-- Student Login Form -->
+      <form id="form-student" onsubmit="handleStudentLogin(event)">
+        <div class="auth-field-group">
+          <label for="student-identifier">موبائل نمبر يا شاگرد آءِ ڊي (Mobile Number or Student ID)</label>
+          <div class="auth-input-container">
+            <input type="text" id="student-identifier" class="auth-input" placeholder="شاگرد آءِ ڊي" required autocomplete="username" oninput="checkStudentIdentifier(this.value)">
+          </div>
+          <span class="auth-helper-text">رجسٽرڊ موبائل فون نمبر يا سسٽم پاران جاري ڪيل شاگرد آءِ ڊي لکو.</span>
+        </div>
+
+        <div style="margin-top: -6px; margin-bottom: 12px; text-align: left;">
+          <button type="button" onclick="toggleSchoolCodeOption()" style="background: none; border: none; color: var(--accent-emerald); font-size: 0.78rem; text-decoration: underline; cursor: pointer; padding: 0;">
+            اسڪول ڪوڊ سان لاگ ان ٿيو (School Code Mode)
+          </button>
+        </div>
+
+        <!-- Optional Legacy School Code field -->
+        <div id="group-legacy-school-code" style="display: none;" class="auth-field-group">
+          <label for="student-school-code">اسڪول ڪوڊ (Optional School Code)</label>
+          <div class="auth-input-container">
+            <input type="text" id="student-school-code" class="auth-input" placeholder="مثال: SCH-HYD-01" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label for="student-pin">پاسورڊ يا پن ڪوڊ (Password / PIN)</label>
+          <div class="auth-input-container">
+            <input type="password" id="student-pin" class="auth-input" placeholder="پاسورڊ يا 4-6 عددن جو پن داخل ڪريو" required minlength="4" maxlength="64" autocomplete="current-password">
+            <button type="button" class="auth-password-toggle" onclick="togglePasswordVisibility('student-pin', this)" aria-label="پاسورڊ ڏيکاريو" title="پاسورڊ ڏيکاريو">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+          <span class="auth-helper-text">شاگردن جو 4 کان 6 عددن جو پن، يا ايڊمن پاسورڊ هتي لکو.</span>
+        </div>
+
+        <button type="submit" id="btn-submit-student" class="auth-submit-btn">
+          <span>لاگ ان ڪريو (Login to LMS)</span>
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+        </button>
+      </form>
+
+      <!-- Admin Login Form -->
+      <form id="form-admin" style="display: none;" onsubmit="handleAdminLogin(event)">
+        <div class="auth-field-group">
+          <label for="admin-identifier">ايڊمن يوزر نالو يا اي ميل (Admin Username / Email)</label>
+          <div class="auth-input-container">
+            <input type="text" id="admin-identifier" class="auth-input" placeholder="superadmin يا admin@sindh.edu.pk" required autocomplete="username">
+          </div>
+        </div>
+
+        <div class="auth-field-group">
+          <label for="admin-password">ايڊمن پاسورڊ (Password)</label>
+          <div class="auth-input-container">
+            <input type="password" id="admin-password" class="auth-input" placeholder="پاسورڊ داخل ڪريو" required minlength="6" autocomplete="current-password">
+            <button type="button" class="auth-password-toggle" onclick="togglePasswordVisibility('admin-password', this)" aria-label="پاسورڊ ڏيکاريو" title="پاسورڊ ڏيکاريو">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" id="btn-submit-admin" class="auth-submit-btn">
+          <span>ايڊمن لاگ ان (Admin Login)</span>
+          <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+        </button>
+      </form>
+
+      <!-- Auxiliary Links -->
+      <div class="auth-footer-links">
+        <div>
+          شاگرد اڪائونٽ ناهي؟ 
+          <a href="/signup">هتي نئون شاگرد کاتو ٺاهيو (Register Student)</a>
+        </div>
+        <div>
+          پاسورڊ يا پن وسري ويو؟ 
+          <a href="/forgot-password">رهنمائي ڏسو (Password Recovery)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Showcase Side (Right for RTL) -->
+    <div class="auth-side-showcase">
+      <div>
+        <div class="auth-showcase-badge">
+          <span style="display: inline-flex; align-items: center; gap: 6px;"><svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-shield"></use></svg> محفوظ سکيا پليٽ فارم</span>
+        </div>
+        <div class="auth-showcase-content">
+          <h3>شاگردن ۽ منتظمين لاءِ SDC</h3>
+          <p>
+            هن وقت ڪلاس 6 جي رياضي ۽ سائنس جا موجود سبق، Tutor ۽ ڪوئيز.
+          </p>
+        </div>
+
+        <ul class="auth-features-list">
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>ڪلاس 6 جا رياضي ۽ سائنس جا سبق.</span>
+          </li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>لاگ ان، Tutor، ڪوئيز ۽ محفوظ نتيجن لاءِ انٽرنيٽ گهربل آهي.</span>
+          </li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>شاگرد پنهنجا نتيجا ڏسن ٿا؛ منتظم سڀني شاگردن جي ترقي ڏسي سگهي ٿو.</span>
+          </li>
+          <li class="auth-feature-bullet">
+            <svg class="sdc-icon sdc-icon-sm" style="color: var(--accent-emerald);" aria-hidden="true"><use href="#icon-check"></use></svg>
+            <span>ٻارن جي مڪمل رازداري — ڪو به اشتهار يا ڊيٽا شيئرنگ ناهي.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div style="font-size: 0.78rem; color: var(--text-dim); border-top: 1px solid var(--border-glass); padding-top: 16px;">
+        &copy; 2026 سنڌي ڊجيٽل ڪلاس روم &bull; سرڪاري درسي نصاب
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Validate Safe Internal Return URL to Prevent Open Redirects
+    function getSafeRedirectUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const next = params.get('next');
+      if (next) {
+        const clean = next.trim();
+        // Strict safe relative URL validation
+        if (clean.startsWith('/') && !clean.startsWith('//') && !clean.startsWith('/\\') && !clean.includes('://')) {
+          return clean;
+        }
+      }
+      return '/app';
+    }
+
+    // SVG Icons for Password Visibility
+    const SVG_EYE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+    const SVG_EYE_OFF = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
+
+    // Toggle Password / PIN Visibility
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (!input) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = SVG_EYE_OFF;
+        btn.setAttribute('aria-label', 'پاسورڊ لڪايو');
+        btn.setAttribute('title', 'پاسورڊ لڪايو');
+      } else {
+        input.type = 'password';
+        btn.innerHTML = SVG_EYE;
+        btn.setAttribute('aria-label', 'پاسورڊ ڏيکاريو');
+        btn.setAttribute('title', 'پاسورڊ ڏيکاريو');
+      }
+      // Keep focus on input for typing convenience
+      input.focus();
+    }
+
+    // Switch Login Modes: STUDENT or ADMIN
+    function switchLoginMode(mode) {
+      const tabStu = document.getElementById('tab-student');
+      const tabAdmin = document.getElementById('tab-admin') || document.getElementById('tab-staff');
+      const formStu = document.getElementById('form-student');
+      const formAdmin = document.getElementById('form-admin') || document.getElementById('form-staff');
+      const errBox = document.getElementById('login-error-alert');
+      if (errBox) errBox.style.display = 'none';
+
+      if (mode === 'STUDENT') {
+        if (tabStu) { tabStu.classList.add('active'); tabStu.setAttribute('aria-selected', 'true'); }
+        if (tabAdmin) { tabAdmin.classList.remove('active'); tabAdmin.setAttribute('aria-selected', 'false'); }
+        if (formStu) formStu.style.display = 'block';
+        if (formAdmin) formAdmin.style.display = 'none';
+      } else {
+        if (tabAdmin) { tabAdmin.classList.add('active'); tabAdmin.setAttribute('aria-selected', 'true'); }
+        if (tabStu) { tabStu.classList.remove('active'); tabStu.setAttribute('aria-selected', 'false'); }
+        if (formAdmin) formAdmin.style.display = 'block';
+        if (formStu) formStu.style.display = 'none';
+      }
+    }
+
+    // Handle Admin Login
+    async function handleAdminLogin(e) {
+      e.preventDefault();
+      const identifierInput = document.getElementById('admin-identifier') || document.getElementById('staff-identifier');
+      const passwordInput = document.getElementById('admin-password') || document.getElementById('staff-password');
+      const submitBtn = document.getElementById('btn-submit-admin') || document.getElementById('btn-submit-staff');
+
+      const identifier = identifierInput ? identifierInput.value.trim() : '';
+      const password = passwordInput ? passwordInput.value.trim() : '';
+
+      if (!identifier || !password) {
+        showError('مهرباني ڪري ايڊمن يوزر نالو ۽ پاسورڊ داخل ڪريو.');
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>تصديق ٿي رهي آهي...</span>';
+      }
+
+      try {
+        const res = await fetch('/api/auth/login/staff', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier: identifier, password: password })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          saveSessionAndRedirect(data);
+        } else {
+          const err = await res.json().catch(() => ({}));
+          showError(err.detail || 'غلط ايڊمن يوزر نالو يا پاسورڊ داخل ڪيو ويو آهي.');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>ايڊمن لاگ ان (Admin Login)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+          }
+        }
+      } catch (err) {
+        showError('سرور سان رابطي ۾ خرابي. مهرباني ڪري نيٽ ورڪ چيڪ ڪريو.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>ايڊمن لاگ ان (Admin Login)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+        }
+      }
+    }
+    // Backward compatibility alias
+    const handleStaffLogin = handleAdminLogin;
+
+    function showError(msg) {
+      const errBox = document.getElementById('login-error-alert');
+      if (errBox) {
+        errBox.textContent = msg;
+        errBox.style.display = 'block';
+      }
+    }
+
+    function toggleSchoolCodeOption() {
+      const box = document.getElementById('group-legacy-school-code');
+      if (!box) return;
+      box.style.display = box.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Auto-detect admin credentials entered in student tab
+    function checkStudentIdentifier(val) {
+      const v = (val || '').trim().toLowerCase();
+      if (v === 'superadmin' || v.startsWith('admin') || v.includes('@')) {
+        // Automatically switch to admin tab seamlessly
+        const adminTab = document.getElementById('tab-admin');
+        if (adminTab) {
+          switchLoginMode('ADMIN');
+          const adminIdent = document.getElementById('admin-identifier');
+          if (adminIdent) {
+            adminIdent.value = val.trim();
+            const adminPass = document.getElementById('admin-password');
+            if (adminPass) adminPass.focus();
+          }
+        }
+      }
+    }
+
+    // Handle Student Login (with intelligent fallback for admin credentials)
+    async function handleStudentLogin(e) {
+      e.preventDefault();
+      const identifierInput = document.getElementById('student-identifier');
+      const identifier = identifierInput ? identifierInput.value.trim() : '';
+      const schoolCodeInput = document.getElementById('student-school-code');
+      const schoolCode = schoolCodeInput ? schoolCodeInput.value.trim() : '';
+      const pin = document.getElementById('student-pin').value.trim();
+      const submitBtn = document.getElementById('btn-submit-student');
+
+      if (!identifier && !schoolCode) {
+        showError('مهرباني ڪري پنهنجو موبائل نمبر يا شاگرد آءِ ڊي داخل ڪريو.');
+        return;
+      }
+      if (!pin) {
+        showError('مهرباني ڪري پنهنجو پاسورڊ يا پن ڪوڊ داخل ڪريو.');
+        return;
+      }
+
+      // Check if user entered admin username (e.g. superadmin) with staff password
+      const identLower = identifier.toLowerCase();
+      if (identLower === 'superadmin' || identLower.startsWith('admin') || identLower.includes('@') || pin.length > 6 || isNaN(Number(pin))) {
+        // Attempt staff authentication directly
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>تصديق ٿي رهي آهي...</span>';
+        try {
+          const res = await fetch('/api/auth/login/staff', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ identifier: identifier, password: pin })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            saveSessionAndRedirect(data);
+            return;
+          }
+        } catch (e) {
+          // fall through to student auth attempt
+        }
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>تصديق ٿي رهي آهي...</span>';
+
+      const payload = { pin: pin };
+      if (identifier) {
+        payload.identifier = identifier;
+      }
+      if (schoolCode) {
+        payload.school_code = schoolCode;
+        payload.student_code = identifier;
+      }
+
+      try {
+        const res = await fetch('/api/auth/login/student', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          saveSessionAndRedirect(data);
+        } else {
+          // If student auth failed and it might be staff credentials
+          if (identifier.length > 0 && pin.length >= 6) {
+            try {
+              const staffRes = await fetch('/api/auth/login/staff', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ identifier: identifier, password: pin })
+              });
+              if (staffRes.ok) {
+                const data = await staffRes.json();
+                saveSessionAndRedirect(data);
+                return;
+              }
+            } catch (err) {}
+          }
+
+          const err = await res.json().catch(() => ({}));
+          showError(err.detail || 'غلط يوزر نالو، شاگرد آءِ ڊي، يا پاسورڊ داخل ڪيو ويو آهي.');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>لاگ ان ڪريو (Login to LMS)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+        }
+      } catch (err) {
+        showError('سرور سان رابطي ۾ خرابي. مهرباني ڪري نيٽ ورڪ چيڪ ڪريو.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>لاگ ان ڪريو (Login to LMS)</span> <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-arrow-left"></use></svg>';
+      }
+    }
+
+
+
+    // Save session to localStorage and navigate to destination
+    function saveSessionAndRedirect(authData) {
+      const user = {
+        user_id: authData.user_id,
+        role: authData.role,
+        pseudonymous_code: authData.pseudonymous_code,
+        school_id: authData.school_id,
+        school_name: authData.school_name,
+        language: authData.language || 'sindhi',
+        token: authData.token
+      };
+      localStorage.setItem('sdc_current_user', JSON.stringify(user));
+      const target = getSafeRedirectUrl();
+      window.location.href = target;
+    }
+
+    // On Load: If already authenticated with valid token, redirect to safe return URL immediately
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Check for logged_out feedback
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('logged_out') === '1') {
+        const errBox = document.getElementById('login-error-alert');
+        if (errBox) {
+          errBox.textContent = 'اوهان ڪاميابيءَ سان لاگ آئوٽ ٿي چڪا آهيو (You have been logged out).';
+          errBox.style.background = 'rgba(16, 185, 129, 0.12)';
+          errBox.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+          errBox.style.color = 'var(--accent-emerald)';
+          errBox.style.display = 'block';
+        }
+        localStorage.removeItem('sdc_current_user');
+        return;
+      }
+
+      const saved = localStorage.getItem('sdc_current_user');
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed && parsed.token) {
+            const res = await fetch('/api/auth/me', {
+              headers: { 'Authorization': `Bearer ${parsed.token}` }
+            });
+            if (res.ok) {
+              // Valid session: redirect away from login form
+              window.location.href = getSafeRedirectUrl();
+              return;
+            } else {
+              localStorage.removeItem('sdc_current_user');
+            }
+          }
+        } catch (e) {
+          localStorage.removeItem('sdc_current_user');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

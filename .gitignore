@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Testing caches
+.pytest_cache/
+.pytest_tmp/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Local sensitive environment variables
+.env
+!.env.example
+!.env.production
+
+# Large AI model checkpoints and weights (>100MB, cannot be pushed to GitHub)
+models/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.onnx
+
+# Large raw textbook PDFs and heavy source packs
+data/curriculum_pdfs/
+SDC_RAG_PACKAGE_for_Antigravity/book/
+data/audio_samples/
+data/offline_packs/
+
+# Database backups & temporary database files
+data/backups/
+/*.db
+!data/sdc_platform.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.db.tmp
+
+# Extraction dump artifacts & temporary text files
+debug_pdf.txt
+page1_chars.txt
+page_*.jpg
+raw_page_*.bin
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
