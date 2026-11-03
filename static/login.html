@@ -33,12 +33,12 @@
     <!-- Form Side -->
     <div class="auth-form-side">
       <div class="auth-heading-area">
-        <h2>پنهنجي اڪائونٽ ۾ لاگ ان ٿيو</h2>
-        <p>سنڌ ٽيڪسٽ بڪ بورڊ نصاب ذريعي پنهنجي پڙهائي جاري رکو</p>
+        <h2 id="heading-title">پنهنجي اڪائونٽ ۾ لاگ ان ٿيو</h2>
+        <p id="heading-sub">سنڌ ٽيڪسٽ بڪ بورڊ نصاب ذريعي پنهنجي پڙهائي جاري رکو</p>
       </div>
 
-      <!-- Mode Selector Tabs: Students & Admin only -->
-      <div class="auth-mode-tabs" role="tablist">
+      <!-- Mode Selector Tabs: Hidden by default for security to prevent administrative surface enumeration -->
+      <div class="auth-mode-tabs" id="auth-mode-tabs-container" style="display: none;" role="tablist">
         <button id="tab-student" class="auth-tab-btn active" onclick="switchLoginMode('STUDENT')" role="tab" aria-selected="true">
           <svg class="sdc-icon sdc-icon-sm" aria-hidden="true"><use href="#icon-academic"></use></svg> <span>شاگرد (Student)</span>
         </button>
@@ -117,7 +117,7 @@
       </form>
 
       <!-- Auxiliary Links -->
-      <div class="auth-footer-links">
+      <div class="auth-footer-links" id="student-footer-links">
         <div>
           شاگرد اڪائونٽ ناهي؟ 
           <a href="/signup">هتي نئون شاگرد کاتو ٺاهيو (Register Student)</a>
@@ -126,6 +126,16 @@
           پاسورڊ يا پن وسري ويو؟ 
           <a href="/forgot-password">رهنمائي ڏسو (Password Recovery)</a>
         </div>
+      </div>
+
+      <!-- Back link for admin mode -->
+      <div id="admin-back-link" style="display: none; text-align: center; margin-top: 14px;">
+        <a href="/login" style="color: var(--accent-emerald); font-size: 0.82rem; text-decoration: none;">&larr; واپس شاگرد لاگ ان ڏانهن (Student Login)</a>
+      </div>
+
+      <!-- Discrete Staff Access Link in student mode -->
+      <div id="staff-portal-link" style="text-align: center; margin-top: 18px; border-top: 1px solid var(--border-glass); padding-top: 12px;">
+        <a href="/admin-portal" style="color: var(--text-dim); font-size: 0.74rem; text-decoration: none;">🔒 انتظامي رسائي (Staff Portal)</a>
       </div>
 
     </div>
@@ -173,6 +183,29 @@
     // Validate Safe Internal Return URL to Prevent Open Redirects
     function getSafeRedirectUrl() {
       const params = new URLSearchParams(window.location.search);
+      // Toggle portal view (Admin vs Student) based on URL
+      const isPortalAdmin = params.get('portal') === 'admin' || window.location.pathname.includes('admin');
+      const hTitle = document.getElementById('heading-title');
+      const hSub = document.getElementById('heading-sub');
+      const admBack = document.getElementById('admin-back-link');
+      const stuFoot = document.getElementById('student-footer-links');
+      const stfLink = document.getElementById('staff-portal-link');
+
+      if (isPortalAdmin) {
+        if (hTitle) hTitle.textContent = 'انتظامي پورٽل لاگ ان (Staff / Admin Portal)';
+        if (hSub) hSub.textContent = 'محفوظ سينٽرل مئنيجمينٽ ۽ شاگرد رڪارڊز جي نگراني';
+        switchLoginMode('ADMIN');
+        if (admBack) admBack.style.display = 'block';
+        if (stuFoot) stuFoot.style.display = 'none';
+        if (stfLink) stfLink.style.display = 'none';
+      } else {
+        if (hTitle) hTitle.textContent = 'پنهنجي اڪائونٽ ۾ لاگ ان ٿيو';
+        if (hSub) hSub.textContent = 'سنڌ ٽيڪسٽ بڪ بورڊ نصاب ذريعي پنهنجي پڙهائي جاري رکو';
+        switchLoginMode('STUDENT');
+        if (admBack) admBack.style.display = 'none';
+        if (stuFoot) stuFoot.style.display = 'block';
+        if (stfLink) stfLink.style.display = 'block';
+      }
       const next = params.get('next');
       if (next) {
         const clean = next.trim();

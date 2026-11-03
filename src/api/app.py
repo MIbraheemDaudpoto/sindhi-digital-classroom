@@ -34,6 +34,21 @@ async def lifespan(app: FastAPI):
     seed_sdc_curriculum()
     # Ensure SDC M5/M6 RAG canonical data (90 chunks, 201 glossary terms, 39 exercises, 113 videos) is seeded
     ensure_sdc_data_seeded()
+    # Sync environment-provided Admin credentials if configured
+    if settings.admin_password:
+        from src.services.auth_service import hash_pin_or_password
+        with get_db() as conn:
+            hashed_pw = hash_pin_or_password(settings.admin_password)
+            username = settings.admin_username or "superadmin"
+            conn.execute(
+                """
+                UPDATE users 
+                SET pseudonymous_code = ?, pin_hash = ?
+                WHERE role IN ('ADMIN', 'SUPER_ADMIN') AND id = 'usr-super-admin-01'
+                """,
+                (username, hashed_pw)
+            )
+            conn.commit()
     yield
 
 
@@ -159,6 +174,11 @@ if static_dir.exists():
         if login_file.exists():
             return FileResponse(str(login_file), media_type="text/html")
         return FileResponse(str(static_dir / "index.html"), media_type="text/html")
+
+    @app.get("/admin-portal", include_in_schema=False)
+    @app.get("/admin/login", include_in_schema=False)
+    async def serve_admin_portal():
+        return RedirectResponse(url="/login?portal=admin", status_code=303)
 
     @app.get("/signup", include_in_schema=False)
     async def serve_signup():

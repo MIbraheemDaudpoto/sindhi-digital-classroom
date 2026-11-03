@@ -92,6 +92,12 @@ class PasswordResetResponse(BaseModel):
     reset_token: Optional[str] = None
 
 
+class ChangeAdminCredentialsRequest(BaseModel):
+    current_password: str = Field(min_length=4, description="Current administrator password for verification")
+    new_username: Optional[str] = Field(default=None, min_length=3, max_length=50, description="New administrative username/code")
+    new_password: str = Field(min_length=6, max_length=128, description="New strong administrator password")
+
+
 class PublicSchoolResponse(BaseModel):
     id: str
     name: str

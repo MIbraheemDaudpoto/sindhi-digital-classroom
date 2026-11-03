@@ -31,6 +31,8 @@ class Settings(BaseSettings):
     password_reset_token_expiry_seconds: int = 600  # 10 minutes
     allow_test_query_auth: bool = False  # Strictly False: no query parameter bypass
     active_pilot_roles: list[str] = ["STUDENT", "SUPER_ADMIN"]  # Only STUDENT and SUPER_ADMIN active for pilot
+    admin_username: str = "superadmin"
+    admin_password: str = ""
 
     # SMS Gateway Configuration (Pakistan OTP)
     sms_provider: str = "mock"  # "mock", "twilio", "pakistan_http"

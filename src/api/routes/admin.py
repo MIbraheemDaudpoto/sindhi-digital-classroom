@@ -21,8 +21,16 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from src.api.deps import get_current_user, require_roles
 from src.config import settings
 from src.database.session import get_db
-from src.models.schemas import AuditLogResponse, StudentInviteRequest, StudentProgressListResponse, UserCreateRequest, UserResponse, UserRole
-from src.services.auth_service import hash_pin_or_password
+from src.models.schemas import (
+    AuditLogResponse,
+    ChangeAdminCredentialsRequest,
+    StudentInviteRequest,
+    StudentProgressListResponse,
+    UserCreateRequest,
+    UserResponse,
+    UserRole,
+)
+from src.services.auth_service import hash_pin_or_password, verify_pin_or_password
 from src.services.question_generator import question_generator
 
 router = APIRouter(prefix="/api/admin", tags=["Administration"])
@@ -261,6 +269,52 @@ async def admin_reset_student_pin(
         )
 
     return {"status": "ok", "message": f"شاگرد {user['pseudonymous_code']} جو پن ڪوڊ ڪاميابيءَ سان تبديل ڪيو ويو."}
+
+
+@router.post("/change-credentials", status_code=status.HTTP_200_OK)
+async def admin_change_credentials(
+    req: ChangeAdminCredentialsRequest,
+    current_user: dict = Depends(require_roles(UserRole.ADMIN))
+):
+    """Change current administrator username and/or password with current password verification."""
+    with get_db() as conn:
+        admin_row = conn.execute("SELECT id, pseudonymous_code, pin_hash FROM users WHERE id = ?", (current_user["id"],)).fetchone()
+        if not admin_row or not verify_pin_or_password(req.current_password, admin_row["pin_hash"]):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="موجوده پاسورڊ غلط آهي (Current password is incorrect)."
+            )
+
+        new_hash = hash_pin_or_password(req.new_password)
+        new_username = req.new_username.strip() if req.new_username else admin_row["pseudonymous_code"]
+
+        # Check username uniqueness if changed
+        if new_username != admin_row["pseudonymous_code"]:
+            existing = conn.execute("SELECT id FROM users WHERE pseudonymous_code = ? AND id != ?", (new_username, current_user["id"])).fetchone()
+            if existing:
+                raise HTTPException(
+                    status_code=status.HTTP_409_CONFLICT,
+                    detail=f"يوزر نالو '{new_username}' اڳ ۾ موجود آهي (Username already taken)."
+                )
+
+        conn.execute(
+            "UPDATE users SET pseudonymous_code = ?, pin_hash = ? WHERE id = ?",
+            (new_username, new_hash, current_user["id"])
+        )
+        now_iso = datetime.now(timezone.utc).isoformat()
+        conn.execute(
+            """
+            INSERT INTO audit_logs (id, user_id, action, resource_type, resource_id, details_json, created_at)
+            VALUES (?, ?, 'ADMIN_CREDENTIALS_CHANGED', 'user', ?, ?, ?)
+            """,
+            (str(uuid.uuid4()), current_user["id"], current_user["id"], json.dumps({"new_username": new_username}), now_iso)
+        )
+
+    return {
+        "status": "ok",
+        "message": "ايڊمن جا يوزر نالو ۽ پاسورڊ ڪاميابيءَ سان تبديل ٿي ويا (Credentials updated successfully).",
+        "username": new_username
+    }
 
 
 # --- AI Question Generation & Approval Endpoints ---
