@@ -21,7 +21,8 @@ ENV/
 !.env.production
 
 # Large AI model checkpoints and weights (>100MB, cannot be pushed to GitHub)
-models/
+/models/
+!src/models/
 *.safetensors
 *.bin
 *.gguf
