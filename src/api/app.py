@@ -167,6 +167,16 @@ if static_dir.exists():
             return FileResponse(str(signup_file), media_type="text/html")
         return FileResponse(str(static_dir / "index.html"), media_type="text/html")
 
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def serve_favicon():
+        fav = static_dir / "favicon.ico"
+        if fav.exists():
+            return FileResponse(str(fav), media_type="image/x-icon")
+        png = static_dir / "icon.png"
+        if png.exists():
+            return FileResponse(str(png), media_type="image/png")
+        raise HTTPException(status_code=404, detail="Favicon not found")
+
     @app.get("/logout", include_in_schema=False)
     async def serve_logout():
         return RedirectResponse(url="/login?logged_out=1", status_code=303)
