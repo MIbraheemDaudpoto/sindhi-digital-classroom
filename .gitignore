@@ -53,3 +53,7 @@ raw_page_*.bin
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Downloaded tools
+tools/
+
