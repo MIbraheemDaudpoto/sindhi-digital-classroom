@@ -408,7 +408,14 @@ function handleTabActivation(tabId) {
 // Authored under agency-ux-researcher, agency-ux-architect, agency-ui-designer
 // Step 1: Select Class -> Step 2: Select Subject -> Step 3: Select Lesson
 // =========================================================================
-window.sosCurrentStep = 1;
+window.sosCurrentStep = 2;
+
+window.scrollCurriculumIntoView = function() {
+  const anchor = document.getElementById('curriculum-browser-anchor');
+  if (anchor) {
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 function sosGoToStep(step) {
   window.sosCurrentStep = step;
@@ -420,6 +427,12 @@ function sosGoToStep(step) {
   if (p1) p1.style.display = (step === 1) ? 'block' : 'none';
   if (p2) p2.style.display = (step === 2) ? 'block' : 'none';
   if (p3) p3.style.display = (step === 3) ? 'block' : 'none';
+
+  // If student is choosing class (1) or subject (2), hide active video lecture to keep focus on choice
+  const vSec = document.getElementById('lesson-video-player-section');
+  if (step < 3 && vSec) {
+    vSec.style.display = 'none';
+  }
   
   // Stepper buttons
   const b1 = document.getElementById('sos-step-btn-1');
@@ -509,14 +522,7 @@ function sosChooseSubject(subject) {
   
   filterAndRenderCourses();
   sosGoToStep(3);
-
-  // Auto-switch player & tutor to first lesson in chosen subject
-  if (Array.isArray(allLoadedCourses)) {
-    const chosenCourse = allLoadedCourses.find(c => c.subject && c.subject.toLowerCase() === subject.toLowerCase());
-    if (chosenCourse && Array.isArray(chosenCourse.lessons) && chosenCourse.lessons.length > 0) {
-      selectLesson(chosenCourse.lessons[0].id);
-    }
-  }
+  window.scrollCurriculumIntoView();
 }
 
 function sosGoBackOneStep() {
@@ -575,16 +581,19 @@ async function loadCurriculum(classLevel = 6, subject = null) {
 
     filterAndRenderCourses();
 
-    // Auto-select lesson: prefer saved lesson or lesson-sci-6-1 or first science lesson
+    // Student UX: Do not auto-open video player on login. Direct students to choose their subject first.
     if (!currentLoadedLessonId) {
-      const savedLesson = localStorage.getItem('sdc_last_lesson_id');
-      const scienceCourse = allLoadedCourses.find(c => c.subject.toLowerCase() === 'science') || allLoadedCourses[0];
-      const targetLessonId = savedLesson 
-        ? savedLesson 
-        : (scienceCourse?.lessons[0]?.id || allLoadedCourses[0]?.lessons[0]?.id);
-      
-      if (targetLessonId) {
-        selectLesson(targetLessonId);
+      const pathLessonMatch = window.location.pathname.match(/\/app\/learn\/(lesson-[a-zA-Z0-9_\-]+)/);
+      const urlParams = new URLSearchParams(window.location.search);
+      const directLessonId = (pathLessonMatch && pathLessonMatch[1]) || urlParams.get('lesson_id');
+
+      if (directLessonId) {
+        selectLesson(directLessonId);
+      } else {
+        // Show Step 2 (Choose Subject) first and keep video section hidden
+        sosGoToStep(2);
+        const playerSec = document.getElementById('lesson-video-player-section');
+        if (playerSec) playerSec.style.display = 'none';
       }
     }
   } catch (err) {
@@ -659,6 +668,15 @@ function filterAndRenderCourses(searchTerm = '') {
 async function selectLesson(lessonId) {
   currentLoadedLessonId = lessonId;
   window.currentLoadedLessonId = lessonId;
+
+  // Reveal Video Lecture section and smoothly bring into view
+  const playerSection = document.getElementById('lesson-video-player-section');
+  if (playerSection) {
+    playerSection.style.display = 'block';
+    setTimeout(() => {
+      playerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
   if (lessonId && lessonId.includes('math')) {
     activeSubjectFilter = 'Math';
     window.currentSubject = 'Math';

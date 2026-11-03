@@ -61,23 +61,6 @@ def seed_sdc_curriculum(db_path: Optional[str] = None):
             ("usr-stu-kamran", hash_pin_or_password("123456"), now_iso)
         )
 
-        # Pre-seeded permanent student invite codes for testing registration
-        test_invites = [
-            ("SDC-INVITE-2026", "sch-hyd-01"),
-            ("SDC-TEST-001", "sch-hyd-01"),
-            ("SDC-TEST-002", "sch-lkr-02"),
-        ]
-        import hashlib
-        for code_str, sch_id in test_invites:
-            c_hash = hashlib.sha256(code_str.encode("utf-8")).hexdigest()
-            conn.execute(
-                """
-                INSERT OR IGNORE INTO student_invites (code_hash, school_id, created_by, created_at, expires_at)
-                VALUES (?, ?, 'usr-super-admin-01', ?, '2030-01-01T00:00:00+00:00')
-                """,
-                (c_hash, sch_id, now_iso)
-            )
-
         # 2) Teachers
         conn.execute(
             """
@@ -143,6 +126,24 @@ def seed_sdc_curriculum(db_path: Optional[str] = None):
             """,
             ("usr-super-admin-01", hash_pin_or_password("super123"), now_iso)
         )
+
+        # Pre-seeded permanent student invite codes for production / pilot registration
+        if db_path is None:
+            test_invites = [
+                ("SDC-INVITE-2026", "sch-hyd-01"),
+                ("SDC-TEST-001", "sch-hyd-01"),
+                ("SDC-TEST-002", "sch-lkr-02"),
+            ]
+            import hashlib
+            for code_str, sch_id in test_invites:
+                c_hash = hashlib.sha256(code_str.encode("utf-8")).hexdigest()
+                conn.execute(
+                    """
+                    INSERT OR IGNORE INTO student_invites (code_hash, school_id, created_by, created_at, expires_at)
+                    VALUES (?, ?, 'usr-super-admin-01', ?, '2030-01-01T00:00:00+00:00')
+                    """,
+                    (c_hash, sch_id, now_iso)
+                )
 
         # 3. Courses (Sindh Textbook Board Class 6-10)
         courses_data = [

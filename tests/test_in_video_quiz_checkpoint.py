@@ -71,12 +71,12 @@ def test_checkpoint_timestamps_and_answer_key_secrecy():
     questions = resp.json()
     assert len(questions) > 0
 
-    # Verify q-math-1-2 is at 4.0s
-    q_math_4s = next((q for q in questions if q["id"] == "q-math-1-2"), None)
-    assert q_math_4s is not None, "q-math-1-2 checkpoint not found"
-    assert q_math_4s["timestamp_seconds"] == 4.0
-    assert q_math_4s["correct_answer_index"] is None, "Correct answer must be withheld before student answers!"
-    assert len(q_math_4s["options"]) == 4
+    # Verify q-math-1-2 is at 120.0s (2-minute pedagogical interval)
+    q_math_checkpoint = next((q for q in questions if q["id"] == "q-math-1-2"), None)
+    assert q_math_checkpoint is not None, "q-math-1-2 checkpoint not found"
+    assert q_math_checkpoint["timestamp_seconds"] == 120.0
+    assert q_math_checkpoint["correct_answer_index"] is None, "Correct answer must be withheld before student answers!"
+    assert len(q_math_checkpoint["options"]) == 4
 
 
 # --- 2. Checkpoint Attempt Persistence ---

@@ -67,7 +67,7 @@ def test_invite_enrollment_hashes_and_consumes_code_once(flow):
     })
     assert duplicate.status_code == 400
     with get_db(str(db_path)) as conn:
-        invite_row = conn.execute("SELECT used_by FROM student_invites").fetchone()
+        invite_row = conn.execute("SELECT used_by FROM student_invites WHERE used_by IS NOT NULL").fetchone()
         student = conn.execute("SELECT role, pin_hash FROM users WHERE id=?", (data["user_id"],)).fetchone()
         assert invite_row["used_by"] == data["user_id"]
         assert student["role"] == "STUDENT"

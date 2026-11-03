@@ -529,13 +529,18 @@ class SDCVideoPlayer {
       return;
     }
 
-    // Never trigger quiz checkpoints during initial load or before 2.0 seconds of playback
+    // Never trigger quiz checkpoints during initial load or before adequate playback buffer
     if (currentTime < 2.0) return;
 
     const prevTime = this.lastObservedTime;
 
     for (const q of this.questions) {
       if (this.completedQuestionIds.has(q.id) || this.triggeredQuestionIds.has(q.id)) {
+        continue;
+      }
+      // Pedagogical safeguard: Full video lectures (>60s) should not trigger popups at early intro seconds (<30s)
+      const isLongLecture = (this.video && this.video.duration > 60) || (this.ytDuration && this.ytDuration > 60);
+      if (isLongLecture && q.timestamp_seconds < 30.0) {
         continue;
       }
       if (q.timestamp_seconds < 2.0) {
