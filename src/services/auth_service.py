@@ -422,9 +422,9 @@ class AuthService:
                     SELECT u.*, s.name as school_name, s.code as school_code, s.district
                     FROM users u
                     LEFT JOIN schools s ON u.school_id = s.id
-                    WHERE (u.phone = ? OR u.phone = ? OR u.pseudonymous_code = ?) AND u.role = 'STUDENT'
+                    WHERE (u.phone = ? OR u.phone = ? OR u.pseudonymous_code = ? OR u.full_name = ?) AND u.role = 'STUDENT'
                     """,
-                    (normalized_phone or clean_phone, clean_phone, ident)
+                    (normalized_phone or clean_phone, clean_phone, ident, ident)
                 ).fetchone()
 
             # Path B: Authenticate via legacy School Code + Student Code
@@ -457,9 +457,9 @@ class AuthService:
                     SELECT u.*, s.name as school_name, s.code as school_code, s.district
                     FROM users u
                     LEFT JOIN schools s ON u.school_id = s.id
-                    WHERE (u.pseudonymous_code = ? OR u.phone = ? OR u.phone = ?) AND u.role = 'STUDENT'
+                    WHERE (u.pseudonymous_code = ? OR u.full_name = ? OR u.phone = ? OR u.phone = ?) AND u.role = 'STUDENT'
                     """,
-                    (ident, normalized_phone or clean_phone, clean_phone)
+                    (ident, ident, normalized_phone or clean_phone, clean_phone)
                 ).fetchone()
 
             if not user or not verify_pin_or_password(req.pin, user["pin_hash"]):

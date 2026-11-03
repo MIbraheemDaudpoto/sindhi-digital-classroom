@@ -453,10 +453,35 @@
       window.location.href = target;
     }
 
-    // On Load: If already authenticated with valid token, redirect to safe return URL immediately
+    // On Load: Handle view mode (Student vs Admin) and session check
     document.addEventListener('DOMContentLoaded', async () => {
-      // Check for logged_out feedback
       const params = new URLSearchParams(window.location.search);
+
+      // Determine portal mode: Admin if ?portal=admin or /admin-portal, otherwise ALWAYS Student
+      const isPortalAdmin = params.get('portal') === 'admin' || window.location.pathname.includes('admin');
+      const hTitle = document.getElementById('heading-title');
+      const hSub = document.getElementById('heading-sub');
+      const admBack = document.getElementById('admin-back-link');
+      const stuFoot = document.getElementById('student-footer-links');
+      const stfLink = document.getElementById('staff-portal-link');
+
+      if (isPortalAdmin) {
+        if (hTitle) hTitle.textContent = 'انتظامي پورٽل لاگ ان (Staff / Admin Portal)';
+        if (hSub) hSub.textContent = 'محفوظ سينٽرل مئنيجمينٽ ۽ شاگرد رڪارڊز جي نگراني';
+        switchLoginMode('ADMIN');
+        if (admBack) admBack.style.display = 'block';
+        if (stuFoot) stuFoot.style.display = 'none';
+        if (stfLink) stfLink.style.display = 'none';
+      } else {
+        if (hTitle) hTitle.textContent = 'پنهنجي شاگرد اڪائونٽ ۾ لاگ ان ٿيو';
+        if (hSub) hSub.textContent = 'سنڌ ٽيڪسٽ بڪ بورڊ نصاب ذريعي پنهنجي پڙهائي جاري رکو';
+        switchLoginMode('STUDENT');
+        if (admBack) admBack.style.display = 'none';
+        if (stuFoot) stuFoot.style.display = 'block';
+        if (stfLink) stfLink.style.display = 'block';
+      }
+
+      // Check for logged_out feedback
       if (params.get('logged_out') === '1') {
         const errBox = document.getElementById('login-error-alert');
         if (errBox) {
