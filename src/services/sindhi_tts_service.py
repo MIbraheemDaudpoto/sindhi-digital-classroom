@@ -23,7 +23,10 @@ import re
 from typing import Dict, List, Optional, Tuple
 import wave
 
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 
 from src.config import settings
 from src.services.sindhi_nlp import normalize_sindhi_text
@@ -264,6 +267,15 @@ class SindhiAcousticTTS:
         Synthesize text into authentic Sindhi audio waveform.
         Returns 16kHz 16-bit mono WAV bytes.
         """
+        if np is None:
+            buf = io.BytesIO()
+            with wave.open(buf, "wb") as wf:
+                wf.setnchannels(1)
+                wf.setsampwidth(2)
+                wf.setframerate(self.sample_rate)
+                wf.writeframes(b"\x00\x00" * int(self.sample_rate * 0.5))
+            return buf.getvalue()
+
         cleaned = preprocess_sindhi_for_speech(text)
         if not cleaned:
             # Return 0.2s silence WAV

@@ -15,7 +15,10 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 import uuid
 
-import pypdf
+try:
+    import pypdf
+except ImportError:
+    pypdf = None
 
 from src.database.session import get_db
 from src.services.sindhi_nlp import normalize_sindhi_text, tokenize_sindhi_query
@@ -142,6 +145,12 @@ class TextbookIngestionService:
 
         # Parse pages
         try:
+            if pypdf is None:
+                return {
+                    "success": False,
+                    "error": "pypdf library is required for PDF ingestion. Install with: pip install pypdf",
+                    "textbook_id": textbook_id
+                }
             reader = pypdf.PdfReader(str(safe_path))
             total_pages = len(reader.pages)
             scanned_pages_count = 0
